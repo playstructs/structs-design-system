@@ -379,6 +379,29 @@ h2 {
 /* ---- Checkbox, Radio End ---- */
 
 
+/* ---- Select Start ---- */
+
+.struct-select-container {
+  display: inline-block;
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent;
+  border-image: url(/img/accent-secondary-border-image.png) 2 / 2px;
+}
+.struct-select {
+  background: #212833;
+  border: 0 none;
+  border-right: 10px solid #212833;
+  border-radius: 0;
+  color: #C5D7D9;
+  font-size: 16px;
+  height: 36px;
+  padding: 0 10px;
+}
+
+/* ---- Select End ---- */
+
+
 /* ---- Test Space Only Start ---- */
 
 form {
