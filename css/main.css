@@ -292,20 +292,24 @@ h2 {
   line-height: 16px;
 }
 
+input:focus {
+  outline: none;
+}
+
 /* ---- General Styling End ---- */
 
 /* ---- Checkbox, Radio Start ---- */
 
-.struct-checkbox-container,
-.struct-radio-container {
+.structs-checkbox-container,
+.structs-radio-container {
   position: relative;
   display: inline-block;
   height: 40px;
   vertical-align: middle;
 }
 
-.struct-checkbox,
-.struct-radio {
+.structs-checkbox,
+.structs-radio {
   position: absolute;
   top: 0;
   left: 0;
@@ -315,8 +319,8 @@ h2 {
   opacity: 0;
 }
 
-.struct-checkbox-display,
-.struct-radio-display {
+.structs-checkbox-display,
+.structs-radio-display {
   position: absolute;
   top: 0;
   left: 0;
@@ -326,8 +330,8 @@ h2 {
   z-index: 0;
 }
 
-.struct-checkbox-container::after,
-.struct-radio-container::after {
+.structs-checkbox-container::after,
+.structs-radio-container::after {
   content: "";
   display: inline-block;
   height: 100%;
@@ -335,44 +339,44 @@ h2 {
   vertical-align: middle;
 }
 
-.struct-checkbox-container .struct-checkbox-display {
+.structs-checkbox-container .structs-checkbox-display {
   background-image: url("/img/checkbox_false.png");
 }
-.struct-radio-container .struct-radio-display {
+.structs-radio-container .structs-radio-display {
   background-image: url("/img/radio_false.png");
 }
 
-.struct-checkbox:checked ~ .struct-checkbox-display {
+.structs-checkbox:checked ~ .structs-checkbox-display {
   background-image: url("/img/checkbox_true.png");
 }
-.struct-radio:checked ~ .struct-radio-display {
+.structs-radio:checked ~ .structs-radio-display {
   background-image: url("/img/radio_true.png");
 }
 
-.struct-checkbox:disabled ~ .struct-checkbox-display{
+.structs-checkbox:disabled ~ .structs-checkbox-display{
   background-image: url("/img/checkbox_disabled_false.png");
 }
-.struct-radio:disabled ~ .struct-radio-display{
+.structs-radio:disabled ~ .structs-radio-display{
   background-image: url("/img/radio_disabled_false.png");
 }
 
-.struct-checkbox:disabled:checked ~ .struct-checkbox-display{
+.structs-checkbox:disabled:checked ~ .structs-checkbox-display{
   background-image: url("/img/checkbox_disabled_true.png");
 }
-.struct-radio:disabled:checked ~ .struct-radio-display{
+.structs-radio:disabled:checked ~ .structs-radio-display{
   background-image: url("/img/radio_disabled_true.png");
 }
 
-.struct-checkbox-container label,
-.struct-radio-container label {
+.structs-checkbox-container label,
+.structs-radio-container label {
   display: inline-block;
   position: relative;
   margin-left: 48px;
   vertical-align: middle;
 }
 
-.struct-checkbox:disabled ~ label,
-.struct-radio:disabled ~ label {
+.structs-checkbox:disabled ~ label,
+.structs-radio:disabled ~ label {
   color: #7394A5;
 }
 
@@ -381,14 +385,14 @@ h2 {
 
 /* ---- Select Start ---- */
 
-.struct-select-container {
+.structs-select-container {
   display: inline-block;
   border-style: solid;
   border-width: 2px;
   border-color: transparent;
   border-image: url(/img/accent-secondary-border-image.png) 2 / 2px;
 }
-.struct-select {
+.structs-select {
   background: #212833;
   border: 0 none;
   border-right: 10px solid #212833;
@@ -401,6 +405,75 @@ h2 {
 
 /* ---- Select End ---- */
 
+/* ---- Input Text Start ---- */
+
+.structs-block-label {
+  display: block;
+  width: 100%;
+}
+
+.structs-block-label:focus-within {
+  color: #C2EFDD;
+}
+
+.structs-block-label-text {
+  display: block;
+  font-family: 'ExtremeHazard', sans-serif;
+  font-size: 8px;
+  line-height: 16px;
+  padding-left: 2px;
+  text-transform: uppercase;
+}
+
+.structs-input-text-group {
+  display: block;
+  text-align: left;
+}
+
+.structs-input-text-flex-container {
+  display: flex;
+  align-items: center;
+}
+
+.structs-input-text-focus-icon {
+  box-sizing: border-box;
+  color: #C2EFDD;
+  display: none;
+  flex: 0 auto;
+  height: 40px;
+  padding: 8px;
+}
+.structs-block-label:focus-within .structs-input-text-focus-icon {
+  display: inline-block;
+}
+
+.structs-input-text {
+  background: transparent;
+  border: 0 none;
+  border-bottom: 2px solid #94A4E4;
+  box-sizing: border-box;
+  color: #C5D7D9;
+  display: inline-block;
+  flex: auto;
+  font-family: 'DirectiveZero', sans-serif;
+  font-size: 16px;
+  height: 40px;
+  width: 100%;
+}
+.structs-input-text:disabled {
+  border-bottom: 2px solid #7394A5;
+}
+.structs-input-text:focus {
+  border-bottom: 2px solid #C2EFDD;
+}
+.structs-input-text::placeholder {
+  color: #A7C0C6;
+}
+.structs-input-text:disabled::placeholder {
+  color: #7394A5;
+}
+
+/* ---- Input Text End ---- */
 
 /* ---- Test Space Only Start ---- */
 
@@ -410,6 +483,11 @@ form {
 
 .form-group {
   margin-bottom: 40px;
+}
+
+.structs-input-text-group {
+  display: inline-block;
+  width: 320px;
 }
 
 /* ---- Test Space Only End ---- */
