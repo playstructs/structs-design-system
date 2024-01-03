@@ -407,22 +407,20 @@ input:focus {
 
 /* ---- Select Start ---- */
 
-.structs-select-container {
-  display: inline-block;
+select {
+  background-clip: padding-box;
+  background: #212833 url("/img/caret-down-accent-secondary.png") no-repeat 10px center;
+  background-clip: padding-box;
   border-style: solid;
   border-width: 2px;
   border-color: transparent;
   border-image: url(/img/accent-secondary-border-image.png) 2 / 2px;
-}
-.structs-select {
-  background: #212833;
-  border: 0 none;
-  border-right: 10px solid #212833;
   border-radius: 0;
   color: #C5D7D9;
   font-size: 16px;
   height: 36px;
-  padding: 0 10px;
+  padding: 0 10px 0 30px;
+  -webkit-appearance: none;
 }
 
 /* ---- Select End ---- */
@@ -443,7 +441,6 @@ input:focus {
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
   line-height: 16px;
-  padding-left: 2px;
   text-transform: uppercase;
 }
 
