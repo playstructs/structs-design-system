@@ -279,17 +279,25 @@ body {
   font-size: 16px;
   line-height: 20px;
   color: #C5D7D9;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 h1 {
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 16px;
+  font-weight: 100;
   line-height: 24px;
+  text-transform: uppercase;
 }
 h2 {
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
+  font-weight: 100;
   line-height: 16px;
+  text-transform: uppercase;
 }
 
 input:focus {
@@ -297,6 +305,20 @@ input:focus {
 }
 
 /* ---- General Styling End ---- */
+
+/* ---- Text Start --- */
+
+.structs-text-tiny {
+  font-family: 'DirectiveZero', sans-serif;
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.structs-text-warning {
+  color: #F3C878;
+}
+
+/* ---- Text End ---- */
 
 /* ---- Checkbox, Radio Start ---- */
 
@@ -473,16 +495,29 @@ input:focus {
   color: #7394A5;
 }
 
+.structs-input-warning-container {
+  display: none;
+  margin-top: 8px;
+}
+
+.structs-input-warning-container.show {
+  display: block;
+}
+
 /* ---- Input Text End ---- */
 
 /* ---- Test Space Only Start ---- */
 
-form {
+section {
   margin: 40px auto;
 }
 
-.form-group {
+.group {
   margin-bottom: 40px;
+}
+
+.section-header {
+  color: #43CDB6;
 }
 
 .structs-input-text-group {
