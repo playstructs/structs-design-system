@@ -152,7 +152,7 @@ select {
   border-style: solid;
   border-width: 2px;
   border-color: transparent;
-  border-image: url("/img/accent-secondary-border-image.png") 2 / 2px;
+  border-image: url("/img/border-image-accent-secondary.png") 2 / 2px;
   border-radius: 0;
   color: #C5D7D9;
   font-size: 16px;
@@ -193,23 +193,6 @@ select:disabled {
   text-align: left;
 }
 
-.structs-input-text-flex-container {
-  display: flex;
-  align-items: center;
-}
-
-.structs-input-text-focus-icon {
-  box-sizing: border-box;
-  color: #C2EFDD;
-  display: none;
-  flex: 0 auto;
-  height: 40px;
-  padding: 8px;
-}
-.structs-block-label:focus-within .structs-input-text-focus-icon {
-  display: inline-block;
-}
-
 .structs-input-text {
   background: transparent;
   border: 0 none;
@@ -227,7 +210,8 @@ select:disabled {
   border-bottom: 2px solid #7394A5;
 }
 .structs-input-text:focus {
-  border-bottom: 2px solid #C2EFDD;
+  border-image: url("/img/border-image-input-text-active.png") 0 0 2 24 / 0 0 2px 24px;
+  padding-left: 24px;
 }
 .structs-input-text::placeholder {
   color: #A7C0C6;
