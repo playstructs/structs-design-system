@@ -1,0 +1,234 @@
+/** ---- Structs UI (SUI) ---- **/
+
+@font-face {
+  font-family: DirectiveZero;
+  src: url(../fonts/DirectiveZeroWid.ttf);
+}
+@font-face {
+  font-family: ExtremeHazard;
+  src: url(../fonts/ExtremeHazard.ttf);
+}
+
+/* ---- General Styling Start ---- */
+
+body {
+  background: rgb(28, 52, 68);
+  text-align: center;
+  font-family: 'DirectiveZero', sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: #C5D7D9;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* ---- General Styling End ---- */
+
+/* ---- Text Start --- */
+
+h1 {
+  font-family: 'ExtremeHazard', sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'ExtremeHazard', sans-serif;
+  font-size: 8px;
+  font-weight: 100;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.sui-text-tiny {
+  font-family: 'DirectiveZero', sans-serif;
+  font-size: 8px;
+  line-height: 12px;
+}
+
+.sui-text-warning {
+  color: #F3C878;
+}
+
+/* ---- Text End ---- */
+
+/* ---- Checkbox, Radio Start ---- */
+
+.sui-checkbox-container,
+.sui-radio-container {
+  position: relative;
+  display: inline-block;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.sui-checkbox,
+.sui-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  z-index: 1;
+  opacity: 0;
+}
+
+.sui-checkbox-display,
+.sui-radio-display {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  z-index: 0;
+}
+
+.sui-checkbox-container::after,
+.sui-radio-container::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+.sui-checkbox-container .sui-checkbox-display {
+  background-image: url("/img/checkbox_false.png");
+}
+.sui-radio-container .sui-radio-display {
+  background-image: url("/img/radio_false.png");
+}
+
+.sui-checkbox:checked ~ .sui-checkbox-display {
+  background-image: url("/img/checkbox_true.png");
+}
+.sui-radio:checked ~ .sui-radio-display {
+  background-image: url("/img/radio_true.png");
+}
+
+.sui-checkbox:disabled ~ .sui-checkbox-display{
+  background-image: url("/img/checkbox_disabled_false.png");
+}
+.sui-radio:disabled ~ .sui-radio-display{
+  background-image: url("/img/radio_disabled_false.png");
+}
+
+.sui-checkbox:disabled:checked ~ .sui-checkbox-display{
+  background-image: url("/img/checkbox_disabled_true.png");
+}
+.sui-radio:disabled:checked ~ .sui-radio-display{
+  background-image: url("/img/radio_disabled_true.png");
+}
+
+.sui-checkbox-container label,
+.sui-radio-container label {
+  display: inline-block;
+  position: relative;
+  margin-left: 48px;
+  vertical-align: middle;
+}
+
+.sui-checkbox:disabled ~ label,
+.sui-radio:disabled ~ label {
+  color: #7394A5;
+}
+
+/* ---- Checkbox, Radio End ---- */
+
+
+/* ---- Select Start ---- */
+
+select {
+  background-clip: padding-box;
+  background: #212833 url("/img/caret-down-accent-secondary.png") no-repeat 10px center;
+  background-clip: padding-box;
+  border-style: solid;
+  border-width: 2px;
+  border-color: transparent;
+  border-image: url("/img/border-image-accent-secondary.png") 2 / 2px;
+  border-radius: 0;
+  color: #C5D7D9;
+  font-size: 16px;
+  height: 36px;
+  padding: 0 10px 0 30px;
+  -webkit-appearance: none;
+}
+
+select:disabled {
+  background: #212833 url("/img/caret-down-accent-disabled.png") no-repeat 10px center;
+  background-clip: padding-box;
+  border-image: url("/img/border-image-accent-disabled.png") 2 / 2px;
+  color: #7394A5;
+}
+/* ---- Select End ---- */
+
+/* ---- Input Text Start ---- */
+
+.sui-block-label {
+  display: block;
+  width: 100%;
+}
+
+.sui-block-label:focus-within {
+  color: #C2EFDD;
+}
+
+.sui-block-label-text {
+  display: block;
+  font-family: 'ExtremeHazard', sans-serif;
+  font-size: 8px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.sui-input-text-group {
+  display: block;
+  text-align: left;
+}
+
+.sui-input-text {
+  background: transparent;
+  border: 0 none;
+  border-bottom: 2px solid #94A4E4;
+  box-sizing: border-box;
+  color: #C5D7D9;
+  display: inline-block;
+  flex: auto;
+  font-family: 'DirectiveZero', sans-serif;
+  font-size: 16px;
+  height: 40px;
+  width: 100%;
+}
+.sui-input-text:disabled {
+  border-bottom: 2px solid #7394A5;
+}
+.sui-input-text:focus {
+  border-image: url("/img/border-image-input-text-active.png") 0 0 2 24 / 0 0 2px 24px;
+  padding-left: 24px;
+}
+.sui-input-text::placeholder {
+  color: #A7C0C6;
+}
+.sui-input-text:disabled::placeholder {
+  color: #7394A5;
+}
+
+.sui-input-warning-container {
+  display: none;
+  margin-top: 8px;
+}
+
+.sui-input-warning-container.show {
+  display: block;
+}
+
+/* ---- Input Text End ---- */
