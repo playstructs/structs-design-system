@@ -76,6 +76,9 @@ h2 {
 .sui-accent-des-active {
   color: #F4A990;
 }
+.sui-accent-disabled {
+  color: #7394A5;
+}
 
 /* ---- Text End ---- */
 
@@ -135,6 +138,20 @@ a.sui-screen-btn::after {
 .sui-screen-btn:hover.sui-accent-des {
   color: #F4A990;
   border-image: url("/img/border-image-accent-des-active.png") 2 / 2px;
+}
+
+.sui-screen-btn.sui-accent-disabled {
+  border-image: url("/img/border-image-accent-disabled.png") 2 / 2px;
+}
+
+.sui-screen-btn-flex-wrapper {
+  display: flex;
+  column-gap: 8px;
+  justify-items: center;
+}
+
+.sui-screen-btn-flex-wrapper > .sui-screen-btn {
+  flex-grow: 1;
 }
 
 /* ---- Screen Button End ---- */

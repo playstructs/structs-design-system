@@ -12,7 +12,7 @@ section {
   color: #43CDB6;
 }
 
-.sui-input-text-group {
+.fixed-width-group {
   display: inline-block;
   width: 320px;
 }
