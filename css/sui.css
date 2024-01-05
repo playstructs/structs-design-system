@@ -58,7 +58,86 @@ h2 {
   color: #F3C878;
 }
 
+.sui-accent-pri {
+  color: #43CDB6;
+}
+.sui-accent-pri-active {
+  color: #C2EFDD;
+}
+.sui-accent-sec {
+  color: #94A4E4;
+}
+.sui-accent-sec-active {
+  color: #BBCAEF;
+}
+.sui-accent-des {
+  color: #EE7D69;
+}
+.sui-accent-des-active {
+  color: #F4A990;
+}
+
 /* ---- Text End ---- */
+
+/* ---- Screen Button Start ---- */
+
+.sui-screen-btn {
+  border: 2px solid transparent;
+}
+
+button.sui-screen-btn,
+a.sui-screen-btn,
+a.sui-screen-btn:link,
+a.sui-screen-btn:visited {
+  display: inline-block;
+  background: #222034;
+  background-clip: padding-box;
+  box-sizing: border-box;
+  font-family: 'ExtremeHazard', sans-serif;
+  font-size: 8px;
+  height: 40px;
+  line-height: 16px;
+  padding: 0 12px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a.sui-screen-btn::after {
+  content: "";
+  display: inline-block;
+  height: 100%;
+  font-size: 0;
+  vertical-align: middle;
+}
+
+.sui-screen-btn.sui-accent-pri {
+  border-image: url("/img/border-image-accent-pri.png") 2 / 2px;
+}
+
+.sui-screen-btn:hover.sui-accent-pri {
+  color: #C2EFDD;
+  border-image: url("/img/border-image-accent-pri-active.png") 2 / 2px;
+}
+
+.sui-screen-btn.sui-accent-sec {
+  border-image: url("/img/border-image-accent-sec.png") 2 / 2px;
+}
+
+.sui-screen-btn:hover.sui-accent-sec {
+  color: #C2EFDD;
+  border-image: url("/img/border-image-accent-sec-active.png") 2 / 2px;
+}
+
+.sui-screen-btn.sui-accent-des {
+  border-image: url("/img/border-image-accent-des.png") 2 / 2px;
+}
+
+.sui-screen-btn:hover.sui-accent-des {
+  color: #F4A990;
+  border-image: url("/img/border-image-accent-des-active.png") 2 / 2px;
+}
+
+/* ---- Screen Button End ---- */
 
 /* ---- Checkbox, Radio Start ---- */
 
@@ -154,7 +233,7 @@ select {
   border-style: solid;
   border-width: 2px;
   border-color: transparent;
-  border-image: url("/img/border-image-accent-secondary.png") 2 / 2px;
+  border-image: url("/img/border-image-accent-sec.png") 2 / 2px;
   border-radius: 0;
   color: #C5D7D9;
   font-size: 16px;
