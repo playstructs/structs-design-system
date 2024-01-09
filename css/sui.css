@@ -9,15 +9,36 @@
   src: url(../fonts/ExtremeHazard.ttf);
 }
 
+/* ---- Variables Start ---- */
+
+:root {
+  --accent-accent-primary: #43CDB6;
+  --accent-accent-primary-active: #C2EFDD;
+  --accent-accent-secondary: #94A4E4;
+  --accent-accent-secondary-active: #BBCAEF;
+  --accent-accent-destructive: #EE7D69;
+  --accent-accent-destructive-active: #F4A990;
+  --accent-accent-disabled: #7394A5;
+  --surface-player-surface-player-body: #133546;
+  --surface-surface-default: #222034;
+  --text-text-body: #C5D7D9;
+  --text-text-hint: #A7C0C6;
+  --text-text-warning: #F3C878;
+}
+
+/* ---- Variables End ----*/
+
 /* ---- General Styling Start ---- */
 
 body {
-  background: rgb(28, 52, 68);
+  background: var(--surface-player-surface-player-body);
   text-align: center;
   font-family: 'DirectiveZero', sans-serif;
   font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
   line-height: 20px;
-  color: #C5D7D9;
+  color: var(--text-text-body);
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-crisp-edges;
   image-rendering: pixelated;
@@ -35,7 +56,8 @@ input:focus {
 h1 {
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 16px;
-  font-weight: 100;
+  font-style: normal;
+  font-weight: 500;
   line-height: 24px;
   text-transform: uppercase;
 }
@@ -43,7 +65,8 @@ h1 {
 h2 {
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
-  font-weight: 100;
+  font-style: normal;
+  font-weight: 500;
   line-height: 16px;
   text-transform: uppercase;
 }
@@ -51,39 +74,42 @@ h2 {
 .sui-text-tiny {
   font-family: 'DirectiveZero', sans-serif;
   font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
   line-height: 12px;
 }
 
 .sui-text-ticker {
   font-family: 'Inter', sans-serif;
   font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
   line-height: 16px;
 }
 
-.sui-text-warning {
-  color: #F3C878;
-}
-
 .sui-accent-pri {
-  color: #43CDB6;
+  color: var(--accent-accent-primary);
 }
 .sui-accent-pri-active {
-  color: #C2EFDD;
+  color: var(--accent-accent-primary-active);
 }
 .sui-accent-sec {
-  color: #94A4E4;
+  color: var(--accent-accent-secondary);
 }
 .sui-accent-sec-active {
-  color: #BBCAEF;
+  color: var(--accent-accent-secondary-active);
 }
 .sui-accent-des {
-  color: #EE7D69;
+  color: var(--accent-accent-destructive);
 }
 .sui-accent-des-active {
-  color: #F4A990;
+  color: var(--accent-accent-destructive-active);
 }
 .sui-accent-disabled {
-  color: #7394A5;
+  color: var(--accent-accent-disabled);
+}
+.sui-text-warning {
+  color: var(--text-text-warning);
 }
 
 /* ---- Text End ---- */
@@ -99,7 +125,7 @@ a.sui-screen-btn,
 a.sui-screen-btn:link,
 a.sui-screen-btn:visited {
   display: inline-block;
-  background: #222034;
+  background: var(--surface-surface-default);
   background-clip: padding-box;
   box-sizing: border-box;
   font-family: 'ExtremeHazard', sans-serif;
@@ -124,7 +150,7 @@ a.sui-screen-btn::after {
 }
 
 .sui-screen-btn:hover.sui-accent-pri {
-  color: #C2EFDD;
+  color: var(--accent-accent-primary-active);
   border-image: url("/img/border-image-accent-pri-active.png") 2 / 2px;
 }
 
@@ -133,7 +159,7 @@ a.sui-screen-btn::after {
 }
 
 .sui-screen-btn:hover.sui-accent-sec {
-  color: #C2EFDD;
+  color: var(--accent-accent-secondary-active);
   border-image: url("/img/border-image-accent-sec-active.png") 2 / 2px;
 }
 
@@ -142,7 +168,7 @@ a.sui-screen-btn::after {
 }
 
 .sui-screen-btn:hover.sui-accent-des {
-  color: #F4A990;
+  color: var(--accent-accent-destructive-active);
   border-image: url("/img/border-image-accent-des-active.png") 2 / 2px;
 }
 
@@ -241,7 +267,7 @@ a.sui-screen-btn::after {
 
 .sui-checkbox:disabled ~ label,
 .sui-radio:disabled ~ label {
-  color: #7394A5;
+  color: var(--accent-accent-disabled);
 }
 
 /* ---- Checkbox, Radio End ---- */
@@ -251,14 +277,14 @@ a.sui-screen-btn::after {
 
 select {
   background-clip: padding-box;
-  background: #212833 url("/img/caret-down-accent-secondary.png") no-repeat 10px center;
+  background: var(--surface-surface-default) url("/img/caret-down-accent-secondary.png") no-repeat 10px center;
   background-clip: padding-box;
   border-style: solid;
   border-width: 2px;
   border-color: transparent;
   border-image: url("/img/border-image-accent-sec.png") 2 / 2px;
   border-radius: 0;
-  color: #C5D7D9;
+  color: var(--text-text-body);
   font-size: 16px;
   height: 36px;
   padding: 0 10px 0 30px;
@@ -266,10 +292,10 @@ select {
 }
 
 select:disabled {
-  background: #212833 url("/img/caret-down-accent-disabled.png") no-repeat 10px center;
+  background: var(--surface-surface-default) url("/img/caret-down-accent-disabled.png") no-repeat 10px center;
   background-clip: padding-box;
   border-image: url("/img/border-image-accent-disabled.png") 2 / 2px;
-  color: #7394A5;
+  color: var(--accent-accent-disabled);
 }
 /* ---- Select End ---- */
 
@@ -281,7 +307,7 @@ select:disabled {
 }
 
 .sui-block-label:focus-within {
-  color: #C2EFDD;
+  color: var(--accent-accent-primary-active);
 }
 
 .sui-block-label-text {
@@ -300,9 +326,9 @@ select:disabled {
 .sui-input-text {
   background: transparent;
   border: 0 none;
-  border-bottom: 2px solid #94A4E4;
+  border-bottom: 2px solid var(--accent-accent-secondary);
   box-sizing: border-box;
-  color: #C5D7D9;
+  color: var(--text-text-body);
   display: inline-block;
   flex: auto;
   font-family: 'DirectiveZero', sans-serif;
@@ -311,17 +337,17 @@ select:disabled {
   width: 100%;
 }
 .sui-input-text:disabled {
-  border-bottom: 2px solid #7394A5;
+  border-bottom: 2px solid var(--accent-accent-disabled);
 }
 .sui-input-text:focus {
   border-image: url("/img/border-image-input-text-active.png") 0 0 2 24 / 0 0 2px 24px;
   padding-left: 24px;
 }
 .sui-input-text::placeholder {
-  color: #A7C0C6;
+  color: var(--text-text-hint);
 }
 .sui-input-text:disabled::placeholder {
-  color: #7394A5;
+  color: var(--accent-accent-disabled);
 }
 
 .sui-input-warning-container {
