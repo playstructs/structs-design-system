@@ -12,6 +12,9 @@
 /* ---- Variables Start ---- */
 
 :root {
+
+  /* -- Colors Start -- */
+
   --accent-accent-primary: #43CDB6;
   --accent-accent-primary-active: #C2EFDD;
   --accent-accent-secondary: #94A4E4;
@@ -24,6 +27,25 @@
   --text-text-body: #C5D7D9;
   --text-text-hint: #A7C0C6;
   --text-text-warning: #F3C878;
+
+  /* -- Colors End -- */
+
+  /* -- Dimensions Start -- */
+
+  --form-input-height-total: 40px;
+
+  /* -- Dimensions End -- */
+
+  /* -- Spacing Start -- */
+
+  --spacing-spacing-xs: 2px;
+  --spacing-spacing-s: 4px;
+  --spacing-spacing-md: 8px;
+  --spacing-spacing-lg: 12px;
+  --spacing-spacing-xl: 16px;
+  --spacing-spacing-xxxl: 32px;
+
+  /* -- Spacing End -- */
 }
 
 /* ---- Variables End ----*/
@@ -130,9 +152,9 @@ a.sui-screen-btn:visited {
   box-sizing: border-box;
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
-  height: 40px;
+  height: var(--form-input-height-total);
   line-height: 16px;
-  padding: 0 12px;
+  padding: 0 var(--spacing-spacing-lg);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -178,7 +200,7 @@ a.sui-screen-btn::after {
 
 .sui-screen-btn-flex-wrapper {
   display: flex;
-  column-gap: 8px;
+  column-gap: var(--spacing-spacing-md);
   justify-items: center;
 }
 
@@ -194,7 +216,7 @@ a.sui-screen-btn::after {
 .sui-radio-container {
   position: relative;
   display: inline-block;
-  height: 40px;
+  height: var(--form-input-height-total);
   vertical-align: middle;
 }
 
@@ -203,8 +225,8 @@ a.sui-screen-btn::after {
   position: absolute;
   top: 0;
   left: 0;
-  height: 40px;
-  width: 40px;
+  height: var(--form-input-height-total);
+  width: var(--form-input-height-total);
   z-index: 1;
   opacity: 0;
 }
@@ -215,8 +237,8 @@ a.sui-screen-btn::after {
   top: 0;
   left: 0;
   display: inline-block;
-  height: 40px;
-  width: 40px;
+  height: var(--form-input-height-total);
+  width: var(--form-input-height-total);
   z-index: 0;
 }
 
@@ -333,7 +355,7 @@ select:disabled {
   flex: auto;
   font-family: 'DirectiveZero', sans-serif;
   font-size: 16px;
-  height: 40px;
+  height: var(--form-input-height-total);
   width: 100%;
 }
 .sui-input-text:disabled {
@@ -352,7 +374,7 @@ select:disabled {
 
 .sui-input-warning-container {
   display: none;
-  margin-top: 8px;
+  margin-top: var(--spacing-spacing-md);
 }
 
 .sui-input-warning-container.show {
