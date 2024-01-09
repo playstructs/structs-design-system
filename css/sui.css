@@ -54,6 +54,12 @@ h2 {
   line-height: 12px;
 }
 
+.sui-text-ticker {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  line-height: 16px;
+}
+
 .sui-text-warning {
   color: #F3C878;
 }
