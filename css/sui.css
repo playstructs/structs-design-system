@@ -33,6 +33,7 @@
   /* -- Dimensions Start -- */
 
   --form-input-height-total: 40px;
+  --from-input-height-content: 36px;
 
   /* -- Dimensions End -- */
 
@@ -138,10 +139,6 @@ h2 {
 
 /* ---- Screen Button Start ---- */
 
-.sui-screen-btn {
-  border: 2px solid transparent;
-}
-
 button.sui-screen-btn,
 a.sui-screen-btn,
 a.sui-screen-btn:link,
@@ -149,11 +146,13 @@ a.sui-screen-btn:visited {
   display: inline-block;
   background: var(--surface-surface-default);
   background-clip: padding-box;
-  box-sizing: border-box;
+  border: 0 none;
+  border-radius: 0;
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
-  height: var(--form-input-height-total);
+  height: var(--from-input-height-content);
   line-height: 16px;
+  margin: 2px;
   padding: 0 var(--spacing-spacing-lg);
   text-decoration: none;
   text-transform: uppercase;
@@ -168,34 +167,34 @@ a.sui-screen-btn::after {
 }
 
 .sui-screen-btn.sui-accent-pri {
-  border-image: url("/img/border-image-accent-pri.png") 2 / 2px;
+  box-shadow: 0 2px 0 0 var(--accent-accent-primary), 0 -2px 0 0 var(--accent-accent-primary), 2px 0 0 0 var(--accent-accent-primary), -2px 0 0 0 var(--accent-accent-primary);
 }
 
 .sui-screen-btn:hover.sui-accent-pri {
   color: var(--accent-accent-primary-active);
-  border-image: url("/img/border-image-accent-pri-active.png") 2 / 2px;
+  box-shadow: 0 2px 0 0 var(--accent-accent-primary-active), 0 -2px 0 0 var(--accent-accent-primary-active), 2px 0 0 0 var(--accent-accent-primary-active), -2px 0 0 0 var(--accent-accent-primary-active);
 }
 
 .sui-screen-btn.sui-accent-sec {
-  border-image: url("/img/border-image-accent-sec.png") 2 / 2px;
+  box-shadow: 0 2px 0 0 var(--accent-accent-secondary), 0 -2px 0 0 var(--accent-accent-secondary), 2px 0 0 0 var(--accent-accent-secondary), -2px 0 0 0 var(--accent-accent-secondary);
 }
 
 .sui-screen-btn:hover.sui-accent-sec {
   color: var(--accent-accent-secondary-active);
-  border-image: url("/img/border-image-accent-sec-active.png") 2 / 2px;
+  box-shadow: 0 2px 0 0 var(--accent-accent-secondary-active), 0 -2px 0 0 var(--accent-accent-secondary-active), 2px 0 0 0 var(--accent-accent-secondary-active), -2px 0 0 0 var(--accent-accent-secondary-active);
 }
 
 .sui-screen-btn.sui-accent-des {
-  border-image: url("/img/border-image-accent-des.png") 2 / 2px;
+  box-shadow: 0 2px 0 0 var(--accent-accent-destructive), 0 -2px 0 0 var(--accent-accent-destructive), 2px 0 0 0 var(--accent-accent-destructive), -2px 0 0 0 var(--accent-accent-destructive);
 }
 
 .sui-screen-btn:hover.sui-accent-des {
   color: var(--accent-accent-destructive-active);
-  border-image: url("/img/border-image-accent-des-active.png") 2 / 2px;
+  box-shadow: 0 2px 0 0 var(--accent-accent-destructive-active), 0 -2px 0 0 var(--accent-accent-destructive-active), 2px 0 0 0 var(--accent-accent-destructive-active), -2px 0 0 0 var(--accent-accent-destructive-active);
 }
 
 .sui-screen-btn.sui-accent-disabled {
-  border-image: url("/img/border-image-accent-disabled.png") 2 / 2px;
+  box-shadow: 0 2px 0 0 var(--accent-accent-disabled), 0 -2px 0 0 var(--accent-accent-disabled), 2px 0 0 0 var(--accent-accent-disabled), -2px 0 0 0 var(--accent-accent-disabled);
 }
 
 .sui-screen-btn-flex-wrapper {
@@ -299,24 +298,23 @@ a.sui-screen-btn::after {
 
 select {
   background-clip: padding-box;
-  background: var(--surface-surface-default) url("/img/caret-down-accent-secondary.png") no-repeat 10px center;
+  background: var(--surface-surface-default) url("/img/caret-down-accent-secondary.png") no-repeat 12px center;
   background-clip: padding-box;
-  border-style: solid;
-  border-width: 2px;
-  border-color: transparent;
-  border-image: url("/img/border-image-accent-sec.png") 2 / 2px;
   border-radius: 0;
+  border: 0 none;
+  box-shadow: 0 2px 0 0 var(--accent-accent-secondary), 0 -2px 0 0 var(--accent-accent-secondary), 2px 0 0 0 var(--accent-accent-secondary), -2px 0 0 0 var(--accent-accent-secondary);
   color: var(--text-text-body);
   font-size: 16px;
-  height: 36px;
-  padding: 0 10px 0 30px;
+  height: var(--from-input-height-content);
+  margin: 2px;
+  padding: 0 var(--spacing-spacing-lg) 0 32px;
   -webkit-appearance: none;
 }
 
 select:disabled {
   background: var(--surface-surface-default) url("/img/caret-down-accent-disabled.png") no-repeat 10px center;
   background-clip: padding-box;
-  border-image: url("/img/border-image-accent-disabled.png") 2 / 2px;
+  box-shadow: 0 2px 0 0 var(--accent-accent-disabled), 0 -2px 0 0 var(--accent-accent-disabled), 2px 0 0 0 var(--accent-accent-disabled), -2px 0 0 0 var(--accent-accent-disabled);
   color: var(--accent-accent-disabled);
 }
 /* ---- Select End ---- */
