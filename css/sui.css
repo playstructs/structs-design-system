@@ -24,6 +24,7 @@
   --accent-accent-disabled: #7394A5;
   --surface-player-surface-player-body: #133546;
   --surface-surface-default: #222034;
+  --surface-surface-panel: #5D7E90;
   --text-text-body: #C5D7D9;
   --text-text-hint: #A7C0C6;
   --text-text-warning: #F3C878;
@@ -209,6 +210,43 @@ a.sui-screen-btn::after {
 
 /* ---- Screen Button End ---- */
 
+/* ---- Panel Start ---- */
+
+.panel-wrapper-fit-content {
+  display: inline-block;
+}
+.panel {
+  border-style: solid;
+  border-width: 0 4px 0 4px;
+  border-color: transparent;
+  border-image: url("/img/panel/panel-edge-left-right-default.png") 0 6 0 6 / 0 4px 0 4px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: stretch;
+}
+
+.panel-chunk {
+  background: var(--surface-surface-panel);
+  background-clip: padding-box;
+  border-style: solid;
+  border-width: 6px 0 8px 0;
+  border-color: transparent;
+  border-image: url("/img/panel/panel-edge-top-bottom-default.png") 6 0 8 0 / 6px 0 8px 0;
+  box-sizing: border-box;
+}
+
+.panel-connector {
+  background-clip: padding-box;
+  border-style: solid;
+  border-width: 4px 2px 8px 4px;
+  border-color: transparent;
+  border-image: url("/img/panel/panel-connector-default.png") 6 0 8 0 fill / 6px 0 8px 0;
+  box-sizing: border-box;
+  width: 2px;
+}
+
+/* ---- Panel End ---- */
+
 /* ---- Checkbox, Radio Start ---- */
 
 .sui-checkbox-container,
@@ -251,31 +289,31 @@ a.sui-screen-btn::after {
 }
 
 .sui-checkbox-container .sui-checkbox-display {
-  background-image: url("/img/checkbox_false.png");
+  background-image: url("/img/form/checkbox_false.png");
 }
 .sui-radio-container .sui-radio-display {
-  background-image: url("/img/radio_false.png");
+  background-image: url("/img/form/radio_false.png");
 }
 
 .sui-checkbox:checked ~ .sui-checkbox-display {
-  background-image: url("/img/checkbox_true.png");
+  background-image: url("/img/form/checkbox_true.png");
 }
 .sui-radio:checked ~ .sui-radio-display {
-  background-image: url("/img/radio_true.png");
+  background-image: url("/img/form/radio_true.png");
 }
 
 .sui-checkbox:disabled ~ .sui-checkbox-display{
-  background-image: url("/img/checkbox_disabled_false.png");
+  background-image: url("/img/form/checkbox_disabled_false.png");
 }
 .sui-radio:disabled ~ .sui-radio-display{
-  background-image: url("/img/radio_disabled_false.png");
+  background-image: url("/img/form/radio_disabled_false.png");
 }
 
 .sui-checkbox:disabled:checked ~ .sui-checkbox-display{
-  background-image: url("/img/checkbox_disabled_true.png");
+  background-image: url("/img/form/checkbox_disabled_true.png");
 }
 .sui-radio:disabled:checked ~ .sui-radio-display{
-  background-image: url("/img/radio_disabled_true.png");
+  background-image: url("/img/form/radio_disabled_true.png");
 }
 
 .sui-checkbox-container label,
@@ -297,8 +335,7 @@ a.sui-screen-btn::after {
 /* ---- Select Start ---- */
 
 select {
-  background-clip: padding-box;
-  background: var(--surface-surface-default) url("/img/caret-down-accent-secondary.png") no-repeat 12px center;
+  background: var(--surface-surface-default) url("/img/form/caret-down-accent-secondary.png") no-repeat 12px center;
   background-clip: padding-box;
   border-radius: 0;
   border: 0 none;
@@ -312,7 +349,7 @@ select {
 }
 
 select:disabled {
-  background: var(--surface-surface-default) url("/img/caret-down-accent-disabled.png") no-repeat 10px center;
+  background: var(--surface-surface-default) url("/img/form/caret-down-accent-disabled.png") no-repeat 10px center;
   background-clip: padding-box;
   box-shadow: 0 2px 0 0 var(--accent-accent-disabled), 0 -2px 0 0 var(--accent-accent-disabled), 2px 0 0 0 var(--accent-accent-disabled), -2px 0 0 0 var(--accent-accent-disabled);
   color: var(--accent-accent-disabled);
@@ -360,7 +397,7 @@ select:disabled {
   border-bottom: 2px solid var(--accent-accent-disabled);
 }
 .sui-input-text:focus {
-  border-image: url("/img/border-image-input-text-active.png") 0 0 2 24 / 0 0 2px 24px;
+  border-image: url("/img/form/border-image-input-text-active.png") 0 0 2 24 / 0 0 2px 24px;
   padding-left: 24px;
 }
 .sui-input-text::placeholder {
