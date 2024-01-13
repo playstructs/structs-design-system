@@ -256,7 +256,14 @@ a.sui-screen-btn::after {
 }
 
 .panel-connector.panel-style-medium {
-  border-image: url("/img/panel/panel-connector-default.png") 6 0 8 0 fill / 6px 0 8px 0;
+  border-image: url("/img/panel/panel-connector-medium.png") 6 0 8 0 fill / 6px 0 8px 0;
+}
+
+.panel.panel-style-medium-to-default {
+  border-image: url("/img/panel/panel-edge-left-right-medium-default.png") 0 6 0 6 / 0 4px 0 4px;
+}
+.panel-connector.panel-style-medium-to-default {
+  border-image: url("/img/panel/panel-connector-medium-default.png") 6 0 8 0 fill / 6px 0 8px 0;
 }
 
 /* ---- Panel End ---- */
