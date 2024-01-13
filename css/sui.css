@@ -25,6 +25,7 @@
   --surface-player-surface-player-body: #133546;
   --surface-surface-default: #222034;
   --surface-surface-panel: #5D7E90;
+  --surface-surface-panel-medium: #4C6475;
   --text-text-body: #C5D7D9;
   --text-text-hint: #A7C0C6;
   --text-text-warning: #F3C878;
@@ -243,6 +244,19 @@ a.sui-screen-btn::after {
   border-image: url("/img/panel/panel-connector-default.png") 6 0 8 0 fill / 6px 0 8px 0;
   box-sizing: border-box;
   width: 2px;
+}
+
+.panel.panel-style-medium {
+  border-image: url("/img/panel/panel-edge-left-right-medium.png") 0 6 0 6 / 0 4px 0 4px;
+}
+
+.panel-chunk.panel-style-medium {
+  background: var(--surface-surface-panel-medium);
+  border-image: url("/img/panel/panel-edge-top-bottom-medium.png") 6 0 8 0 / 6px 0 8px 0;
+}
+
+.panel-connector.panel-style-medium {
+  border-image: url("/img/panel/panel-connector-default.png") 6 0 8 0 fill / 6px 0 8px 0;
 }
 
 /* ---- Panel End ---- */
