@@ -15,20 +15,30 @@
 
   /* -- Colors Start -- */
 
-  --accent-accent-primary: #43CDB6;
-  --accent-accent-primary-active: #C2EFDD;
-  --accent-accent-secondary: #94A4E4;
-  --accent-accent-secondary-active: #BBCAEF;
-  --accent-accent-destructive: #EE7D69;
-  --accent-accent-destructive-active: #F4A990;
-  --accent-accent-disabled: #7394A5;
-  --surface-player-surface-player-body: #133546;
-  --surface-surface-default: #222034;
-  --surface-surface-panel: #5D7E90;
-  --surface-surface-panel-medium: #4C6475;
-  --text-text-body: #C5D7D9;
-  --text-text-hint: #A7C0C6;
-  --text-text-warning: #F3C878;
+  --accent-primary: #43CDB6;
+  --accent-primary-active: #C2EFDD;
+  --accent-secondary: #94A4E4;
+  --accent-secondary-active: #BBCAEF;
+  --accent-destructive: #EE7D69;
+  --accent-destructive-active: #F4A990;
+  --accent-disabled: #7394A5;
+  --border-enemy: #440D3A;
+  --border-player: #133546;
+  --surface-enemy-highlight: #5D0C15;
+  --surface-enemy-inverted: #E64D40;
+  --surface-player-highlight: #1C5F6A;
+  --surface-player-inverted: #43CDB6;
+  --surface-player-body: #133546;
+  --surface-default: #222034;
+  --surface-panel: #5D7E90;
+  --surface-panel-medium: #4C6475;
+  --text-enemy-hightlight: #F4A990;
+  --text-enemy-inverted: #2E1F3E;
+  --text-player-highlight: #86DFC6;
+  --text-player-inverted: #133546;
+  --text-body: #C5D7D9;
+  --text-hint: #A7C0C6;
+  --text-warning: #F3C878;
 
   /* -- Colors End -- */
 
@@ -56,14 +66,14 @@
 /* ---- General Styling Start ---- */
 
 body {
-  background: var(--surface-player-surface-player-body);
+  background: var(--surface-player-body);
   text-align: center;
   font-family: 'DirectiveZero', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  color: var(--text-text-body);
+  color: var(--text-body);
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-crisp-edges;
   image-rendering: pixelated;
@@ -113,28 +123,28 @@ h2 {
 }
 
 .sui-accent-pri {
-  color: var(--accent-accent-primary);
+  color: var(--accent-primary);
 }
 .sui-accent-pri-active {
-  color: var(--accent-accent-primary-active);
+  color: var(--accent-primary-active);
 }
 .sui-accent-sec {
-  color: var(--accent-accent-secondary);
+  color: var(--accent-secondary);
 }
 .sui-accent-sec-active {
-  color: var(--accent-accent-secondary-active);
+  color: var(--accent-secondary-active);
 }
 .sui-accent-des {
-  color: var(--accent-accent-destructive);
+  color: var(--accent-destructive);
 }
 .sui-accent-des-active {
-  color: var(--accent-accent-destructive-active);
+  color: var(--accent-destructive-active);
 }
 .sui-accent-disabled {
-  color: var(--accent-accent-disabled);
+  color: var(--accent-disabled);
 }
 .sui-text-warning {
-  color: var(--text-text-warning);
+  color: var(--text-warning);
 }
 
 /* ---- Text End ---- */
@@ -146,7 +156,7 @@ a.sui-screen-btn,
 a.sui-screen-btn:link,
 a.sui-screen-btn:visited {
   display: inline-block;
-  background: var(--surface-surface-default);
+  background: var(--surface-default);
   background-clip: padding-box;
   border: 0 none;
   border-radius: 0;
@@ -169,34 +179,34 @@ a.sui-screen-btn::after {
 }
 
 .sui-screen-btn.sui-accent-pri {
-  box-shadow: 0 2px 0 0 var(--accent-accent-primary), 0 -2px 0 0 var(--accent-accent-primary), 2px 0 0 0 var(--accent-accent-primary), -2px 0 0 0 var(--accent-accent-primary);
+  box-shadow: 0 2px 0 0 var(--accent-primary), 0 -2px 0 0 var(--accent-primary), 2px 0 0 0 var(--accent-primary), -2px 0 0 0 var(--accent-primary);
 }
 
 .sui-screen-btn:hover.sui-accent-pri {
-  color: var(--accent-accent-primary-active);
-  box-shadow: 0 2px 0 0 var(--accent-accent-primary-active), 0 -2px 0 0 var(--accent-accent-primary-active), 2px 0 0 0 var(--accent-accent-primary-active), -2px 0 0 0 var(--accent-accent-primary-active);
+  color: var(--accent-primary-active);
+  box-shadow: 0 2px 0 0 var(--accent-primary-active), 0 -2px 0 0 var(--accent-primary-active), 2px 0 0 0 var(--accent-primary-active), -2px 0 0 0 var(--accent-primary-active);
 }
 
 .sui-screen-btn.sui-accent-sec {
-  box-shadow: 0 2px 0 0 var(--accent-accent-secondary), 0 -2px 0 0 var(--accent-accent-secondary), 2px 0 0 0 var(--accent-accent-secondary), -2px 0 0 0 var(--accent-accent-secondary);
+  box-shadow: 0 2px 0 0 var(--accent-secondary), 0 -2px 0 0 var(--accent-secondary), 2px 0 0 0 var(--accent-secondary), -2px 0 0 0 var(--accent-secondary);
 }
 
 .sui-screen-btn:hover.sui-accent-sec {
-  color: var(--accent-accent-secondary-active);
-  box-shadow: 0 2px 0 0 var(--accent-accent-secondary-active), 0 -2px 0 0 var(--accent-accent-secondary-active), 2px 0 0 0 var(--accent-accent-secondary-active), -2px 0 0 0 var(--accent-accent-secondary-active);
+  color: var(--accent-secondary-active);
+  box-shadow: 0 2px 0 0 var(--accent-secondary-active), 0 -2px 0 0 var(--accent-secondary-active), 2px 0 0 0 var(--accent-secondary-active), -2px 0 0 0 var(--accent-secondary-active);
 }
 
 .sui-screen-btn.sui-accent-des {
-  box-shadow: 0 2px 0 0 var(--accent-accent-destructive), 0 -2px 0 0 var(--accent-accent-destructive), 2px 0 0 0 var(--accent-accent-destructive), -2px 0 0 0 var(--accent-accent-destructive);
+  box-shadow: 0 2px 0 0 var(--accent-destructive), 0 -2px 0 0 var(--accent-destructive), 2px 0 0 0 var(--accent-destructive), -2px 0 0 0 var(--accent-destructive);
 }
 
 .sui-screen-btn:hover.sui-accent-des {
-  color: var(--accent-accent-destructive-active);
-  box-shadow: 0 2px 0 0 var(--accent-accent-destructive-active), 0 -2px 0 0 var(--accent-accent-destructive-active), 2px 0 0 0 var(--accent-accent-destructive-active), -2px 0 0 0 var(--accent-accent-destructive-active);
+  color: var(--accent-destructive-active);
+  box-shadow: 0 2px 0 0 var(--accent-destructive-active), 0 -2px 0 0 var(--accent-destructive-active), 2px 0 0 0 var(--accent-destructive-active), -2px 0 0 0 var(--accent-destructive-active);
 }
 
 .sui-screen-btn.sui-accent-disabled {
-  box-shadow: 0 2px 0 0 var(--accent-accent-disabled), 0 -2px 0 0 var(--accent-accent-disabled), 2px 0 0 0 var(--accent-accent-disabled), -2px 0 0 0 var(--accent-accent-disabled);
+  box-shadow: 0 2px 0 0 var(--accent-disabled), 0 -2px 0 0 var(--accent-disabled), 2px 0 0 0 var(--accent-disabled), -2px 0 0 0 var(--accent-disabled);
 }
 
 .sui-screen-btn-flex-wrapper {
@@ -213,15 +223,15 @@ a.sui-screen-btn::after {
 
 /* ---- Panel Start ---- */
 
-.panel-wrapper-fit-content {
+.sui-panel-wrapper-fit-content {
   display: inline-block;
 }
-.panel {
+.sui-panel {
   display: flex;
   align-items: stretch;
 }
 
-.panel-edge-left {
+.sui-panel-edge-left {
   background-clip: padding-box;
   border-style: solid;
   border-width: 0 0 0 6px;
@@ -231,7 +241,7 @@ a.sui-screen-btn::after {
   width: 0;
 }
 
-.panel-edge-right {
+.sui-panel-edge-right {
   background-clip: padding-box;
   border-style: solid;
   border-width: 0 6px 0 0;
@@ -241,8 +251,8 @@ a.sui-screen-btn::after {
   width: 0;
 }
 
-.panel-chunk {
-  background: var(--surface-surface-panel);
+.sui-panel-chunk {
+  background: var(--surface-panel);
   background-clip: padding-box;
   border-style: solid;
   border-width: 6px 0 8px 0;
@@ -251,7 +261,7 @@ a.sui-screen-btn::after {
   box-sizing: border-box;
 }
 
-.panel-connector {
+.sui-panel-connector {
   background-clip: padding-box;
   border-style: solid;
   border-width: 4px 2px 8px 4px;
@@ -261,32 +271,78 @@ a.sui-screen-btn::after {
   width: 2px;
 }
 
-.panel-edge-left.panel-style-medium {
+.sui-panel-edge-left.sui-panel-style-medium {
   border-image: url("/img/panel/panel-edge-left-medium.png") 0 0 0 6 / 0 0 0 6px;
 }
 
-.panel-edge-right.panel-style-medium {
+.sui-panel-edge-right.sui-panel-style-medium {
   border-image: url("/img/panel/panel-edge-right-medium.png") 0 6 0 0 / 0 6px 0 0;
 }
 
-.panel-chunk.panel-style-medium {
-  background: var(--surface-surface-panel-medium);
+.sui-panel-chunk.sui-panel-style-medium {
+  background: var(--surface-panel-medium);
   border-image: url("/img/panel/panel-edge-top-bottom-medium.png") 6 0 8 0 / 6px 0 8px 0;
 }
 
-.panel-connector.panel-style-medium {
+.sui-panel-connector.sui-panel-style-medium {
   border-image: url("/img/panel/panel-connector-medium.png") 6 0 8 0 fill / 6px 0 8px 0;
 }
 
-.panel-connector.panel-style-medium-to-default {
+.sui-panel-connector.sui-panel-style-medium-to-default {
   border-image: url("/img/panel/panel-connector-medium-default.png") 6 0 8 0 fill / 6px 0 8px 0;
 }
 
-.panel-connector.panel-style-default-to-medium {
+.sui-panel-connector.sui-panel-style-default-to-medium {
   border-image: url("/img/panel/panel-connector-default-medium.png") 6 0 8 0 fill / 6px 0 8px 0;
 }
 
 /* ---- Panel End ---- */
+
+/* ---- Screens Start ---- */
+
+.sui-screen {
+  background-clip: padding-box;
+  border-style: solid;
+  border-width: 4px;
+  border-color: transparent;
+  border-image: url("/img/screen/screen-frame-default.png") 4 / 4px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+
+.sui-screen-info {
+  border-radius: 0;
+  border: 2px solid var(--border-player);
+  background-color: var(--surface-player-highlight);
+  color: var(--text-player-highlight);
+  font-family: 'ExtremeHazard', sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+  padding: var(--spacing-spacing-xs) var(--spacing-spacing-s);
+}
+
+.sui-screen-info.sui-screen-style-player-inverted {
+  border: 2px solid var(--border-player);
+  background-color: var(--surface-player-inverted);
+  color: var(--text-player-inverted);
+}
+
+.sui-screen-info.sui-screen-style-enemy {
+  border: 2px solid var(--border-enemy);
+  background-color: var(--surface-enemy-highlight);
+  color: var(--text-enemy-hightlight);
+}
+
+.sui-screen-info.sui-screen-style-enemy-inverted {
+  border: 2px solid var(--border-enemy);
+  background-color: var(--surface-enemy-inverted);
+  color: var(--text-enemy-inverted);
+}
+
+/* ---- Screens End ---- */
 
 /* ---- Checkbox, Radio Start ---- */
 
@@ -367,7 +423,7 @@ a.sui-screen-btn::after {
 
 .sui-checkbox:disabled ~ label,
 .sui-radio:disabled ~ label {
-  color: var(--accent-accent-disabled);
+  color: var(--accent-disabled);
 }
 
 /* ---- Checkbox, Radio End ---- */
@@ -376,12 +432,12 @@ a.sui-screen-btn::after {
 /* ---- Select Start ---- */
 
 select {
-  background: var(--surface-surface-default) url("/img/form/caret-down-accent-secondary.png") no-repeat 12px center;
+  background: var(--surface-default) url("/img/form/caret-down-accent-secondary.png") no-repeat 12px center;
   background-clip: padding-box;
   border-radius: 0;
   border: 0 none;
-  box-shadow: 0 2px 0 0 var(--accent-accent-secondary), 0 -2px 0 0 var(--accent-accent-secondary), 2px 0 0 0 var(--accent-accent-secondary), -2px 0 0 0 var(--accent-accent-secondary);
-  color: var(--text-text-body);
+  box-shadow: 0 2px 0 0 var(--accent-secondary), 0 -2px 0 0 var(--accent-secondary), 2px 0 0 0 var(--accent-secondary), -2px 0 0 0 var(--accent-secondary);
+  color: var(--text-body);
   font-size: 16px;
   height: var(--from-input-height-content);
   margin: 2px;
@@ -390,10 +446,10 @@ select {
 }
 
 select:disabled {
-  background: var(--surface-surface-default) url("/img/form/caret-down-accent-disabled.png") no-repeat 10px center;
+  background: var(--surface-default) url("/img/form/caret-down-accent-disabled.png") no-repeat 10px center;
   background-clip: padding-box;
-  box-shadow: 0 2px 0 0 var(--accent-accent-disabled), 0 -2px 0 0 var(--accent-accent-disabled), 2px 0 0 0 var(--accent-accent-disabled), -2px 0 0 0 var(--accent-accent-disabled);
-  color: var(--accent-accent-disabled);
+  box-shadow: 0 2px 0 0 var(--accent-disabled), 0 -2px 0 0 var(--accent-disabled), 2px 0 0 0 var(--accent-disabled), -2px 0 0 0 var(--accent-disabled);
+  color: var(--accent-disabled);
 }
 /* ---- Select End ---- */
 
@@ -405,7 +461,7 @@ select:disabled {
 }
 
 .sui-block-label:focus-within {
-  color: var(--accent-accent-primary-active);
+  color: var(--accent-primary-active);
 }
 
 .sui-block-label-text {
@@ -424,9 +480,9 @@ select:disabled {
 .sui-input-text {
   background: transparent;
   border: 0 none;
-  border-bottom: 2px solid var(--accent-accent-secondary);
+  border-bottom: 2px solid var(--accent-secondary);
   box-sizing: border-box;
-  color: var(--text-text-body);
+  color: var(--text-body);
   display: inline-block;
   flex: auto;
   font-family: 'DirectiveZero', sans-serif;
@@ -435,17 +491,17 @@ select:disabled {
   width: 100%;
 }
 .sui-input-text:disabled {
-  border-bottom: 2px solid var(--accent-accent-disabled);
+  border-bottom: 2px solid var(--accent-disabled);
 }
 .sui-input-text:focus {
   border-image: url("/img/form/border-image-input-text-active.png") 0 0 2 24 / 0 0 2px 24px;
   padding-left: 24px;
 }
 .sui-input-text::placeholder {
-  color: var(--text-text-hint);
+  color: var(--text-hint);
 }
 .sui-input-text:disabled::placeholder {
-  color: var(--accent-accent-disabled);
+  color: var(--accent-disabled);
 }
 
 .sui-input-warning-container {
