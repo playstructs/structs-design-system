@@ -23,17 +23,25 @@
   --accent-destructive-active: #F4A990;
   --accent-disabled: #7394A5;
   --border-enemy: #440D3A;
+  --border-enemy-dark: #222034;
+  --border-neutral-dark: #000000;
   --border-player: #133546;
+  --border-player-dark: #2E1F3E;
+  --surface-enemy-body: #2E1F3E;
   --surface-enemy-highlight: #5D0C15;
   --surface-enemy-inverted: #E64D40;
+  --surface-neutral-body: #1E1C2E;
   --surface-player-highlight: #1C5F6A;
   --surface-player-inverted: #43CDB6;
   --surface-player-body: #133546;
   --surface-default: #222034;
   --surface-panel: #5D7E90;
   --surface-panel-medium: #4C6475;
+  --text-enemy-primary: #EE7D69;
   --text-enemy-hightlight: #F4A990;
   --text-enemy-inverted: #2E1F3E;
+  --text-neutral-primary: #EBAA49;
+  --text-player-primary: #43CDB6;
   --text-player-highlight: #86DFC6;
   --text-player-inverted: #133546;
   --text-body: #C5D7D9;
@@ -51,12 +59,12 @@
 
   /* -- Spacing Start -- */
 
-  --spacing-spacing-xs: 2px;
-  --spacing-spacing-s: 4px;
-  --spacing-spacing-md: 8px;
-  --spacing-spacing-lg: 12px;
-  --spacing-spacing-xl: 16px;
-  --spacing-spacing-xxxl: 32px;
+  --spacing-xs: 2px;
+  --spacing-s: 4px;
+  --spacing-md: 8px;
+  --spacing-lg: 12px;
+  --spacing-xl: 16px;
+  --spacing-xxxl: 32px;
 
   /* -- Spacing End -- */
 }
@@ -165,7 +173,7 @@ a.sui-screen-btn:visited {
   height: var(--from-input-height-content);
   line-height: 16px;
   margin: 2px;
-  padding: 0 var(--spacing-spacing-lg);
+  padding: 0 var(--spacing-lg);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -211,7 +219,7 @@ a.sui-screen-btn::after {
 
 .sui-screen-btn-flex-wrapper {
   display: flex;
-  column-gap: var(--spacing-spacing-md);
+  column-gap: var(--spacing-md);
   justify-items: center;
 }
 
@@ -325,7 +333,7 @@ a.sui-screen-btn::after {
   font-weight: 500;
   line-height: 16px;
   text-transform: uppercase;
-  padding: var(--spacing-spacing-xs) var(--spacing-spacing-s);
+  padding: var(--spacing-xs) var(--spacing-s);
 }
 
 .sui-screen-info.sui-screen-style-player-inverted {
@@ -344,6 +352,40 @@ a.sui-screen-btn::after {
   border: 2px solid var(--border-enemy);
   background-color: var(--surface-enemy-inverted);
   color: var(--text-enemy-inverted);
+}
+
+.sui-screen-dialogue {
+  border-radius: 0;
+  border: 2px solid var(--border-neutral-dark);
+  background-color: var(--surface-neutral-body);
+  padding: var(--spacing-md);
+  text-align: left;
+}
+
+.sui-screen-dialogue strong {
+  color: var(--text-neutral-primary);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+.sui-screen-dialogue.sui-screen-style-player {
+  border: 2px solid var(--border-player-dark);
+  background-color: var(--surface-player-body);
+}
+
+.sui-screen-dialogue.sui-screen-style-player strong {
+  color: var(--text-player-primary);
+}
+
+.sui-screen-dialogue.sui-screen-style-enemy {
+  border: 2px solid var(--border-enemy-dark);
+  background-color: var(--surface-enemy-body);
+}
+
+.sui-screen-dialogue.sui-screen-style-enemy strong {
+  color: var(--text-enemy-primary);
 }
 
 /* ---- Screens End ---- */
@@ -445,7 +487,7 @@ select {
   font-size: 16px;
   height: var(--from-input-height-content);
   margin: 2px;
-  padding: 0 var(--spacing-spacing-lg) 0 32px;
+  padding: 0 var(--spacing-lg) 0 32px;
   -webkit-appearance: none;
 }
 
@@ -510,7 +552,7 @@ select:disabled {
 
 .sui-input-warning-container {
   display: none;
-  margin-top: var(--spacing-spacing-md);
+  margin-top: var(--spacing-md);
 }
 
 .sui-input-warning-container.show {
