@@ -38,7 +38,7 @@
   --surface-panel: #5D7E90;
   --surface-panel-medium: #4C6475;
   --text-enemy-primary: #EE7D69;
-  --text-enemy-hightlight: #F4A990;
+  --text-enemy-highlight: #F4A990;
   --text-enemy-inverted: #2E1F3E;
   --text-neutral-primary: #EBAA49;
   --text-player-primary: #43CDB6;
@@ -244,7 +244,6 @@ a.sui-screen-btn::after {
   border-style: solid;
   border-width: 0 0 0 6px;
   border-color: transparent;
-  border-image: url("/img/panel/panel-edge-left-default.png") 6 0 12 6 / 6px 0 12px 6px;
   box-sizing: border-box;
   width: 0;
 }
@@ -254,18 +253,15 @@ a.sui-screen-btn::after {
   border-style: solid;
   border-width: 0 6px 0 0;
   border-color: transparent;
-  border-image: url("/img/panel/panel-edge-right-default.png") 6 6 12 0 / 6px 6px 12px 0;
   box-sizing: border-box;
   width: 0;
 }
 
 .sui-panel-chunk {
-  background: var(--surface-panel);
   background-clip: padding-box;
   border-style: solid;
   border-width: 4px 0 8px 0;
   border-color: transparent;
-  border-image: url("/img/panel/panel-edge-top-bottom-default.png") 4 0 8 0 / 4px 0 8px 0;
   box-sizing: border-box;
 }
 
@@ -274,24 +270,48 @@ a.sui-screen-btn::after {
   border-style: solid;
   border-width: 4px 2px 8px 4px;
   border-color: transparent;
-  border-image: url("/img/panel/panel-connector-default.png") 6 0 8 0 fill / 6px 0 8px 0;
   box-sizing: border-box;
   width: 2px;
 }
 
+.sui-panel.sui-panel-style-default .sui-panel-edge-left,
+.sui-panel-edge-left.sui-panel-style-default {
+  border-image: url("/img/panel/panel-edge-left-default.png") 6 0 12 6 / 6px 0 12px 6px;
+}
+
+.sui-panel.sui-panel-style-default .sui-panel-edge-right,
+.sui-panel-edge-right.sui-panel-style-default {
+  border-image: url("/img/panel/panel-edge-right-default.png") 6 6 12 0 / 6px 6px 12px 0;
+}
+
+.sui-panel.sui-panel-style-default .sui-panel-chunk,
+.sui-panel-chunk.sui-panel-style-default {
+  background: var(--surface-panel);
+  border-image: url("/img/panel/panel-edge-top-bottom-default.png") 6 0 8 0 / 6px 0 8px 0;
+}
+
+.sui-panel.sui-panel-style-default .sui-panel-connector,
+.sui-panel-connector.sui-panel-style-default {
+  border-image: url("/img/panel/panel-connector-default.png") 6 0 8 0 fill / 6px 0 8px 0;
+}
+
+.sui-panel.sui-panel-style-medium .sui-panel-edge-left,
 .sui-panel-edge-left.sui-panel-style-medium {
   border-image: url("/img/panel/panel-edge-left-medium.png") 6 0 12 6 / 6px 0 12px 6px;
 }
 
+.sui-panel.sui-panel-style-medium .sui-panel-edge-right,
 .sui-panel-edge-right.sui-panel-style-medium {
   border-image: url("/img/panel/panel-edge-right-medium.png") 6 6 12 0 / 6px 6px 12px 0;
 }
 
+.sui-panel.sui-panel-style-medium .sui-panel-chunk,
 .sui-panel-chunk.sui-panel-style-medium {
   background: var(--surface-panel-medium);
   border-image: url("/img/panel/panel-edge-top-bottom-medium.png") 6 0 8 0 / 6px 0 8px 0;
 }
 
+.sui-panel.sui-panel-style-medium .sui-panel-connector,
 .sui-panel-connector.sui-panel-style-medium {
   border-image: url("/img/panel/panel-connector-medium.png") 6 0 8 0 fill / 6px 0 8px 0;
 }
@@ -324,9 +344,6 @@ a.sui-screen-btn::after {
 
 .sui-screen-info {
   border-radius: 0;
-  border: 2px solid var(--border-player);
-  background-color: var(--surface-player-highlight);
-  color: var(--text-player-highlight);
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
   font-style: normal;
@@ -334,6 +351,12 @@ a.sui-screen-btn::after {
   line-height: 16px;
   text-transform: uppercase;
   padding: var(--spacing-xs) var(--spacing-s);
+}
+
+.sui-screen-info.sui-screen-style-player {
+  border: 2px solid var(--border-player);
+  background-color: var(--surface-player-highlight);
+  color: var(--text-player-highlight);
 }
 
 .sui-screen-info.sui-screen-style-player-inverted {
@@ -345,7 +368,7 @@ a.sui-screen-btn::after {
 .sui-screen-info.sui-screen-style-enemy {
   border: 2px solid var(--border-enemy);
   background-color: var(--surface-enemy-highlight);
-  color: var(--text-enemy-hightlight);
+  color: var(--text-enemy-highlight);
 }
 
 .sui-screen-info.sui-screen-style-enemy-inverted {
@@ -356,14 +379,11 @@ a.sui-screen-btn::after {
 
 .sui-screen-dialogue {
   border-radius: 0;
-  border: 2px solid var(--border-neutral-dark);
-  background-color: var(--surface-neutral-body);
   padding: var(--spacing-md);
   text-align: left;
 }
 
 .sui-screen-dialogue strong {
-  color: var(--text-neutral-primary);
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
@@ -386,6 +406,15 @@ a.sui-screen-btn::after {
 
 .sui-screen-dialogue.sui-screen-style-enemy strong {
   color: var(--text-enemy-primary);
+}
+
+.sui-screen-dialogue.sui-screen-style-neutral {
+  border: 2px solid var(--border-neutral-dark);
+  background-color: var(--surface-neutral-body);
+}
+
+.sui-screen-dialogue.sui-screen-style-neutral strong {
+  color: var(--text-neutral-primary);
 }
 
 /* ---- Screens End ---- */
