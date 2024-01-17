@@ -236,7 +236,7 @@ a.sui-screen-btn::after {
   border-style: solid;
   border-width: 0 0 0 6px;
   border-color: transparent;
-  border-image: url("/img/panel/panel-edge-left-default.png") 0 0 0 6 / 0 0 0 6px;
+  border-image: url("/img/panel/panel-edge-left-default.png") 6 0 12 6 / 6px 0 12px 6px;
   box-sizing: border-box;
   width: 0;
 }
@@ -246,7 +246,7 @@ a.sui-screen-btn::after {
   border-style: solid;
   border-width: 0 6px 0 0;
   border-color: transparent;
-  border-image: url("/img/panel/panel-edge-right-default.png") 0 6 0 0 / 0 6px 0 0;
+  border-image: url("/img/panel/panel-edge-right-default.png") 6 6 12 0 / 6px 6px 12px 0;
   box-sizing: border-box;
   width: 0;
 }
@@ -255,9 +255,9 @@ a.sui-screen-btn::after {
   background: var(--surface-panel);
   background-clip: padding-box;
   border-style: solid;
-  border-width: 6px 0 8px 0;
+  border-width: 4px 0 8px 0;
   border-color: transparent;
-  border-image: url("/img/panel/panel-edge-top-bottom-default.png") 6 0 8 0 / 6px 0 8px 0;
+  border-image: url("/img/panel/panel-edge-top-bottom-default.png") 4 0 8 0 / 4px 0 8px 0;
   box-sizing: border-box;
 }
 
@@ -272,11 +272,11 @@ a.sui-screen-btn::after {
 }
 
 .sui-panel-edge-left.sui-panel-style-medium {
-  border-image: url("/img/panel/panel-edge-left-medium.png") 0 0 0 6 / 0 0 0 6px;
+  border-image: url("/img/panel/panel-edge-left-medium.png") 6 0 12 6 / 6px 0 12px 6px;
 }
 
 .sui-panel-edge-right.sui-panel-style-medium {
-  border-image: url("/img/panel/panel-edge-right-medium.png") 0 6 0 0 / 0 6px 0 0;
+  border-image: url("/img/panel/panel-edge-right-medium.png") 6 6 12 0 / 6px 6px 12px 0;
 }
 
 .sui-panel-chunk.sui-panel-style-medium {
@@ -308,6 +308,10 @@ a.sui-screen-btn::after {
   border-image: url("/img/screen/screen-frame-default.png") 4 / 4px;
   box-sizing: border-box;
   display: inline-block;
+}
+
+.sui-screen.sui-panel-style-medium {
+  border-image: url("/img/screen/screen-frame-medium.png") 4 / 4px;
 }
 
 .sui-screen-info {
@@ -432,7 +436,7 @@ a.sui-screen-btn::after {
 /* ---- Select Start ---- */
 
 select {
-  background: var(--surface-default) url("/img/form/caret-down-accent-secondary.png") no-repeat 12px center;
+  background: var(--surface-default) url("/img/form/caret-down-accent-secondary.png") no-repeat 10px center;
   background-clip: padding-box;
   border-radius: 0;
   border: 0 none;
