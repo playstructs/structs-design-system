@@ -417,6 +417,59 @@ a.sui-screen-btn::after {
   color: var(--text-neutral-primary);
 }
 
+.sui-screen-portrait,
+a.sui-screen-portrait,
+a.sui-screen-portrait:link,
+a.sui-screen-portrait:visited {
+  border-radius: 0;
+  display: block;
+  height: 40px;
+  width: 40px;
+  position: relative;
+}
+
+a.sui-screen-portrait:hover::before {
+  content: "";
+  background-image: url("/img/icon/icon-menu.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+  outline: 2px solid rgba(0, 0, 0, 0.20);
+  outline-offset: -2px;
+  padding: var(--spacing-md);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.sui-screen-portrait.sui-screen-style-player,
+a.sui-screen-portrait.sui-screen-style-player:hover::before {
+  background-color: var(--surface-player-body);
+}
+
+.sui-screen-portrait.sui-screen-style-enemy,
+a.sui-screen-portrait.sui-screen-style-enemy:hover::before {
+  background-image: url("/img/icon/icon-info-enemy.svg");
+  background-color: var(--surface-enemy-body);
+}
+
+.sui-screen-portrait-image {
+  background-image: url("/img/mock/mock-droid-360.png");
+  background-position: -16px -4px;
+  height: 100%;
+  width: 100%;
+  outline: 2px solid rgba(0, 0, 0, 0.20);
+  outline-offset: -2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
 /* ---- Screens End ---- */
 
 /* ---- Checkbox, Radio Start ---- */
