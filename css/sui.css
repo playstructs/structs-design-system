@@ -263,6 +263,7 @@ a.sui-screen-btn::after {
   border-width: 4px 0 8px 0;
   border-color: transparent;
   box-sizing: border-box;
+  padding-bottom: var(--spacing-xs);
 }
 
 .sui-panel-connector {
@@ -333,11 +334,16 @@ a.sui-screen-btn::after {
   border-style: solid;
   border-width: 4px;
   border-color: transparent;
-  border-image: url("/img/screen/screen-frame-default.png") 4 / 4px;
   box-sizing: border-box;
   display: inline-block;
 }
 
+.sui-panel-style-default .sui-screen,
+.sui-screen.sui-panel-style-default {
+  border-image: url("/img/screen/screen-frame-default.png") 4 / 4px;
+}
+
+.sui-panel-style-medium .sui-screen,
 .sui-screen.sui-panel-style-medium {
   border-image: url("/img/screen/screen-frame-medium.png") 4 / 4px;
 }
@@ -470,7 +476,57 @@ a.sui-screen-portrait.sui-screen-style-enemy:hover::before {
   z-index: 0;
 }
 
+.sui-screen-battery {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: var(--spacing-xs);
+  width: 36px
+}
+
+.sui-screen-battery.sui-screen-style-player {
+  border-radius: 0;
+  border: 2px solid var(--border-player-dark);
+  background: var(--surface-player-body);
+}
+
+.sui-screen-battery.sui-screen-style-enemy {
+  border-radius: 0;
+  border: 2px solid var(--border-enemy-dark);
+  background: var(--surface-enemy-body);
+}
+
+.sui-screen-battery-chunk {
+  display: inline-block;
+  background-image: url("/img/battery/battery-chunk-empty.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 4px 16px;
+  height: 16px;
+  width: 4px;
+}
+
+.sui-screen-battery.sui-screen-style-player .sui-screen-battery-chunk.sui-screen-battery-chunk-filled {
+  background-image: url("/img/battery/battery-chunk-player.png");
+}
+
+.sui-screen-battery.sui-screen-style-enemy .sui-screen-battery-chunk.sui-screen-battery-chunk-filled {
+  background-image: url("/img/battery/battery-chunk-enemy.png");
+}
+
 /* ---- Screens End ---- */
+
+/* ---- Action Bar Start---- */
+
+.sui-action-bar-player-chunk {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: var(--spacing-xs)
+}
+
+/* ---- Action Bar End ---- */
 
 /* ---- Checkbox, Radio Start ---- */
 

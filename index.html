@@ -222,7 +222,7 @@
 
   <section>
     <div>
-      <div class="sui-screen">
+      <div class="sui-screen sui-panel-style-default">
         <div class="sui-screen-info sui-screen-style-player">Information</div>
       </div>
     </div>
@@ -230,7 +230,7 @@
     <br>
 
     <div>
-      <div class="sui-screen">
+      <div class="sui-screen sui-panel-style-default">
         <div class="sui-screen-info sui-screen-style-player-inverted">Information</div>
       </div>
     </div>
@@ -238,7 +238,7 @@
     <br>
 
     <div>
-      <div class="sui-screen">
+      <div class="sui-screen sui-panel-style-default">
         <div class="sui-screen-info sui-screen-style-enemy">Information</div>
       </div>
     </div>
@@ -246,7 +246,7 @@
     <br>
 
     <div>
-      <div class="sui-screen">
+      <div class="sui-screen sui-panel-style-default">
         <div class="sui-screen-info sui-screen-style-enemy-inverted">Information</div>
       </div>
     </div>
@@ -317,7 +317,7 @@
 
   <section>
     <div class="group fixed-width-group">
-      <div class="sui-screen">
+      <div class="sui-screen sui-panel-style-default">
         <div class="sui-screen-dialogue sui-screen-style-player">
           <strong>Struct Command:</strong>
           Please stop doing shit wrong. Do it right instead.
@@ -328,7 +328,7 @@
     <br>
 
     <div class="group fixed-width-group">
-      <div class="sui-screen">
+      <div class="sui-screen sui-panel-style-default">
         <div class="sui-screen-dialogue sui-screen-style-enemy">
           <strong>Struct Command:</strong>
           Please stop doing shit wrong. Do it right instead.
@@ -339,7 +339,7 @@
     <br>
 
     <div class="group fixed-width-group">
-      <div class="sui-screen">
+      <div class="sui-screen sui-panel-style-default">
         <div class="sui-screen-dialogue sui-screen-style-neutral">
           <strong>Struct Command:</strong>
           Please stop doing shit wrong. Do it right instead.
@@ -437,6 +437,100 @@
         <a href="javascript: void(0)" class="sui-screen-portrait sui-screen-style-enemy">
           <div class="sui-screen-portrait-image"></div>
         </a>
+      </div>
+    </div>
+  </section>
+
+  <h1 class="section-header">Battery Screen</h1>
+
+  <section>
+    <div>
+      <div class="sui-screen sui-panel-style-default">
+        <div class="sui-screen-battery sui-screen-style-player">
+          <div id="playerBatteryChunk1" class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+          <div id="playerBatteryChunk2" class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+          <div id="playerBatteryChunk3" class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+          <div id="playerBatteryChunk4" class="sui-screen-battery-chunk"></div>
+          <div id="playerBatteryChunk5" class="sui-screen-battery-chunk"></div>
+          <div id="playerBatteryChunk6" class="sui-screen-battery-chunk"></div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div>
+      <div class="sui-screen sui-panel-style-medium">
+        <div class="sui-screen-battery sui-screen-style-enemy">
+          <div id="enemyBatteryChunk1" class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+          <div id="enemyBatteryChunk2" class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+          <div id="enemyBatteryChunk3" class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+          <div id="enemyBatteryChunk4" class="sui-screen-battery-chunk"></div>
+          <div id="enemyBatteryChunk5" class="sui-screen-battery-chunk"></div>
+          <div id="enemyBatteryChunk6" class="sui-screen-battery-chunk"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <h1 class="section-header">Action Bar</h1>
+
+  <section>
+    <div>
+      <div class="sui-panel-wrapper-fit-content">
+        <div class="sui-panel sui-panel-style-default">
+          <div class="sui-panel-edge-left"></div>
+          <div class="sui-panel-chunk">
+            <div class="sui-action-bar-player-chunk">
+              <div class="sui-screen">
+                <a href="javascript: void(0)" class="sui-screen-portrait sui-screen-style-player">
+                  <div class="sui-screen-portrait-image"></div>
+                </a>
+              </div>
+              <div class="sui-screen">
+                <div class="sui-screen-battery sui-screen-style-player">
+                  <div class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+                  <div class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+                  <div class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+                  <div class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+                  <div class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+                  <div class="sui-screen-battery-chunk"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sui-panel-edge-right"></div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <div>
+      <div class="sui-panel-wrapper-fit-content">
+        <div class="sui-panel sui-panel-style-medium">
+          <div class="sui-panel-edge-left"></div>
+          <div class="sui-panel-chunk">
+            <div class="sui-action-bar-player-chunk">
+              <div class="sui-screen">
+                <a href="javascript: void(0)" class="sui-screen-portrait sui-screen-style-enemy">
+                  <div class="sui-screen-portrait-image"></div>
+                </a>
+              </div>
+              <div class="sui-screen">
+                <div class="sui-screen-battery sui-screen-style-enemy">
+                  <div class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+                  <div class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+                  <div class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+                  <div class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+                  <div class="sui-screen-battery-chunk sui-screen-battery-chunk-filled"></div>
+                  <div class="sui-screen-battery-chunk"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="sui-panel-edge-right"></div>
+        </div>
       </div>
     </div>
   </section>
