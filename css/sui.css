@@ -275,45 +275,45 @@ a.sui-screen-btn::after {
   width: 2px;
 }
 
-.sui-panel.sui-panel-style-default .sui-panel-edge-left,
-.sui-panel-edge-left.sui-panel-style-default {
+.sui-theme-player .sui-panel-edge-left,
+.sui-panel-edge-left.sui-theme-player {
   border-image: url("/img/panel/panel-edge-left-default.png") 6 0 12 6 / 6px 0 12px 6px;
 }
 
-.sui-panel.sui-panel-style-default .sui-panel-edge-right,
-.sui-panel-edge-right.sui-panel-style-default {
+.sui-theme-player .sui-panel-edge-right,
+.sui-panel-edge-right.sui-theme-player {
   border-image: url("/img/panel/panel-edge-right-default.png") 6 6 12 0 / 6px 6px 12px 0;
 }
 
-.sui-panel.sui-panel-style-default .sui-panel-chunk,
-.sui-panel-chunk.sui-panel-style-default {
+.sui-theme-player .sui-panel-chunk,
+.sui-panel-chunk.sui-theme-player {
   background: var(--surface-panel);
   border-image: url("/img/panel/panel-edge-top-bottom-default.png") 6 0 8 0 / 6px 0 8px 0;
 }
 
-.sui-panel.sui-panel-style-default .sui-panel-connector,
-.sui-panel-connector.sui-panel-style-default {
+.sui-theme-player .sui-panel-connector,
+.sui-panel-connector.sui-theme-player {
   border-image: url("/img/panel/panel-connector-default.png") 6 0 8 0 fill / 6px 0 8px 0;
 }
 
-.sui-panel.sui-panel-style-medium .sui-panel-edge-left,
-.sui-panel-edge-left.sui-panel-style-medium {
+.sui-theme-enemy .sui-panel-edge-left,
+.sui-panel-edge-left.sui-theme-enemy {
   border-image: url("/img/panel/panel-edge-left-medium.png") 6 0 12 6 / 6px 0 12px 6px;
 }
 
-.sui-panel.sui-panel-style-medium .sui-panel-edge-right,
-.sui-panel-edge-right.sui-panel-style-medium {
+.sui-theme-enemy .sui-panel-edge-right,
+.sui-panel-edge-right.sui-theme-enemy {
   border-image: url("/img/panel/panel-edge-right-medium.png") 6 6 12 0 / 6px 6px 12px 0;
 }
 
-.sui-panel.sui-panel-style-medium .sui-panel-chunk,
-.sui-panel-chunk.sui-panel-style-medium {
+.sui-theme-enemy .sui-panel-chunk,
+.sui-panel-chunk.sui-theme-enemy {
   background: var(--surface-panel-medium);
   border-image: url("/img/panel/panel-edge-top-bottom-medium.png") 6 0 8 0 / 6px 0 8px 0;
 }
 
-.sui-panel.sui-panel-style-medium .sui-panel-connector,
-.sui-panel-connector.sui-panel-style-medium {
+.sui-theme-enemy .sui-panel-connector,
+.sui-panel-connector.sui-theme-enemy {
   border-image: url("/img/panel/panel-connector-medium.png") 6 0 8 0 fill / 6px 0 8px 0;
 }
 
@@ -338,13 +338,13 @@ a.sui-screen-btn::after {
   display: inline-block;
 }
 
-.sui-panel-style-default .sui-screen,
-.sui-screen.sui-panel-style-default {
+.sui-theme-player .sui-screen,
+.sui-screen.sui-theme-player {
   border-image: url("/img/screen/screen-frame-default.png") 4 / 4px;
 }
 
-.sui-panel-style-medium .sui-screen,
-.sui-screen.sui-panel-style-medium {
+.sui-theme-enemy .sui-screen,
+.sui-screen.sui-theme-enemy {
   border-image: url("/img/screen/screen-frame-medium.png") 4 / 4px;
 }
 
@@ -359,25 +359,29 @@ a.sui-screen-btn::after {
   padding: var(--spacing-xs) var(--spacing-s);
 }
 
-.sui-screen-info.sui-screen-style-player {
+.sui-theme-player .sui-screen-info,
+.sui-theme-player.sui-screen-info {
   border: 2px solid var(--border-player);
   background-color: var(--surface-player-highlight);
   color: var(--text-player-highlight);
 }
 
-.sui-screen-info.sui-screen-style-player-inverted {
+.sui-theme-player .sui-screen-info.sui-theme-inverted,
+.sui-theme-player.sui-screen-info.sui-theme-inverted {
   border: 2px solid var(--border-player);
   background-color: var(--surface-player-inverted);
   color: var(--text-player-inverted);
 }
 
-.sui-screen-info.sui-screen-style-enemy {
+.sui-theme-enemy .sui-screen-info,
+.sui-theme-enemy.sui-screen-info {
   border: 2px solid var(--border-enemy);
   background-color: var(--surface-enemy-highlight);
   color: var(--text-enemy-highlight);
 }
 
-.sui-screen-info.sui-screen-style-enemy-inverted {
+.sui-theme-enemy .sui-screen-info.sui-theme-inverted,
+.sui-theme-enemy.sui-screen-info.sui-theme-inverted {
   border: 2px solid var(--border-enemy);
   background-color: var(--surface-enemy-inverted);
   color: var(--text-enemy-inverted);
@@ -396,30 +400,35 @@ a.sui-screen-btn::after {
   text-transform: uppercase;
 }
 
-.sui-screen-dialogue.sui-screen-style-player {
+.sui-theme-player .sui-screen-dialogue,
+.sui-theme-player.sui-screen-dialogue {
   border: 2px solid var(--border-player-dark);
   background-color: var(--surface-player-body);
 }
 
-.sui-screen-dialogue.sui-screen-style-player strong {
+.sui-theme-player .sui-screen-dialogue strong,
+.sui-theme-player.sui-screen-dialogue strong {
   color: var(--text-player-primary);
 }
 
-.sui-screen-dialogue.sui-screen-style-enemy {
+.sui-theme-enemy .sui-screen-dialogue,
+.sui-theme-enemy.sui-screen-dialogue {
   border: 2px solid var(--border-enemy-dark);
   background-color: var(--surface-enemy-body);
 }
 
-.sui-screen-dialogue.sui-screen-style-enemy strong {
+.sui-theme-enemy .sui-screen-dialogue strong,
+.sui-theme-enemy.sui-screen-dialogue strong {
   color: var(--text-enemy-primary);
 }
 
-.sui-screen-dialogue.sui-screen-style-neutral {
+
+.sui-screen-dialogue.sui-theme-neutral {
   border: 2px solid var(--border-neutral-dark);
   background-color: var(--surface-neutral-body);
 }
 
-.sui-screen-dialogue.sui-screen-style-neutral strong {
+.sui-screen-dialogue.sui-theme-neutral strong {
   color: var(--text-neutral-primary);
 }
 
@@ -452,13 +461,13 @@ a.sui-screen-portrait:hover::before {
   z-index: 1;
 }
 
-.sui-screen-portrait.sui-screen-style-player,
-a.sui-screen-portrait.sui-screen-style-player:hover::before {
+.sui-theme-player .sui-screen-portrait,
+.sui-theme-player a.sui-screen-portrait:hover::before {
   background-color: var(--surface-player-body);
 }
 
-.sui-screen-portrait.sui-screen-style-enemy,
-a.sui-screen-portrait.sui-screen-style-enemy:hover::before {
+.sui-theme-enemy .sui-screen-portrait,
+.sui-theme-enemy a.sui-screen-portrait:hover::before {
   background-image: url("/img/icon/icon-info-enemy.svg");
   background-color: var(--surface-enemy-body);
 }
@@ -485,13 +494,15 @@ a.sui-screen-portrait.sui-screen-style-enemy:hover::before {
   width: 36px
 }
 
-.sui-screen-battery.sui-screen-style-player {
+.sui-theme-player .sui-screen-battery,
+.sui-theme-player.sui-screen-battery {
   border-radius: 0;
   border: 2px solid var(--border-player-dark);
   background: var(--surface-player-body);
 }
 
-.sui-screen-battery.sui-screen-style-enemy {
+.sui-theme-enemy .sui-screen-battery,
+.sui-theme-enemy.sui-screen-battery {
   border-radius: 0;
   border: 2px solid var(--border-enemy-dark);
   background: var(--surface-enemy-body);
@@ -507,11 +518,13 @@ a.sui-screen-portrait.sui-screen-style-enemy:hover::before {
   width: 4px;
 }
 
-.sui-screen-battery.sui-screen-style-player .sui-screen-battery-chunk.sui-screen-battery-chunk-filled {
+.sui-theme-player .sui-screen-battery .sui-screen-battery-chunk.sui-screen-battery-chunk-filled,
+.sui-theme-player.sui-screen-battery .sui-screen-battery-chunk.sui-screen-battery-chunk-filled {
   background-image: url("/img/battery/battery-chunk-player.png");
 }
 
-.sui-screen-battery.sui-screen-style-enemy .sui-screen-battery-chunk.sui-screen-battery-chunk-filled {
+.sui-theme-enemy .sui-screen-battery .sui-screen-battery-chunk.sui-screen-battery-chunk-filled,
+.sui-theme-enemy.sui-screen-battery .sui-screen-battery-chunk.sui-screen-battery-chunk-filled {
   background-image: url("/img/battery/battery-chunk-enemy.png");
 }
 
