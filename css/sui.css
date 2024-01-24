@@ -94,6 +94,26 @@ input:focus {
 
 /* ---- General Styling End ---- */
 
+/* ---- Icons Start ---- */
+
+.icon-8 {
+  width: 8px;
+}
+
+.icon-16 {
+  width: 16px;
+}
+
+.icon-24 {
+  width: 24px;
+}
+
+.icon-32 {
+  width: 32px;
+}
+
+/* ---- Icons End ---- */
+
 /* ---- Text Start --- */
 
 h1 {
@@ -470,6 +490,30 @@ a.sui-screen-portrait:hover::before {
 .sui-theme-enemy a.sui-screen-portrait:hover::before {
   background-image: url("/img/icon/icon-info-enemy.svg");
   background-color: var(--surface-enemy-body);
+}
+
+.sui-screen-indicator {
+  background-color: var(--surface-neutral-body);
+  border-radius: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  z-index: 0;
+}
+
+.sui-screen-indicator::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+  outline: 2px solid rgba(0, 0, 0, 0.20);
+  outline-offset: -2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
 }
 
 .sui-screen-portrait-image {
