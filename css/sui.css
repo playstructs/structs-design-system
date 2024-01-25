@@ -96,19 +96,27 @@ input:focus {
 
 /* ---- Icons Start ---- */
 
-.icon-8 {
+.sui-icon-8 {
+  font-size: 8px;
+  height: 8px;
   width: 8px;
 }
 
-.icon-16 {
+.sui-icon-16 {
+  font-size: 16px;
+  height: 16px;
   width: 16px;
 }
 
-.icon-24 {
+.sui-icon-24 {
+  font-size: 24px;
+  height: 24px;
   width: 24px;
 }
 
-.icon-32 {
+.sui-icon-32 {
+  font-size: 32px;
+  height: 32px;
   width: 32px;
 }
 
@@ -183,27 +191,22 @@ button.sui-screen-btn,
 a.sui-screen-btn,
 a.sui-screen-btn:link,
 a.sui-screen-btn:visited {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   background: var(--surface-default);
   background-clip: padding-box;
   border: 0 none;
   border-radius: 0;
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
+  gap: var(--spacing-md, 8px);
   height: var(--from-input-height-content);
+  justify-content: center;
   line-height: 16px;
   margin: 2px;
   padding: 0 var(--spacing-lg);
   text-decoration: none;
   text-transform: uppercase;
-}
-
-a.sui-screen-btn::after {
-  content: "";
-  display: inline-block;
-  height: 100%;
-  font-size: 0;
-  vertical-align: middle;
 }
 
 .sui-screen-btn.sui-accent-pri {
@@ -244,7 +247,18 @@ a.sui-screen-btn::after {
 }
 
 .sui-screen-btn-flex-wrapper > .sui-screen-btn {
+  flex: 1;
+}
+
+.sui-screen-btn-flex-wrapper .sui-screen-btn i {
+  flex-grow: 0;
+}
+.sui-screen-btn-flex-wrapper .sui-screen-btn span {
   flex-grow: 1;
+}
+
+.sui-screen-btn .sui-screen-btn-fixed-width {
+
 }
 
 /* ---- Screen Button End ---- */

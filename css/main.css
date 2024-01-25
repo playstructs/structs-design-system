@@ -17,4 +17,9 @@ section {
   width: 320px;
 }
 
+.fixed-width-group-sm {
+  display: inline-block;
+  width: 257px;
+}
+
 /* ---- Test Space Only End ---- */
