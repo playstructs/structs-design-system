@@ -470,40 +470,46 @@ a.sui-screen-btn:visited {
 a.sui-screen-portrait,
 a.sui-screen-portrait:link,
 a.sui-screen-portrait:visited {
+  align-items: center;
   border-radius: 0;
-  display: block;
+  display: flex;
   height: 40px;
+  justify-content: center;
   width: 40px;
   position: relative;
 }
 
-a.sui-screen-portrait:hover::before {
-  content: "";
-  background-image: url("/img/icon/icon-menu.svg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 24px;
+.sui-screen-portrait i {
+  display: none;
+}
+
+.sui-screen-portrait:hover .sui-screen-portrait-image {
+  display: none;
+}
+
+a.sui-screen-portrait:hover {
   box-sizing: border-box;
   height: 100%;
   width: 100%;
   outline: 2px solid rgba(0, 0, 0, 0.20);
   outline-offset: -2px;
   padding: var(--spacing-md);
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
 }
-
-.sui-theme-player .sui-screen-portrait,
-.sui-theme-player a.sui-screen-portrait:hover::before {
+.sui-theme-player a.sui-screen-portrait:hover {
   background-color: var(--surface-player-body);
 }
-
-.sui-theme-enemy .sui-screen-portrait,
-.sui-theme-enemy a.sui-screen-portrait:hover::before {
-  background-image: url("/img/icon/icon-info-enemy.svg");
+.sui-theme-enemy a.sui-screen-portrait:hover {
   background-color: var(--surface-enemy-body);
+}
+
+.sui-theme-player .sui-screen-portrait:hover i.icon-menu {
+  color: var(--accent-primary);
+  display: inline-block;
+}
+
+.sui-theme-enemy .sui-screen-portrait:hover i.icon-info {
+  color: var(--accent-destructive);
+  display: inline-block;
 }
 
 .sui-screen-indicator {
@@ -537,10 +543,6 @@ a.sui-screen-portrait:hover::before {
   width: 100%;
   outline: 2px solid rgba(0, 0, 0, 0.20);
   outline-offset: -2px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 0;
 }
 
 .sui-screen-battery {
