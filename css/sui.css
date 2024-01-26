@@ -474,10 +474,34 @@ a.sui-screen-nav-item:visited {
   color: var(--text-player-primary);
 }
 
+.sui-theme-player .sui-screen-properties a,
+.sui-theme-player .sui-screen-properties a:link,
+.sui-theme-player .sui-screen-properties a:visited {
+  color: var(--text-player-primary);
+  text-decoration: none;
+}
+
+.sui-theme-player .sui-screen-properties a:hover,
+.sui-theme-player .sui-screen-properties a:active {
+  color: var(--text-player-highlight);
+}
+
 .sui-theme-enemy .sui-screen-properties {
   border: 2px solid var(--border-enemy-dark);
   background-color: var(--surface-enemy-body);
   color: var(--text-enemy-primary);
+}
+
+.sui-theme-enemy .sui-screen-properties a,
+.sui-theme-enemy .sui-screen-properties a:link,
+.sui-theme-enemy .sui-screen-properties a:visited {
+  color: var(--text-enemy-primary);
+  text-decoration: none;
+}
+
+.sui-theme-enemy .sui-screen-properties a:hover,
+.sui-theme-enemy .sui-screen-properties a:active {
+  color: var(--text-enemy-highlight);
 }
 
 .sui-screen-info {
