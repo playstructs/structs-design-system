@@ -459,6 +459,27 @@ a.sui-screen-nav-item:visited {
   color: var(--accent-primary-active);
 }
 
+.sui-screen-properties {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-xl);
+  justify-content: center;
+  min-width: 72px;
+  padding: var(--spacing-md);
+}
+
+.sui-theme-player .sui-screen-properties {
+  border: 2px solid var(--border-player-dark);
+  background-color: var(--surface-player-body);
+  color: var(--text-player-primary);
+}
+
+.sui-theme-enemy .sui-screen-properties {
+  border: 2px solid var(--border-enemy-dark);
+  background-color: var(--surface-enemy-body);
+  color: var(--text-enemy-primary);
+}
+
 .sui-screen-info {
   border-radius: 0;
   font-family: 'ExtremeHazard', sans-serif;
