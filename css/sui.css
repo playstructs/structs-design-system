@@ -372,6 +372,10 @@ a.sui-screen-btn:visited {
   display: inline-block;
 }
 
+.sui-screen.sui-screen-full-width {
+  display: block;
+}
+
 .sui-theme-player .sui-screen,
 .sui-screen.sui-theme-player {
   border-image: url("/img/screen/screen-frame-default.png") 4 / 4px;
@@ -380,6 +384,79 @@ a.sui-screen-btn:visited {
 .sui-theme-enemy .sui-screen,
 .sui-screen.sui-theme-enemy {
   border-image: url("/img/screen/screen-frame-medium.png") 4 / 4px;
+}
+
+.sui-screen-nav {
+  align-items: flex-start;
+  border-radius: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-md);
+}
+
+.sui-theme-player .sui-screen-nav {
+  border: 2px solid var(--border-player);
+  background: var(--surface-player-highlight);
+}
+
+.sui-screen-nav-items {
+  align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.sui-screen-nav-item,
+a.sui-screen-nav-item,
+a.sui-screen-nav-item:link,
+a.sui-screen-nav-item:visited {
+  align-items: center;
+  border-radius: 0;
+  display: flex;
+  font-family: ExtremeHazard, sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  gap: var(--spacing-s);
+  justify-content: center;
+  line-height: 16px;
+  padding: 6px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.sui-screen-nav-item-active {
+  border-bottom: 2px solid var(--accent-primary-active);
+}
+
+.sui-screen-nav-close {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: 0;
+  padding: var(--spacing-s) var(--spacing-md);
+  text-decoration: none;
+}
+
+.sui-theme-player .sui-screen-nav-item,
+.sui-theme-player a.sui-screen-nav-item,
+.sui-theme-player a.sui-screen-nav-item:link,
+.sui-theme-player a.sui-screen-nav-item:visited,
+.sui-theme-player a.sui-screen-nav-close,
+.sui-theme-player a.sui-screen-nav-close:link,
+.sui-theme-player a.sui-screen-nav-close:visited {
+  color: var(--accent-primary);
+}
+
+.sui-theme-player .sui-screen-nav-item.sui-screen-nav-item-active,
+.sui-theme-player a.sui-screen-nav-item.sui-screen-nav-item-active,
+.sui-theme-player a.sui-screen-nav-item.sui-screen-nav-item-active:link,
+.sui-theme-player a.sui-screen-nav-item.sui-screen-nav-item-active:visited,
+.sui-theme-player a.sui-screen-nav-item:hover,
+.sui-theme-player a.sui-screen-nav-item:active,
+.sui-theme-player a.sui-screen-nav-close:hover,
+.sui-theme-player a.sui-screen-nav-close:active {
+  color: var(--accent-primary-active);
 }
 
 .sui-screen-info {

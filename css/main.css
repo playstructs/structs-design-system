@@ -14,12 +14,14 @@ section {
 
 .fixed-width-group {
   display: inline-block;
-  width: 320px;
+  max-width: 320px;
+  width: 100%;
 }
 
 .fixed-width-group-sm {
   display: inline-block;
-  width: 257px;
+  max-width: 257px;
+  width: 100%;
 }
 
 /* ---- Test Space Only End ---- */
