@@ -27,6 +27,7 @@
   --border-neutral-dark: #000000;
   --border-player: #133546;
   --border-player-dark: #2E1F3E;
+  --icon-dark: #394958;
   --surface-enemy-body: #2E1F3E;
   --surface-enemy-highlight: #5D0C15;
   --surface-enemy-inverted: #E64D40;
@@ -121,6 +122,68 @@ input:focus {
 }
 
 /* ---- Icons End ---- */
+
+/* ---- Panel Button Start ---- */
+
+.sui-panel-btn,
+a.sui-panel-btn,
+a.sui-panel-btn:link,
+a.sui-panel-btn:visited {
+  align-items: flex-start;
+  border: 0 none;
+  box-sizing: border-box;
+  display: inline-flex;
+  height: 48px;
+  justify-content: center;
+  padding: var(--spacing-lg) 10px var(--spacing-md);
+  text-decoration: none;
+  width: 44px;
+}
+
+.sui-panel-btn.sui-panel-btn-default,
+a.sui-panel-btn.sui-panel-btn-default {
+  background: url("/img/panel/panel-btn-default.png") no-repeat;
+  color: var(--icon-dark);
+  padding-top: var(--spacing-md);
+}
+
+.sui-panel-btn.sui-panel-btn-default:active,
+a.sui-panel-btn.sui-panel-btn-default:active {
+  background: url("/img/panel/panel-btn-pressed.png") bottom no-repeat;
+  padding-top: var(--spacing-lg);
+}
+
+.sui-panel-btn.sui-panel-btn-pressed,
+a.sui-panel-btn.sui-panel-btn-pressed {
+  background: url("/img/panel/panel-btn-pressed.png") bottom no-repeat;
+  color: var(--icon-dark);
+}
+
+.sui-panel-btn.sui-panel-btn-active-defense,
+a.sui-panel-btn.sui-panel-btn-active-defense {
+  background: url("/img/panel/panel-btn-active-defense.png") bottom no-repeat;
+  color: var(--text-player-highlight);
+}
+
+.sui-panel-btn.sui-panel-btn-active-offense,
+a.sui-panel-btn.sui-panel-btn-active-offense {
+  background: url("/img/panel/panel-btn-active-offense.png") bottom no-repeat;
+  color: var(--text-warning);
+}
+
+.sui-panel-btn.sui-panel-btn-disabled,
+a.sui-panel-btn.sui-panel-btn-disabled {
+  background: url("/img/panel/panel-btn-disabled.png") bottom no-repeat;
+  color: var(--accent-disabled);
+}
+
+.sui-panel-btn.sui-panel-btn-disabled-active,
+a.sui-panel-btn.sui-panel-btn-disabled-active {
+  background: url("/img/panel/panel-btn-disabled.png") bottom no-repeat;
+  color: var(--accent-destructive);
+}
+
+/* ---- Panel Button End ---- */
 
 /* ---- Text Start --- */
 
