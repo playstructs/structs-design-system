@@ -437,6 +437,7 @@ a.sui-screen-btn:visited {
 
 .sui-screen.sui-screen-full-width {
   display: block;
+  width: 100%;
 }
 
 .sui-theme-player .sui-screen,
@@ -782,6 +783,30 @@ a.sui-screen-portrait:hover {
   align-items: flex-start;
   flex-direction: column;
   gap: var(--spacing-xs)
+}
+
+.sui-action-bar-bottom-row {
+  align-items: flex-start;
+  display: flex;
+  gap: 0;
+  padding: 0;
+}
+
+.sui-action-bar-btn-group {
+  align-items: flex-start;
+  display: flex;
+  gap: var(--spacing-xs);
+  height: 48px;
+}
+
+.sui-theme-player .sui-action-bar-btn-group {
+  background: url("/img/panel/panel-btn-group-sliver-default.png") left no-repeat;
+  padding-left: 7px;
+}
+
+.sui-theme-enemy .sui-action-bar-btn-group {
+  background: url("/img/panel/panel-btn-group-sliver-medium.png") left no-repeat;
+  padding-left: 7px;
 }
 
 /* ---- Action Bar End ---- */
