@@ -355,11 +355,15 @@ a.sui-screen-btn:visited {
 }
 
 .sui-panel-chunk {
+  align-items: flex-start;
   background-clip: padding-box;
   border-style: solid;
   border-width: 4px 0 8px 0;
   border-color: transparent;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
   padding-bottom: var(--spacing-xs);
 }
 
@@ -529,7 +533,7 @@ a.sui-screen-nav-item:visited {
   gap: var(--spacing-xl);
   justify-content: center;
   min-width: 72px;
-  padding: var(--spacing-md);
+  padding: 6px;
 }
 
 .sui-theme-player .sui-screen-properties {
@@ -576,7 +580,7 @@ a.sui-screen-nav-item:visited {
   font-weight: 500;
   line-height: 16px;
   text-transform: uppercase;
-  padding: var(--spacing-xs) var(--spacing-s);
+  padding: 0 var(--spacing-s);
 }
 
 .sui-theme-player .sui-screen-info,
@@ -777,13 +781,6 @@ a.sui-screen-portrait:hover {
 /* ---- Screens End ---- */
 
 /* ---- Action Bar Start---- */
-
-.sui-action-bar-player-chunk {
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
-  gap: var(--spacing-xs)
-}
 
 .sui-action-bar-bottom-row {
   align-items: flex-start;
