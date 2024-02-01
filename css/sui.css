@@ -377,44 +377,44 @@ a.sui-screen-btn:visited {
 }
 
 .sui-theme-player .sui-panel-edge-left,
-.sui-panel-edge-left.sui-theme-player {
+div.sui-panel-edge-left.sui-theme-player {
   border-image: url("/img/panel/panel-edge-left-default.png") 6 0 12 6 / 6px 0 12px 6px;
 }
 
 .sui-theme-player .sui-panel-edge-right,
-.sui-panel-edge-right.sui-theme-player {
+div.sui-panel-edge-right.sui-theme-player {
   border-image: url("/img/panel/panel-edge-right-default.png") 6 6 12 0 / 6px 6px 12px 0;
 }
 
 .sui-theme-player .sui-panel-chunk,
-.sui-panel-chunk.sui-theme-player {
+div.sui-panel-chunk.sui-theme-player {
   background: var(--surface-panel);
   border-image: url("/img/panel/panel-edge-top-bottom-default.png") 6 0 8 0 / 6px 0 8px 0;
 }
 
 .sui-theme-player .sui-panel-connector,
-.sui-panel-connector.sui-theme-player {
+div.sui-panel-connector.sui-theme-player {
   border-image: url("/img/panel/panel-connector-default.png") 6 0 8 0 fill / 6px 0 8px 0;
 }
 
 .sui-theme-enemy .sui-panel-edge-left,
-.sui-panel-edge-left.sui-theme-enemy {
+div.sui-panel-edge-left.sui-theme-enemy {
   border-image: url("/img/panel/panel-edge-left-medium.png") 6 0 12 6 / 6px 0 12px 6px;
 }
 
 .sui-theme-enemy .sui-panel-edge-right,
-.sui-panel-edge-right.sui-theme-enemy {
+div.sui-panel-edge-right.sui-theme-enemy {
   border-image: url("/img/panel/panel-edge-right-medium.png") 6 6 12 0 / 6px 6px 12px 0;
 }
 
 .sui-theme-enemy .sui-panel-chunk,
-.sui-panel-chunk.sui-theme-enemy {
+div.sui-panel-chunk.sui-theme-enemy {
   background: var(--surface-panel-medium);
   border-image: url("/img/panel/panel-edge-top-bottom-medium.png") 6 0 8 0 / 6px 0 8px 0;
 }
 
 .sui-theme-enemy .sui-panel-connector,
-.sui-panel-connector.sui-theme-enemy {
+div.sui-panel-connector.sui-theme-enemy {
   border-image: url("/img/panel/panel-connector-medium.png") 6 0 8 0 fill / 6px 0 8px 0;
 }
 
@@ -449,6 +449,8 @@ a.sui-screen-btn:visited {
   border-image: url("/img/screen/screen-frame-default.png") 4 / 4px;
 }
 
+.sui-theme-neutral .sui-screen,
+.sui-screen.sui-theme-neutral,
 .sui-theme-enemy .sui-screen,
 .sui-screen.sui-theme-enemy {
   border-image: url("/img/screen/screen-frame-medium.png") 4 / 4px;
@@ -807,6 +809,45 @@ a.sui-screen-portrait:hover {
 }
 
 /* ---- Action Bar End ---- */
+
+/* ---- Dialogue Panel Start ---- */
+
+.sui-panel-chunk-spacer-indicator {
+  background: url("/img/panel/panel-chunk-spacer-indicator.png") top no-repeat;
+  flex-grow: 1;
+  width: 48px;
+}
+
+.sui-dialogue-btn-chunk {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+}
+
+.sui-dialogue-btn-chunk-col {
+  align-items: flex-end;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: 6px;
+  justify-content: flex-end;
+  padding-bottom: var(--spacing-xs);
+}
+
+.sui-panel-chunk-spacer-btn-a {
+  background: url("/img/panel/panel-chunk-spacer-btn-a.png") bottom no-repeat;
+  flex-grow: 1;
+  width: 44px;
+}
+
+.sui-panel-chunk-spacer-btn-b {
+  background: url("/img/panel/panel-chunk-spacer-btn-b.png") bottom no-repeat;
+  height: 100%;
+  max-height: 68px;
+  width: 44px;
+}
+
+/* ---- Dialogue Panel End ---- */
 
 /* ---- Checkbox, Radio Start ---- */
 

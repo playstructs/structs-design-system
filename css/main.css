@@ -12,6 +12,12 @@ section {
   color: #43CDB6;
 }
 
+.fixed-width-group-lg {
+  display: inline-block;
+  max-width: 409px;
+  width: 100%;
+}
+
 .fixed-width-group {
   display: inline-block;
   max-width: 320px;
@@ -22,6 +28,10 @@ section {
   display: inline-block;
   max-width: 257px;
   width: 100%;
+}
+
+.sui-screen-portrait-image.skull-head {
+  background-image: url("/img/mock/mock-droid-168.png");
 }
 
 /* ---- Test Space Only End ---- */
