@@ -367,6 +367,10 @@ a.sui-screen-btn:visited {
   padding-bottom: var(--spacing-xs);
 }
 
+.sui-panel-chunk.grow-1 {
+  flex-grow: 1;
+}
+
 .sui-panel-connector {
   background-clip: padding-box;
   border-style: solid;
@@ -829,14 +833,13 @@ a.sui-screen-portrait:hover {
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
-  gap: 6px;
   justify-content: flex-end;
   padding-bottom: var(--spacing-xs);
 }
 
 .sui-panel-chunk-spacer-btn-a {
-  background: url("/img/panel/panel-chunk-spacer-btn-a.png") bottom no-repeat;
-  flex-grow: 1;
+  background: url("/img/panel/panel-chunk-spacer-btn-a.png") bottom 6px center no-repeat;
+  flex: 1 0 0;
   width: 44px;
 }
 
