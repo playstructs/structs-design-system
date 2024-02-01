@@ -825,7 +825,9 @@ a.sui-screen-portrait:hover {
 .sui-dialogue-btn-chunk {
   display: flex;
   flex-direction: row;
-  flex-grow: 1;
+  flex: 1 0 0;
+  gap: var(--spacing-xs);
+  justify-content: center;
 }
 
 .sui-dialogue-btn-chunk-col {
@@ -834,19 +836,17 @@ a.sui-screen-portrait:hover {
   flex: 1 0 0;
   flex-direction: column;
   justify-content: flex-end;
-  padding-bottom: var(--spacing-xs);
 }
 
 .sui-panel-chunk-spacer-btn-a {
-  background: url("/img/panel/panel-chunk-spacer-btn-a.png") bottom 6px center no-repeat;
+  background: url("/img/panel/panel-chunk-spacer-btn-a.png") bottom 11px center no-repeat;
   flex: 1 0 0;
   width: 44px;
 }
 
 .sui-panel-chunk-spacer-btn-b {
-  background: url("/img/panel/panel-chunk-spacer-btn-b.png") bottom no-repeat;
-  height: 100%;
-  max-height: 68px;
+  background: url("/img/panel/panel-chunk-spacer-btn-b.png") bottom 11px center no-repeat;
+  flex: 1 0 0;
   width: 44px;
 }
 
@@ -1022,3 +1022,11 @@ select:disabled {
 }
 
 /* ---- Input Text End ---- */
+
+/* ---- Utility Classes Start ---- */
+
+.sui-flip-horizontal {
+  transform: scale(-1);
+}
+
+/* ---- Utility Classes End ---- */
