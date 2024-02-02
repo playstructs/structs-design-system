@@ -55,6 +55,10 @@
 
   --form-input-height-total: 40px;
   --from-input-height-content: 36px;
+  --icon-xs: 8px;
+  --icon-sm: 16px;
+  --icon-md: 24px;
+  --icon-lg: 32px;
 
   /* -- Dimensions End -- */
 
@@ -97,28 +101,88 @@ input:focus {
 
 /* ---- Icons Start ---- */
 
-.sui-icon-8 {
-  font-size: 8px;
-  height: 8px;
-  width: 8px;
+.sui-icon-xs {
+  font-size: var(--icon-xs);
+  height: var(--icon-xs);
+  width: var(--icon-xs);
 }
 
-.sui-icon-16 {
-  font-size: 16px;
-  height: 16px;
-  width: 16px;
+.sui-icon-sm {
+  font-size: var(--icon-sm);
+  height: var(--icon-sm);
+  width: var(--icon-sm);
 }
 
-.sui-icon-24 {
-  font-size: 24px;
-  height: 24px;
-  width: 24px;
+.sui-icon-md {
+  font-size: var(--icon-md);
+  height: var(--icon-md);
+  width: var(--icon-md);
 }
 
-.sui-icon-32 {
-  font-size: 32px;
-  height: 32px;
-  width: 32px;
+.sui-icon-lg {
+  font-size: var(--icon-lg);
+  height: var(--icon-lg);
+  width: var(--icon-lg);
+}
+
+i.sui-icon {
+  background-position: center;
+  background-size: cover;
+  display: inline-block;
+}
+
+i.sui-icon-alpha-matter {
+  background-image: url("/img/icon/icon-alpha-matter.png");
+  height: var(--icon-md);
+  width: var(--icon-md);
+}
+
+i.sui-icon-alpha-ore {
+  background-image: url("/img/icon/icon-alpha-ore.png");
+  height: var(--icon-md);
+  width: var(--icon-md);
+}
+
+i.sui-icon-deployed-structs {
+  background-image: url("/img/icon/icon-deployed-structs.png");
+  height: var(--icon-md);
+  width: var(--icon-md);
+}
+
+i.sui-icon-enemy-shield-health {
+  background-image: url("/img/icon/icon-enemy-shield-health.png");
+  height: var(--icon-md);
+  width: var(--icon-md);
+}
+
+i.sui-icon-energy {
+  background-image: url("/img/icon/icon-energy.png");
+  height: var(--icon-md);
+  width: var(--icon-md);
+}
+
+i.sui-icon-inert-alpha {
+  background-image: url("/img/icon/icon-inert-alpha.png");
+  height: var(--icon-md);
+  width: var(--icon-md);
+}
+
+i.sui-icon-players {
+  background-image: url("/img/icon/icon-players.png");
+  height: var(--icon-md);
+  width: var(--icon-md);
+}
+
+i.sui-icon-shield-health {
+  background-image: url("/img/icon/icon-shield-health.png");
+  height: var(--icon-md);
+  width: var(--icon-md);
+}
+
+i.sui-icon-undiscovered-ore {
+  background-image: url("/img/icon/icon-undiscovered-ore.png");
+  height: var(--icon-md);
+  width: var(--icon-md);
 }
 
 /* ---- Icons End ---- */
