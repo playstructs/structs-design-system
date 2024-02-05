@@ -12,6 +12,16 @@ section {
   color: #43CDB6;
 }
 
+.sub-section-header {
+  margin: 40px auto 20px;
+}
+
+.fixed-width-group-xl {
+  display: inline-block;
+  max-width: 620px;
+  width: 100%;
+}
+
 .fixed-width-group-lg {
   display: inline-block;
   max-width: 409px;
@@ -34,18 +44,18 @@ section {
   background-image: url("/img/mock/mock-droid-168.png");
 }
 
-.icon-display-container {
+.grid-container {
   display: inline-flex;
   flex-direction: column;
   gap: var(--spacing-xl);
   margin: var(--spacing-xl) 0;
 }
-.icon-display-row {
+.grid-row {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-xl);
 }
-.icon-display-col {
+.grid-col {
   flex-grow: 1;
   align-self: stretch;
 }

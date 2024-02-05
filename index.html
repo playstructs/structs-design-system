@@ -64,18 +64,18 @@
       Base Size: 12 x 12 px<br>
       Display Size: 24 x 24 px
     </h2>
-    <div class="icon-display-container">
-      <div class="icon-display-row">
+    <div class="grid-container">
+      <div class="grid-row">
         <i class="sui-icon sui-icon-undiscovered-ore"></i>
         <i class="sui-icon sui-icon-alpha-ore"></i>
         <i class="sui-icon sui-icon-alpha-matter"></i>
       </div>
-      <div class="icon-display-row">
+      <div class="grid-row">
         <i class="sui-icon sui-icon-inert-alpha"></i>
         <i class="sui-icon sui-icon-energy"></i>
         <i class="sui-icon sui-icon-shield-health"></i>
       </div>
-      <div class="icon-display-row">
+      <div class="grid-row">
         <i class="sui-icon sui-icon-enemy-shield-health"></i>
         <i class="sui-icon sui-icon-deployed-structs"></i>
         <i class="sui-icon sui-icon-players"></i>
@@ -184,6 +184,8 @@
   <h1 class="section-header">Screen Buttons</h1>
 
   <section>
+    <h2 class="sub-section-header">Screen Button</h2>
+
     <div>
       <button class="sui-screen-btn sui-accent-pri">Command &lt;button&gt;</button>
     </div>
@@ -204,15 +206,6 @@
 
     <div>
       <button class="sui-screen-btn sui-accent-disabled">Command &lt;button&gt;</button>
-    </div>
-
-    <br>
-
-    <div>
-      <button class="sui-screen-btn sui-accent-pri">
-        <i class="sui-icon-md icon-computer"></i>
-        Activate Device
-      </button>
     </div>
 
     <br>
@@ -243,6 +236,17 @@
 
     <div>
       <a href="javascript: void(0)" class="sui-screen-btn sui-accent-disabled">Command &lt;a&gt;</a>
+    </div>
+
+    <br>
+
+    <h2 class="sub-section-header">Button Details and Variations</h2>
+
+    <div>
+      <button class="sui-screen-btn sui-accent-pri">
+        <i class="sui-icon-md icon-computer"></i>
+        Activate Device
+      </button>
     </div>
 
     <br>
@@ -1431,6 +1435,53 @@
 
       </div>
     </div>
+  </section>
+
+  <h1 class="section-header">Page Elements</h1>
+
+  <section>
+    <h2 class="sub-section-header">Page Header</h2>
+
+    <div class="fixed-width-group-xl">
+      <div class="sui-page-header">
+        <a href="javascript: void(0)" class="sui-nav-btn">
+          <i class="sui-icon-sm icon-chevron-left sui-accent-sec"></i>
+          PREVIOUS
+        </a>
+
+        <div class="sui-page-header-resources">
+          <a href="javascript: void(0)" class="sui-resource">
+            <span>32/50</span>
+            <i class="sui-icon sui-icon-energy"></i>
+          </a>
+          <a href="javascript: void(0)" class="sui-resource">
+            <span>3</span>
+            <i class="sui-icon sui-icon-alpha-matter"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <br>
+
+    <h2 class="sub-section-header">Resource</h2>
+
+    <div>
+      <a href="javascript: void(0)" class="sui-resource">
+        <span id="resourceName1">1</span>
+        <i class="sui-icon sui-icon-alpha-matter"></i>
+      </a>
+    </div>
+
+    <br>
+
+    <div>
+      <a href="javascript: void(0)" class="sui-resource">
+        <i class="sui-icon sui-icon-alpha-matter"></i>
+        <span id="resourceName2">1</span>
+      </a>
+    </div>
+
   </section>
 
   <h1 class="section-header">Form Elements</h1>

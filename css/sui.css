@@ -27,6 +27,7 @@
   --border-neutral-dark: #000000;
   --border-player: #133546;
   --border-player-dark: #2E1F3E;
+  --border-subtle: #394958;
   --icon-dark: #394958;
   --surface-enemy-body: #2E1F3E;
   --surface-enemy-highlight: #5D0C15;
@@ -77,6 +78,25 @@
 /* ---- Variables End ----*/
 
 /* ---- General Styling Start ---- */
+
+a,
+a:link,
+a:visited {
+  color: var(--text-body);
+  font-family: 'DirectiveZero', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  text-decoration: none;
+}
+
+a:active,
+a:hover {
+  text-decoration: none;
+}
+
+
 
 body {
   background: var(--surface-player-body);
@@ -285,27 +305,49 @@ h2 {
   line-height: 16px;
 }
 
-.sui-accent-pri {
+.sui-accent-pri,
+a.sui-accent-pri,
+a.sui-accent-pri:link,
+a.sui-accent-pri:visited {
   color: var(--accent-primary);
 }
-.sui-accent-pri-active {
+
+.sui-accent-pri-active,
+a.sui-accent-pri-active:hover,
+a.sui-accent-pri-active:active {
   color: var(--accent-primary-active);
 }
-.sui-accent-sec {
+
+.sui-accent-sec,
+a.sui-accent-sec,
+a.sui-accent-sec:link,
+a.sui-accent-sec:visited {
   color: var(--accent-secondary);
 }
-.sui-accent-sec-active {
+
+.sui-accent-sec-active,
+a.sui-accent-sec-active:hover,
+a.sui-accent-sec-active:active {
   color: var(--accent-secondary-active);
 }
-.sui-accent-des {
+
+.sui-accent-des,
+a.sui-accent-des,
+a.sui-accent-des:link,
+a.sui-accent-des:visited {
   color: var(--accent-destructive);
 }
-.sui-accent-des-active {
+
+.sui-accent-des-active,
+a.sui-accent-des-active:hover,
+a.sui-accent-des-active:active {
   color: var(--accent-destructive-active);
 }
+
 .sui-accent-disabled {
   color: var(--accent-disabled);
 }
+
 .sui-text-warning {
   color: var(--text-warning);
 }
@@ -386,6 +428,27 @@ a.sui-screen-btn:visited {
 
 .sui-screen-btn .sui-screen-btn-fixed-width {
 
+}
+
+.sui-nav-btn,
+a.sui-nav-btn,
+a.sui-nav-btn:link,
+a.sui-nav-btn:hover,
+a.sui-nav-btn:active,
+a.sui-nav-btn:visited {
+  align-items: center;
+  display: inline-flex;
+  font-family: 'ExtremeHazard', sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px; /* 200% */
+  text-transform: uppercase;
+}
+
+.sui-nav-btn .icon-chevron-left,
+.sui-nav-btn .icon-chevron-right {
+  padding: var(--spacing-md);
 }
 
 /* ---- Screen Button End ---- */
@@ -915,6 +978,42 @@ a.sui-screen-portrait:hover {
 }
 
 /* ---- Dialogue Panel End ---- */
+
+/* ---- Page Header Start ---- */
+
+.sui-page-header {
+  align-items: center;
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  justify-content: space-between;
+  padding: 0 var(--spacing-xl) 0 var(--spacing-xs);
+  width: 620px;
+}
+
+.sui-page-header-resources {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-xl);
+}
+
+/* ---- Page Header End ---- */
+
+/* ---- Resource Start ---- */
+
+.sui-resource,
+a.sui-resource,
+a.sui-resource:link,
+a.sui-resource:hover,
+a.sui-resource:active,
+a.sui-resource:visited {
+  align-items: center;
+  display: inline-flex;
+  gap: var(--spacing-s);
+  justify-items: center;
+  text-decoration: none;
+}
+
+/* ---- Resource End ---- */
 
 /* ---- Checkbox, Radio Start ---- */
 
