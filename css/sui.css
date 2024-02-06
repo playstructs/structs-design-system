@@ -992,7 +992,6 @@ a.sui-screen-portrait:hover {
   display: flex;
   justify-content: space-between;
   padding: 0 var(--spacing-xl) 0 var(--spacing-xs);
-  width: 620px;
 }
 
 .sui-page-header-resources {
@@ -1000,6 +999,7 @@ a.sui-screen-portrait:hover {
   display: flex;
   flex-grow: 1;
   gap: var(--spacing-xl);
+  justify-content: flex-end;
 }
 
 /* ---- Page Header End ---- */
@@ -1085,10 +1085,6 @@ a.sui-resource:visited {
   box-sizing: border-box;
   height: 44px;
   width: 44px;
-}
-
-.sui-result-row-portrait:has(.sui-result-row-portrait-image) {
-
 }
 
 .sui-result-row-portrait-icon {
