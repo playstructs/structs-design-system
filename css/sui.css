@@ -1029,15 +1029,26 @@ a.sui-resource:visited {
   gap: var(--spacing-md);
 }
 
+.sui-result-table.sui-result-rows {
+  gap: 0;
+}
+
 .sui-result-row {
   align-content: center;
   align-items: center;
-  border: 1px solid var(--border, #5D7E90);
+  border: 1px solid var(--border);
   border-radius: 0;
   display: flex;
   flex-wrap: wrap;
   gap: var(--spacing-lg) var(--spacing-xxxl);
   padding: var(--spacing-md);
+}
+
+.sui-result-table.sui-result-rows:first-child {
+  border-top: 1px solid var(--border);
+}
+.sui-result-table.sui-result-rows .sui-result-row {
+  border-top: 0 none;
 }
 
 .sui-result-row-left-section {
