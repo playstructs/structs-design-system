@@ -22,6 +22,7 @@
   --accent-destructive: #EE7D69;
   --accent-destructive-active: #F4A990;
   --accent-disabled: #7394A5;
+  --border: #5D7E90;
   --border-enemy: #440D3A;
   --border-enemy-dark: #222034;
   --border-neutral-dark: #000000;
@@ -118,6 +119,95 @@ input:focus {
 }
 
 /* ---- General Styling End ---- */
+
+/* ---- Text Start --- */
+
+h1 {
+  font-family: 'ExtremeHazard', sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-family: 'ExtremeHazard', sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.sui-text-tiny {
+  font-family: 'DirectiveZero', sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 12px;
+}
+
+.sui-text-ticker {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+}
+
+.sui-accent-pri,
+a.sui-accent-pri,
+a.sui-accent-pri:link,
+a.sui-accent-pri:visited {
+  color: var(--accent-primary);
+}
+
+.sui-accent-pri-active,
+a.sui-accent-pri-active:hover,
+a.sui-accent-pri-active:active {
+  color: var(--accent-primary-active);
+}
+
+.sui-accent-sec,
+a.sui-accent-sec,
+a.sui-accent-sec:link,
+a.sui-accent-sec:visited {
+  color: var(--accent-secondary);
+}
+
+.sui-accent-sec-active,
+a.sui-accent-sec-active:hover,
+a.sui-accent-sec-active:active {
+  color: var(--accent-secondary-active);
+}
+
+.sui-accent-des,
+a.sui-accent-des,
+a.sui-accent-des:link,
+a.sui-accent-des:visited {
+  color: var(--accent-destructive);
+}
+
+.sui-accent-des-active,
+a.sui-accent-des-active:hover,
+a.sui-accent-des-active:active {
+  color: var(--accent-destructive-active);
+}
+
+.sui-accent-disabled {
+  color: var(--accent-disabled);
+}
+
+.sui-text-warning {
+  color: var(--text-warning);
+}
+
+.sui-text-hint {
+  color: var(--text-hint);
+}
+
+/* ---- Text End ---- */
 
 /* ---- Icons Start ---- */
 
@@ -268,91 +358,6 @@ a.sui-panel-btn.sui-panel-btn-disabled-active {
 }
 
 /* ---- Panel Button End ---- */
-
-/* ---- Text Start --- */
-
-h1 {
-  font-family: 'ExtremeHazard', sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
-  text-transform: uppercase;
-}
-
-h2 {
-  font-family: 'ExtremeHazard', sans-serif;
-  font-size: 8px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px;
-  text-transform: uppercase;
-}
-
-.sui-text-tiny {
-  font-family: 'DirectiveZero', sans-serif;
-  font-size: 8px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 12px;
-}
-
-.sui-text-ticker {
-  font-family: 'Inter', sans-serif;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 16px;
-}
-
-.sui-accent-pri,
-a.sui-accent-pri,
-a.sui-accent-pri:link,
-a.sui-accent-pri:visited {
-  color: var(--accent-primary);
-}
-
-.sui-accent-pri-active,
-a.sui-accent-pri-active:hover,
-a.sui-accent-pri-active:active {
-  color: var(--accent-primary-active);
-}
-
-.sui-accent-sec,
-a.sui-accent-sec,
-a.sui-accent-sec:link,
-a.sui-accent-sec:visited {
-  color: var(--accent-secondary);
-}
-
-.sui-accent-sec-active,
-a.sui-accent-sec-active:hover,
-a.sui-accent-sec-active:active {
-  color: var(--accent-secondary-active);
-}
-
-.sui-accent-des,
-a.sui-accent-des,
-a.sui-accent-des:link,
-a.sui-accent-des:visited {
-  color: var(--accent-destructive);
-}
-
-.sui-accent-des-active,
-a.sui-accent-des-active:hover,
-a.sui-accent-des-active:active {
-  color: var(--accent-destructive-active);
-}
-
-.sui-accent-disabled {
-  color: var(--accent-disabled);
-}
-
-.sui-text-warning {
-  color: var(--text-warning);
-}
-
-/* ---- Text End ---- */
 
 /* ---- Screen Button Start ---- */
 
@@ -993,6 +998,7 @@ a.sui-screen-portrait:hover {
 .sui-page-header-resources {
   align-items: center;
   display: flex;
+  flex-grow: 1;
   gap: var(--spacing-xl);
 }
 
@@ -1014,6 +1020,127 @@ a.sui-resource:visited {
 }
 
 /* ---- Resource End ---- */
+
+/* ---- Result Rows Start ---- */
+
+.sui-result-rows {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.sui-result-row {
+  align-content: center;
+  align-items: center;
+  border: 1px solid var(--border, #5D7E90);
+  border-radius: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-lg) var(--spacing-xxxl);
+  padding: var(--spacing-md);
+}
+
+.sui-result-row-left-section {
+  align-items: center;
+  display: flex;
+  flex: 1 0 0;
+  gap: 16px;
+  min-width: 256px;
+  padding-right: var(--spacing-xl);
+}
+
+.sui-result-row-right-section {
+  align-items: center;
+  display: flex;
+  flex: 1 0 0;
+  justify-content: space-between;
+  min-width: 224px;
+  padding: 0;
+}
+
+.sui-result-row-player-info {
+  align-items: flex-start;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  justify-content: center;
+  padding-right: var(--spacing-xl);
+  text-align: left;
+}
+
+.sui-result-row-portrait {
+  align-items: flex-start;
+  border-radius: 0;
+  display: flex;
+  height: 44px;
+  justify-content: center;
+  padding: 0;
+  width: 44px;
+}
+
+.sui-result-row-portrait-image {
+  background: url("/img/mock/mock-droid-360.png") top;
+  border: 1px solid var(--border-subtle);
+  box-sizing: border-box;
+  height: 44px;
+  width: 44px;
+}
+
+.sui-result-row-portrait:has(.sui-result-row-portrait-image) {
+
+}
+
+.sui-result-row-portrait-icon {
+  align-items: center;
+  color: var(--accent-secondary);
+  display: flex;
+  height: 44px;
+  justify-content: center;
+  width: 44px;
+}
+
+.sui-result-row-resources {
+  align-items: center;
+  display: flex;
+  gap: var(--spacing-xl);
+  justify-content: flex-end;
+}
+
+/* ---- Result Rows End ---- */
+
+/* ---- Badge Start ---- */
+
+.sui-badge {
+  align-items: center;
+  display: inline-flex;
+  font-family: 'ExtremeHazard', sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  justify-content: center;
+  line-height: 16px;
+  padding: 0 var(--spacing-md);
+  text-transform: uppercase;
+}
+
+.sui-badge-default {
+  border: 1px solid var(--accent-primary);
+  color: var(--text-player-primary);
+}
+
+.sui-badge-warning {
+  border: 1px solid var(--text-warning);
+  color: var(--text-warning);
+}
+
+.sui-badge-solid {
+  background-color: var(--accent-primary);
+  border: 1px solid var(--accent-primary);
+  color: var(--text-player-inverted);
+}
+
+/* ---- Badge End ---- */
 
 /* ---- Checkbox, Radio Start ---- */
 
