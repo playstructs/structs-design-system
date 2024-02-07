@@ -16,6 +16,10 @@ section {
   margin: 40px auto 20px;
 }
 
+.fixed-height-group {
+  height: 360px;
+}
+
 .fixed-width-group-xl {
   display: inline-block;
   max-width: 620px;

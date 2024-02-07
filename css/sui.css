@@ -466,6 +466,7 @@ a.sui-nav-btn:visited {
 .sui-panel {
   display: flex;
   align-items: stretch;
+  max-height: 100%;
 }
 
 .sui-panel-edge-left {
@@ -499,7 +500,7 @@ a.sui-nav-btn:visited {
   padding-bottom: var(--spacing-xs);
 }
 
-.sui-panel-chunk.grow-1 {
+.sui-panel-chunk.sui-grow-1 {
   flex-grow: 1;
 }
 
@@ -573,6 +574,10 @@ div.sui-panel-connector.sui-theme-enemy {
   border-color: transparent;
   box-sizing: border-box;
   display: inline-block;
+}
+
+.sui-screen.sui-screen-scroll-y {
+  overflow-y: scroll;
 }
 
 .sui-screen.sui-screen-full-width {
@@ -989,9 +994,11 @@ a.sui-screen-portrait:hover {
 .sui-page-header {
   align-items: center;
   border-bottom: 1px solid var(--border-subtle);
+  box-sizing: border-box;
   display: flex;
   justify-content: space-between;
   padding: 0 var(--spacing-xl) 0 var(--spacing-xs);
+  width: 100%;
 }
 
 .sui-page-header-resources {
@@ -1319,6 +1326,28 @@ select:disabled {
 }
 
 /* ---- Input Text End ---- */
+
+/* ---- Page Layout Start ---- */
+
+.sui-page-body-screen {
+  align-items: center;
+  align-self: stretch;
+  background: var(--surface-player-body);
+  border-radius: 0;
+  border: 2px solid var(--border-player-dark);
+  display: flex;
+  gap: 0;
+  flex: 1 0 0;
+  flex-direction: column;
+  padding: 0;
+}
+
+.sui-screen-body {
+  flex: 1 0 0;
+  padding: var(--spacing-xl);
+}
+
+/* ---- Page Layout End ---- */
 
 /* ---- Utility Classes Start ---- */
 
