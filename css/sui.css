@@ -30,6 +30,7 @@
   --border-player-dark: #2E1F3E;
   --border-subtle: #394958;
   --icon-dark: #394958;
+  --page-background: #1A2029;
   --surface-enemy-body: #2E1F3E;
   --surface-enemy-highlight: #5D0C15;
   --surface-enemy-inverted: #E64D40;
@@ -100,7 +101,7 @@ a:hover {
 
 
 body {
-  background: var(--surface-player-body);
+  background: url("/img/page/page-background.png") repeat var(--page-background);
   text-align: center;
   font-family: 'DirectiveZero', sans-serif;
   font-size: 16px;
