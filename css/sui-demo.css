@@ -1,5 +1,9 @@
 /* ---- Structs UI Demo Page Only ---- */
 
+#structsUI img {
+  filter: brightness(0) saturate(100%) invert(97%) sepia(5%) saturate(838%) hue-rotate(150deg) brightness(86%) contrast(97%);
+}
+
 .content {
   margin: 0;
   padding: var(--spacing-xl);
