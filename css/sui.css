@@ -505,6 +505,11 @@ a.sui-nav-btn:visited {
   flex-grow: 1;
 }
 
+.sui-panel-chunk.sui-panel-chunk-shrink {
+  flex-shrink: 1;
+  min-width: 0;
+}
+
 .sui-panel-connector {
   background-clip: padding-box;
   border-style: solid;
@@ -605,6 +610,8 @@ div.sui-panel-connector.sui-theme-enemy {
   display: flex;
   justify-content: space-between;
   padding: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-md);
+  min-width: 0;
+  overflow-x: scroll;
 }
 
 .sui-theme-player .sui-screen-nav {
