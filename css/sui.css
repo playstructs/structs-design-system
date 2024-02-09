@@ -594,14 +594,14 @@ div.sui-panel-connector.sui-theme-enemy {
 
 .sui-theme-player .sui-screen,
 .sui-screen.sui-theme-player {
-  border-image: url("/img/screen/screen-frame-default.png") 4 / 4px;
+  border-image: url("/img/screen/screen-frame-default.png") 4 4 5 4/ 4px 4px 5px 4px;
 }
 
 .sui-theme-neutral .sui-screen,
 .sui-screen.sui-theme-neutral,
 .sui-theme-enemy .sui-screen,
 .sui-screen.sui-theme-enemy {
-  border-image: url("/img/screen/screen-frame-medium.png") 4 / 4px;
+  border-image: url("/img/screen/screen-frame-medium.png") 4 4 5 4/ 4px 4px 5px 4px;
 }
 
 .sui-screen-nav {
@@ -643,6 +643,7 @@ a.sui-screen-nav-item:visited {
   padding: 6px 10px;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
 }
 
 .sui-screen-nav-item-active {

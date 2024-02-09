@@ -1,7 +1,13 @@
 /* ---- Test Space Only Start ---- */
 
-body {
-  background: #133546 !important;
+.content {
+  margin: 0;
+  padding: var(--spacing-xl);
+}
+
+.page-panel.sui-panel {
+  position: fixed;
+  width: 100%;
 }
 
 section {
