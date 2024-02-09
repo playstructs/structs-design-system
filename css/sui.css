@@ -501,7 +501,7 @@ a.sui-nav-btn:visited {
   padding-bottom: var(--spacing-xs);
 }
 
-.sui-panel-chunk.sui-grow-1 {
+.sui-panel-chunk.sui-panel-chunk-grow {
   flex-grow: 1;
 }
 
@@ -577,8 +577,9 @@ div.sui-panel-connector.sui-theme-enemy {
   display: inline-block;
 }
 
-.sui-screen.sui-screen-scroll-y {
-  overflow-y: scroll;
+.sui-screen.sui-screen-shrink {
+  min-height: 0;
+  min-width: 0;
 }
 
 .sui-screen.sui-screen-full-width {
@@ -1331,11 +1332,17 @@ select:disabled {
 /* ---- Page Layout Start ---- */
 
 .sui-page-body-screen {
+  background: var(--surface-player-body);
+  border: 2px solid var(--border-player-dark);
+  border-radius: 0;
+  box-sizing: border-box;
+  max-height: 100%;
+  overflow-y: scroll;
+}
+
+.sui-page-body-screen-content {
   align-items: center;
   align-self: stretch;
-  background: var(--surface-player-body);
-  border-radius: 0;
-  border: 2px solid var(--border-player-dark);
   display: flex;
   gap: 0;
   flex: 1 0 0;
