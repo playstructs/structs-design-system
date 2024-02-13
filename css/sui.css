@@ -516,6 +516,7 @@ a.sui-panel-btn.sui-panel-btn-disabled-active {
   font-weight: 500;
   line-height: 16px;
   max-width: 156px;
+  text-align: left;
   text-transform: uppercase;
 }
 
@@ -1149,7 +1150,15 @@ a.sui-screen-portrait:hover {
   background: var(--surface-enemy-body);
 }
 
-.sui-screen-battery-chunk {
+.sui-battery {
+  align-items: center;
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: var(--spacing-xs);
+}
+
+.sui-battery-chunk {
   display: inline-block;
   background-image: url("/img/battery/battery-chunk-empty.png");
   background-position: center;
@@ -1159,13 +1168,17 @@ a.sui-screen-portrait:hover {
   width: 4px;
 }
 
-.sui-theme-player .sui-screen-battery .sui-screen-battery-chunk.sui-screen-battery-chunk-filled,
-.sui-theme-player.sui-screen-battery .sui-screen-battery-chunk.sui-screen-battery-chunk-filled {
+.sui-theme-player .sui-screen-battery .sui-battery-chunk.sui-battery-chunk-filled,
+.sui-theme-player.sui-screen-battery .sui-battery-chunk.sui-battery-chunk-filled
+.sui-theme-player .sui-battery .sui-battery-chunk.sui-battery-chunk-filled,
+.sui-theme-player.sui-battery .sui-battery-chunk.sui-battery-chunk-filled {
   background-image: url("/img/battery/battery-chunk-player.png");
 }
 
-.sui-theme-enemy .sui-screen-battery .sui-screen-battery-chunk.sui-screen-battery-chunk-filled,
-.sui-theme-enemy.sui-screen-battery .sui-screen-battery-chunk.sui-screen-battery-chunk-filled {
+.sui-theme-enemy .sui-screen-battery .sui-battery-chunk.sui-battery-chunk-filled,
+.sui-theme-enemy.sui-screen-battery .sui-battery-chunk.sui-battery-chunk-filled,
+.sui-theme-enemy .sui-battery .sui-battery-chunk.sui-battery-chunk-filled,
+.sui-theme-enemy.sui-battery .sui-battery-chunk.sui-battery-chunk-filled {
   background-image: url("/img/battery/battery-chunk-enemy.png");
 }
 
