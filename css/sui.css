@@ -551,7 +551,7 @@ a.sui-panel-btn.sui-panel-btn-disabled-active {
   text-align: left;
 }
 
-.sui-cheatsheet-ability-info {
+.sui-cheatsheet-property-section {
   align-items: flex-start;
   align-self: stretch;
   display: flex;
@@ -565,20 +565,35 @@ a.sui-panel-btn.sui-panel-btn-disabled-active {
   gap: var(--spacing-xl);
 }
 
-.sui-cheatsheet-property i.sui-icon {
-  color: var(--accent-secondary);
+.sui-cheatsheet-property-icon {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-.sui-cheatsheet-property span {
-  align-items: center;
-  color: var(--text-body);
-  display: inline-flex;
+.sui-cheatsheet-property-info {
+  align-items: flex-start;
+  color: var(--text-hint);
+  display: flex;
+  flex-direction: column;
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
   font-style: normal;
   font-weight: 500;
-  gap: 1em;
+  gap: var(--spacing-s);
+  justify-content: center;
   line-height: 16px;
+}
+
+.sui-cheatsheet-property-info div {
+  align-items: center;
+  color: var(--text-body);
+  display: inline-flex;
+  gap: var(--spacing-lg);
+}
+
+.sui-cheatsheet-property i.sui-icon {
+  color: var(--accent-secondary);
 }
 
 /* ---- Cheatsheet End ---- */
