@@ -1680,7 +1680,6 @@ select:disabled {
   flex-direction: column;
   gap: var(--spacing-xl);
   justify-content: flex-end;
-  min-height: 160px;
   padding: var(--spacing-xl);
 }
 
@@ -1728,6 +1727,28 @@ select:disabled {
   flex-direction: column;
   gap: var(--spacing-xl);
   justify-content: center;
+}
+
+.sui-planet-card-loading {
+  align-items: center;
+  display: flex;
+  flex: 1 0 0;
+  gap: 10px;
+  justify-content: center;
+  min-height: 128px;
+}
+
+.sui-planet-card-loading-animation {
+  background-image: url("/img/planet-card/planet-card-loading.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 60px;
+  width: 60px;
+}
+
+.sui-planet-card-loading img {
+  height: 60px;
+  width: 60px;
 }
 
 /* ---- Planet Card End ---- */
