@@ -46,13 +46,19 @@ section {
   width: 100%;
 }
 
-.fixed-width-group {
+.fixed-width-group-md {
   display: inline-block;
   max-width: 320px;
   width: 100%;
 }
 
 .fixed-width-group-sm {
+  display: inline-block;
+  max-width: 286px;
+  width: 100%;
+}
+
+.fixed-width-group-xs {
   display: inline-block;
   max-width: 257px;
   width: 100%;

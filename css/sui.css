@@ -62,6 +62,7 @@
   --icon-sm: 16px;
   --icon-md: 24px;
   --icon-lg: 32px;
+  --icon-xl: 48px;
 
   /* -- Dimensions End -- */
 
@@ -239,6 +240,12 @@ a.sui-accent-disabled:visited {
   font-size: var(--icon-lg);
   height: var(--icon-lg);
   width: var(--icon-lg);
+}
+
+.sui-icon-xl {
+  font-size: var(--icon-xl);
+  height: var(--icon-xl);
+  width: var(--icon-xl);
 }
 
 i.sui-icon {
@@ -655,8 +662,9 @@ a.sui-screen-btn:visited {
 }
 
 .sui-screen-btn-flex-wrapper {
+  align-self: stretch;
   display: flex;
-  column-gap: var(--spacing-md);
+  gap: var(--spacing-md);
   justify-items: center;
 }
 
@@ -1615,6 +1623,114 @@ select:disabled {
 }
 
 /* ---- Page Layout End ---- */
+
+/* ---- Planet Card Start ---- */
+
+.sui-planet-card {
+  align-items: center;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: 0;
+  justify-content: center;
+}
+
+.sui-planet-card-header {
+  align-items: flex-start;
+  align-self: stretch;
+  border-top: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  border-left: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spacing-md);
+}
+
+.sui-planet-card-header-label {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.sui-planet-card-header-label i.sui-icon {
+  color: var(--accent-primary)
+}
+
+.sui-planet-card-header-label-title {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  font-family: 'ExtremeHazard', sans-serif;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.sui-planet-card-header-label-title span:first-child {
+  color: var(--accent-primary);
+}
+
+.sui-planet-card-body {
+  align-items: center;
+  align-self: stretch;
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  justify-content: flex-end;
+  min-height: 160px;
+  padding: var(--spacing-xl);
+}
+
+.sui-planet-card-body-content {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  min-height: 72px;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+}
+
+.sui-planet-card-status-group {
+  align-content: center;
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  justify-content: center;
+  min-height: 72px;
+}
+.sui-planet-card-status-group-col {
+  align-items: flex-start;
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  gap: var(--spacing-md, 8px);
+  min-width: 112px;
+}
+
+.sui-planet-card-alert {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+}
+
+.sui-planet-card-message {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+  justify-content: center;
+}
+
+/* ---- Planet Card End ---- */
 
 /* ---- Utility Classes Start ---- */
 
