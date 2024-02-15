@@ -515,6 +515,11 @@ a.sui-panel-btn.sui-panel-btn-disabled-active {
   padding: 0 16px;
 }
 
+.sui-theme-enemy .sui-cheatsheet-title,
+.sui-theme-enemy.sui-cheatsheet-title {
+  border-left: 4px solid var(--accent-destructive);
+}
+
 .sui-cheatsheet-title-text {
   color: var(--text-body);
   font-family: 'ExtremeHazard', sans-serif;
@@ -1177,7 +1182,7 @@ a.sui-screen-portrait:hover {
 }
 
 .sui-theme-player .sui-screen-battery .sui-battery-chunk.sui-battery-chunk-filled,
-.sui-theme-player.sui-screen-battery .sui-battery-chunk.sui-battery-chunk-filled
+.sui-theme-player.sui-screen-battery .sui-battery-chunk.sui-battery-chunk-filled,
 .sui-theme-player .sui-battery .sui-battery-chunk.sui-battery-chunk-filled,
 .sui-theme-player.sui-battery .sui-battery-chunk.sui-battery-chunk-filled {
   background-image: url("/img/battery/battery-chunk-player.png");
