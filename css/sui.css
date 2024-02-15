@@ -28,6 +28,7 @@
   --border-neutral-dark: #000000;
   --border-player: #133546;
   --border-player-dark: #2E1F3E;
+  --border-strong: #A7C0C6;
   --border-subtle: #394958;
   --icon-dark: #394958;
   --page-background: #1A2029;
@@ -73,6 +74,7 @@
   --spacing-md: 8px;
   --spacing-lg: 12px;
   --spacing-xl: 16px;
+  --spacing-xxl: 24px;
   --spacing-xxxl: 32px;
 
   /* -- Spacing End -- */
@@ -206,7 +208,7 @@ a.sui-accent-disabled:visited {
   color: var(--accent-disabled);
 }
 
-.sui-text-warning {
+.sui-accent-warning {
   color: var(--text-warning);
 }
 
@@ -1628,6 +1630,166 @@ select:disabled {
 }
 
 /* ---- Page Layout End ---- */
+
+/* ---- Messages Start ---- */
+
+.sui-message-system-modal {
+  align-items: flex-end;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 640px;
+  padding: 10px;
+}
+
+.sui-message-system-modal-frame {
+  align-items: flex-start;
+  align-self: stretch;
+  background: var(--surface-default);
+  border-top: 2px solid var(--border-strong);
+  border-right: 2px solid var(--border-strong);
+  border-bottom: 2px solid var(--border-strong);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: row;
+  padding-right: var(--spacing-xxl);
+}
+
+.sui-message-system-modal-frame-left {
+  align-items: flex-start;
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.sui-message-system-modal-frame-left-top {
+  align-items: flex-start;
+  align-self: stretch;
+  border-left: 2px solid var(--border-strong);
+  display: flex;
+  gap: 16px;
+  height: 16px;
+  padding: 0 8px;
+}
+
+.sui-message-system-modal-frame-left-middle {
+  align-items: flex-start;
+  border-left: 4px solid var(--accent-primary);
+  color: var(--accent-primary);
+  display: flex;
+  gap: 16px;
+  padding: var(--spacing-s) var(--spacing-lg);
+}
+
+.sui-message-system-modal-frame-left-bottom {
+  align-items: flex-start;
+  align-self: stretch;
+  border-left: 2px solid var(--border-strong);
+  display: flex;
+  flex: 1 0 0;
+  gap: 16px;
+  padding: 0 8px;
+}
+
+.sui-message-system-model-frame-center {
+  align-items: flex-start;
+  display: flex;
+  flex: 1 0 0;
+  padding: var(--spacing-xxl) 0;
+  text-align: left;
+}
+
+.sui-message-system-modal-cta {
+  align-items: flex-start;
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: flex-end;
+}
+
+.sui-message-system-modal-cta-btn-wrapper {
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  display: inline-flex;
+  justify-content: center;
+}
+
+.sui-message-system-alert {
+  align-items: flex-start;
+  background: var(--surface-default);
+  border-top: 2px solid var(--border-strong);
+  border-right: 2px solid var(--border-strong);
+  border-bottom: 2px solid var(--border-strong);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+  display: flex;
+  max-width: 640px;
+}
+
+.sui-message-system-alert-icon-container {
+  align-items: flex-start;
+  align-self: stretch;
+  border-left: 4px solid var(--accent-primary);
+  display: flex;
+  gap: 16px;
+  padding: var(--spacing-lg);
+}
+
+.sui-message-system-alert-text-container {
+  align-items: flex-start;
+  color: var(--text-body);
+  display: flex;
+  flex: 1 0 0;
+  flex-direction: column;
+  padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-lg) 0;
+  text-align: left;
+}
+
+.sui-message-system-alert-close-container {
+  align-items: flex-start;
+  color: var(--accent-primary);
+  display: flex;
+  justify-content: flex-end;
+  padding: var(--spacing-xl);
+}
+
+.sui-accent-pri .sui-message-system-alert-icon-container {
+  border-left: 4px solid var(--accent-primary);
+}
+
+.sui-accent-sec .sui-message-system-alert-icon-container {
+  border-left: 4px solid var(--accent-secondary);
+}
+.sui-accent-des .sui-message-system-alert-icon-container {
+  border-left: 4px solid var(--accent-destructive);
+}
+.sui-accent-warning .sui-message-system-alert-icon-container {
+  border-left: 4px solid var(--text-warning);
+}
+
+.sui-message-system-alert.sui-message-system-alert-minimized {
+  display: inline-flex;
+}
+
+.sui-message-system-alert-minimized  .sui-message-system-alert-text-container,
+.sui-message-system-alert-minimized  .sui-message-system-alert-close-container {
+  display: none;
+}
+
+.sui-message-inline-alert {
+  align-items: flex-start;
+  display: inline-flex;
+  gap: var(--spacing-md);
+}
+
+.sui-message-inline-alert-text {
+  align-items: flex-start;
+  color: var(--text-body);
+  display: flex;
+  padding: var(--spacing-xs) 0;
+}
+
+/* ---- Messages End ---- */
 
 /* ---- Planet Card Start ---- */
 
