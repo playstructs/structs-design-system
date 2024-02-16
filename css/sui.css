@@ -1299,6 +1299,7 @@ a.sui-resource:visited {
   display: inline-flex;
   gap: var(--spacing-s);
   justify-items: center;
+  min-height: var(--spacing-xxxl);
   text-decoration: none;
 }
 
@@ -1919,6 +1920,39 @@ select:disabled {
 }
 
 /* ---- Planet Card End ---- */
+
+/* ---- HUD Elements Start ---- */
+
+.sui-status-bar {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+  padding: 2px;
+  width: 100%;
+}
+
+.sui-status-bar-panel {
+  align-items: center;
+  background-color: var(--surface-player-body);
+  background-clip: padding-box;
+  border-image: url("/img/status-bar/status-bar-border.png") 4 / 4px / 4px;
+  display: flex;
+  gap: var(--spacing-xl);
+  justify-content: center;
+  padding: var(--spacing-s) var(--spacing-md);
+}
+
+.sui-theme-player .sui-status-bar-panel,
+.sui-theme-player.sui-status-bar-panel {
+  background-color: var(--surface-player-body);
+}
+
+.sui-theme-enemy .sui-status-bar-panel,
+.sui-theme-enemy.sui-status-bar-panel {
+  background-color: var(--surface-enemy-body);
+}
+
+/* ---- HUD Elements End ---- */
 
 /* ---- Utility Classes Start ---- */
 
