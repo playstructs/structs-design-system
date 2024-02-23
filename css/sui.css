@@ -30,6 +30,9 @@
   --border-player-dark: #2E1F3E;
   --border-strong: #A7C0C6;
   --border-subtle: #394958;
+  --icon-colour-destructive: #EE7D69;
+  --icon-colour-primary: #43CDB6;
+  --icon-colour-warning: #F3C878;
   --icon-dark: #394958;
   --page-background: #1A2029;
   --surface-enemy-body: #2E1F3E;
@@ -81,6 +84,19 @@
 }
 
 /* ---- Variables End ----*/
+
+/* ---- Keyframes Start ---- */
+
+@keyframes blink {
+  from {
+    opacity: 1
+  }
+  to {
+    opacity: 0
+  }
+}
+
+/* ---- Keyframes End ---- */
 
 /* ---- General Styling Start ---- */
 
@@ -1950,6 +1966,92 @@ select:disabled {
 .sui-theme-enemy .sui-status-bar-panel,
 .sui-theme-enemy.sui-status-bar-panel {
   background-color: var(--surface-enemy-body);
+}
+
+.sui-hud-indicator {
+  position: relative;
+
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+}
+
+.sui-hud-indicator-icon {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 2px 0 0 #000000, 0 -2px 0 0 #000000, 2px 0 0 0 #000000, -2px 0 0 0 #000000;
+  flex-direction: column;
+  justify-content: center;
+
+  background: #394958;
+}
+
+.sui-hud-indicator::after {
+  content: "";
+
+  position: absolute;
+  left: 18px;
+  bottom: 0;
+
+  display: inline-block;
+  height: 10px;
+  width: 16px;
+
+  animation: blink 1.5s infinite alternate-reverse linear;
+}
+
+.sui-mod-top.sui-hud-indicator::after {
+  top: 0;
+  left: 18px;
+
+  transform: rotate(180deg);
+}
+
+.sui-mod-right.sui-hud-indicator::after {
+  top: 21px;
+  left: 39px;
+
+  transform: rotate(270deg);
+}
+
+.sui-mod-bottom.sui-hud-indicator::after {
+  bottom: 0;
+  left: 18px;
+}
+
+.sui-mod-left.sui-hud-indicator::after {
+  top: 21px;
+  left: -3px;
+
+  transform: rotate(90deg);
+}
+
+.sui-hud-indicator.sui-mod-primary {
+  color: var(--icon-colour-primary);
+}
+
+.sui-hud-indicator.sui-mod-primary::after {
+  background: url("/img/hud/hud-indicator-caret-primary.png") center / contain no-repeat;
+}
+
+.sui-hud-indicator.sui-mod-warning {
+  color: var(--icon-colour-warning);
+}
+
+.sui-hud-indicator.sui-mod-warning::after {
+  background: url("/img/hud/hud-indicator-caret-warning.png") center / contain no-repeat;
+}
+
+.sui-hud-indicator.sui-mod-destructive {
+  color: var(--icon-colour-destructive);
+}
+
+.sui-hud-indicator.sui-mod-destructive::after {
+  background: url("/img/hud/hud-indicator-caret-destructive.png") center / contain no-repeat;
 }
 
 /* ---- HUD Elements End ---- */
