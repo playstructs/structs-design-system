@@ -455,45 +455,45 @@ a.sui-panel-btn:visited {
   width: 44px;
 }
 
-.sui-panel-btn.sui-panel-btn-default,
-a.sui-panel-btn.sui-panel-btn-default {
+.sui-panel-btn.sui-mod-default,
+a.sui-panel-btn.sui-mod-default {
   background: url("/img/panel/panel-btn-default.png") no-repeat;
   color: var(--icon-dark);
   padding-top: var(--spacing-md);
 }
 
-.sui-panel-btn.sui-panel-btn-default:active,
-a.sui-panel-btn.sui-panel-btn-default:active {
+.sui-panel-btn.sui-mod-default:active,
+a.sui-panel-btn.sui-mod-default:active {
   background: url("/img/panel/panel-btn-pressed.png") bottom no-repeat;
   padding-top: var(--spacing-lg);
 }
 
-.sui-panel-btn.sui-panel-btn-pressed,
-a.sui-panel-btn.sui-panel-btn-pressed {
+.sui-panel-btn.sui-mod-pressed,
+a.sui-panel-btn.sui-mod-pressed {
   background: url("/img/panel/panel-btn-pressed.png") bottom no-repeat;
   color: var(--icon-dark);
 }
 
-.sui-panel-btn.sui-panel-btn-active-defense,
-a.sui-panel-btn.sui-panel-btn-active-defense {
+.sui-panel-btn.sui-mod-active-defense,
+a.sui-panel-btn.sui-mod-active-defense {
   background: url("/img/panel/panel-btn-active-defense.png") bottom no-repeat;
   color: var(--text-player-highlight);
 }
 
-.sui-panel-btn.sui-panel-btn-active-offense,
-a.sui-panel-btn.sui-panel-btn-active-offense {
+.sui-panel-btn.sui-mod-active-offense,
+a.sui-panel-btn.sui-mod-active-offense {
   background: url("/img/panel/panel-btn-active-offense.png") bottom no-repeat;
   color: var(--text-warning);
 }
 
-.sui-panel-btn.sui-panel-btn-disabled,
-a.sui-panel-btn.sui-panel-btn-disabled {
+.sui-panel-btn.sui-mod-disabled,
+a.sui-panel-btn.sui-mod-disabled {
   background: url("/img/panel/panel-btn-disabled.png") bottom no-repeat;
   color: var(--accent-disabled);
 }
 
-.sui-panel-btn.sui-panel-btn-disabled-active,
-a.sui-panel-btn.sui-panel-btn-disabled-active {
+.sui-panel-btn.sui-mod-disabled-active,
+a.sui-panel-btn.sui-mod-disabled-active {
   background: url("/img/panel/panel-btn-disabled.png") bottom no-repeat;
   color: var(--accent-destructive);
 }
