@@ -1029,8 +1029,8 @@ a.sui-screen-nav-item:visited {
   color: var(--text-player-highlight);
 }
 
-.sui-theme-player .sui-screen-info.sui-theme-inverted,
-.sui-theme-player.sui-screen-info.sui-theme-inverted {
+.sui-theme-player .sui-screen-info.sui-mod-inverted,
+.sui-theme-player.sui-screen-info.sui-mod-inverted {
   border: 2px solid var(--border-player);
   background-color: var(--surface-player-inverted);
   color: var(--text-player-inverted);
@@ -1043,8 +1043,8 @@ a.sui-screen-nav-item:visited {
   color: var(--text-enemy-highlight);
 }
 
-.sui-theme-enemy .sui-screen-info.sui-theme-inverted,
-.sui-theme-enemy.sui-screen-info.sui-theme-inverted {
+.sui-theme-enemy .sui-screen-info.sui-mod-inverted,
+.sui-theme-enemy.sui-screen-info.sui-mod-inverted {
   border: 2px solid var(--border-enemy);
   background-color: var(--surface-enemy-inverted);
   color: var(--text-enemy-inverted);
