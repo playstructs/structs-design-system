@@ -932,7 +932,7 @@ a.sui-screen-nav-item:visited {
   white-space: nowrap;
 }
 
-.sui-screen-nav-item-active {
+.sui-mod-active {
   border-bottom: 2px solid var(--accent-primary-active);
 }
 
@@ -955,10 +955,10 @@ a.sui-screen-nav-item:visited {
   color: var(--accent-primary);
 }
 
-.sui-theme-player .sui-screen-nav-item.sui-screen-nav-item-active,
-.sui-theme-player a.sui-screen-nav-item.sui-screen-nav-item-active,
-.sui-theme-player a.sui-screen-nav-item.sui-screen-nav-item-active:link,
-.sui-theme-player a.sui-screen-nav-item.sui-screen-nav-item-active:visited,
+.sui-theme-player .sui-screen-nav-item.sui-mod-active,
+.sui-theme-player a.sui-screen-nav-item.sui-mod-active,
+.sui-theme-player a.sui-screen-nav-item.sui-mod-active:link,
+.sui-theme-player a.sui-screen-nav-item.sui-mod-active:visited,
 .sui-theme-player a.sui-screen-nav-item:hover,
 .sui-theme-player a.sui-screen-nav-item:active,
 .sui-theme-player a.sui-screen-nav-close:hover,
