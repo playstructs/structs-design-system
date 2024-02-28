@@ -787,11 +787,11 @@ a.sui-nav-btn:visited {
   padding-bottom: var(--spacing-xs);
 }
 
-.sui-panel-chunk.sui-panel-chunk-grow {
+.sui-panel-chunk.sui-mod-grow {
   flex-grow: 1;
 }
 
-.sui-panel-chunk.sui-panel-chunk-shrink {
+.sui-panel-chunk.sui-mod-shrink {
   flex-shrink: 1;
   min-width: 0;
 }
