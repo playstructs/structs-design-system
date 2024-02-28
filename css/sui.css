@@ -1215,17 +1215,17 @@ a.sui-screen-portrait:hover {
   width: 4px;
 }
 
-.sui-theme-player .sui-screen-battery .sui-battery-chunk.sui-battery-chunk-filled,
-.sui-theme-player.sui-screen-battery .sui-battery-chunk.sui-battery-chunk-filled,
-.sui-theme-player .sui-battery .sui-battery-chunk.sui-battery-chunk-filled,
-.sui-theme-player.sui-battery .sui-battery-chunk.sui-battery-chunk-filled {
+.sui-theme-player .sui-screen-battery .sui-battery-chunk.sui-mod-filled,
+.sui-theme-player.sui-screen-battery .sui-battery-chunk.sui-mod-filled,
+.sui-theme-player .sui-battery .sui-battery-chunk.sui-mod-filled,
+.sui-theme-player.sui-battery .sui-battery-chunk.sui-mod-filled {
   background-image: url("/img/battery/battery-chunk-player.png");
 }
 
-.sui-theme-enemy .sui-screen-battery .sui-battery-chunk.sui-battery-chunk-filled,
-.sui-theme-enemy.sui-screen-battery .sui-battery-chunk.sui-battery-chunk-filled,
-.sui-theme-enemy .sui-battery .sui-battery-chunk.sui-battery-chunk-filled,
-.sui-theme-enemy.sui-battery .sui-battery-chunk.sui-battery-chunk-filled {
+.sui-theme-enemy .sui-screen-battery .sui-battery-chunk.sui-mod-filled,
+.sui-theme-enemy.sui-screen-battery .sui-battery-chunk.sui-mod-filled,
+.sui-theme-enemy .sui-battery .sui-battery-chunk.sui-mod-filled,
+.sui-theme-enemy.sui-battery .sui-battery-chunk.sui-mod-filled {
   background-image: url("/img/battery/battery-chunk-enemy.png");
 }
 
