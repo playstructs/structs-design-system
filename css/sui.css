@@ -1447,17 +1447,17 @@ a.sui-resource:visited {
   text-transform: uppercase;
 }
 
-.sui-mod-default {
+.sui-badge.sui-mod-default {
   border: 1px solid var(--accent-primary);
   color: var(--text-player-primary);
 }
 
-.sui-mod-warning {
+.sui-badge.sui-mod-warning {
   border: 1px solid var(--text-warning);
   color: var(--text-warning);
 }
 
-.sui-mod-solid {
+.sui-badge.sui-mod-solid {
   background-color: var(--accent-primary);
   border: 1px solid var(--accent-primary);
   color: var(--text-player-inverted);
@@ -1562,7 +1562,7 @@ select {
   font-size: 16px;
   height: var(--from-input-height-content);
   margin: 2px;
-  padding: 0 var(--spacing-lg) 0 32px;
+  padding: 0 var(--spacing-md) 0 36px;
   -webkit-appearance: none;
 }
 
