@@ -80,7 +80,7 @@
 
   <div class="ui-element-container">
     <h2>
-      Header &lt;h2&gt;/&lt;label&gt;  - Used For Small Headers and Labels.<br>
+      Header &lt;h2&gt; - Used For Small Headers and Labels.<br>
       Size: 8px line-height: 16px
     </h2>
   </div>
@@ -1823,7 +1823,7 @@
               <div class="sui-result-row-portrait-image"></div>
             </div>
             <div class="sui-result-row-player-info">
-              <div class="sui-block-label-text">
+              <div class="sui-text-label-block">
                 <span class="sui-mod-secondary">[TAG]</span> ABSTRACT<br>
                 <span class="sui-text-hint">PID #7283</span>
               </div>
@@ -1848,7 +1848,7 @@
               <div class="sui-result-row-portrait-image"></div>
             </div>
             <div class="sui-result-row-player-info">
-              <div class="sui-block-label-text">
+              <div class="sui-text-label-block">
                 <span class="sui-mod-secondary">[TAG]</span> ABSTRACT<br>
               </div>
               <span class="sui-badge sui-mod-default">Fleet Away</span>
@@ -1879,7 +1879,7 @@
               </div>
             </div>
             <div class="sui-result-row-player-info">
-              <div class="sui-block-label-text">
+              <div class="sui-text-label-block">
                 Non-Player Address
                 <i class="sui-icon-sm icon-tip sui-text-secondary"></i>
               </div>
@@ -1906,7 +1906,7 @@
               </div>
             </div>
             <div class="sui-result-row-player-info">
-              <div class="sui-block-label-text">
+              <div class="sui-text-label-block">
                 SN.CORPORATION
               </div>
             </div>
@@ -1934,7 +1934,7 @@
               </div>
             </div>
             <div class="sui-result-row-player-info">
-              <div class="sui-block-label-text">
+              <div class="sui-text-label-block">
                 Transaction #00134
               </div>
               <span class="sui-badge sui-mod-default">Completed</span>
@@ -1969,7 +1969,7 @@
               <div class="sui-result-row-portrait-image"></div>
             </div>
             <div class="sui-result-row-player-info">
-              <div class="sui-block-label-text">
+              <div class="sui-text-label-block">
                 <span class="sui-mod-secondary">[TAG]</span> ABSTRACT<br>
               </div>
               <span class="sui-badge sui-mod-default">Fleet Away</span>
@@ -1998,7 +1998,7 @@
               <div class="sui-result-row-portrait-image"></div>
             </div>
             <div class="sui-result-row-player-info">
-              <div class="sui-block-label-text">
+              <div class="sui-text-label-block">
                 <span class="sui-mod-secondary">[TAG]</span> ABSTRACT<br>
               </div>
               <span class="sui-badge sui-mod-default">Fleet Away</span>
@@ -2027,7 +2027,7 @@
               <div class="sui-result-row-portrait-image"></div>
             </div>
             <div class="sui-result-row-player-info">
-              <div class="sui-block-label-text">
+              <div class="sui-text-label-block">
                 <span class="sui-mod-secondary">[TAG]</span> THEDEVILSROBOT<br>
               </div>
               <span class="sui-badge sui-mod-warning">On Station</span>
@@ -2056,7 +2056,7 @@
               <div class="sui-result-row-portrait-image"></div>
             </div>
             <div class="sui-result-row-player-info">
-              <div class="sui-block-label-text">
+              <div class="sui-text-label-block">
                 <span class="sui-mod-secondary">[TAG]</span> Abstract<br>
               </div>
               <span class="sui-badge sui-mod-warning">On Station</span>
@@ -2085,7 +2085,7 @@
               <div class="sui-result-row-portrait-image"></div>
             </div>
             <div class="sui-result-row-player-info">
-              <div class="sui-block-label-text">
+              <div class="sui-text-label-block">
                 <span class="sui-mod-secondary">[TAG]</span> Abstract<br>
               </div>
               <span class="sui-badge sui-mod-default">Fleet Away</span>
@@ -2241,44 +2241,40 @@
     <div class="ui-element-container">
       <div class="fixed-width-group-md ">
 
-        <div class="sui-input-text-group">
-          <label class="sui-block-label" for="testInputText1">
-            <span class="sui-block-label-text">Min. Vulnerable Ore</span>
-            <input
-              type="text"
-              class="sui-input-text"
-              name="testInputText1"
-              id="testInputText1"
-              placeholder="Hint Text"
-            >
-          </label>
-        </div>
+        <label class="sui-input-text" for="testInputText">
+          <span>Min. Vulnerable Ore</span>
+          <input
+            type="text"
+            name="testInputText"
+            id="testInputText"
+            placeholder="Hint Text"
+          >
+        </label>
 
       </div>
     </div>
 
     <div class="ui-element-container">
-      <div class="fixed-width-group-md">
+      <div class="fixed-width-group-md ">
 
-        <div class="sui-input-text-group">
-          <label class="sui-block-label" for="testInputText2">
-            <span class="sui-block-label-text">Min. Vulnerable Ore</span>
-            <input
-              type="text"
-              class="sui-input-text"
-              name="testInputText2"
-              id="testInputText2"
-              placeholder="Hint Text"
-              disabled="disabled"
-            >
-          </label>
-          <div class="sui-input-warning-container sui-text-warning show">
-            You did it wrong.
-          </div>
+        <label class="sui-input-text" for="testInputTextDisabled">
+          <span>Min. Vulnerable Ore</span>
+          <input
+            type="text"
+            name="testInputText"
+            id="testInputTextDisabled"
+            placeholder="Hint Text"
+            disabled="disabled"
+          >
+        </label>
+
+        <div class="sui-input-text-warning sui-mod-show">
+          You did it wrong.
         </div>
 
       </div>
     </div>
+
   </form>
 </section>
 
@@ -2351,7 +2347,7 @@
                         <div class="sui-result-row-portrait-image"></div>
                       </div>
                       <div class="sui-result-row-player-info">
-                        <div class="sui-block-label-text">
+                        <div class="sui-text-label-block">
                           <span class="sui-mod-secondary">[TAG]</span> ABSTRACT<br>
                           <span class="sui-text-hint">PID #7283</span>
                         </div>
@@ -2376,7 +2372,7 @@
                         <div class="sui-result-row-portrait-image"></div>
                       </div>
                       <div class="sui-result-row-player-info">
-                        <div class="sui-block-label-text">
+                        <div class="sui-text-label-block">
                           <span class="sui-mod-secondary">[TAG]</span> DETHMASHENE<br>
                           <span class="sui-text-hint">PID #7283</span>
                         </div>
@@ -2401,7 +2397,7 @@
                         <div class="sui-result-row-portrait-image"></div>
                       </div>
                       <div class="sui-result-row-player-info">
-                        <div class="sui-block-label-text">
+                        <div class="sui-text-label-block">
                           <span class="sui-mod-secondary">[TAG]</span> TXUE<br>
                           <span class="sui-text-hint">PID #7283</span>
                         </div>
@@ -2426,7 +2422,7 @@
                         <div class="sui-result-row-portrait-image"></div>
                       </div>
                       <div class="sui-result-row-player-info">
-                        <div class="sui-block-label-text">
+                        <div class="sui-text-label-block">
                           <span class="sui-mod-secondary">[TAG]</span> NETLAG<br>
                           <span class="sui-text-hint">PID #7283</span>
                         </div>
@@ -2451,7 +2447,7 @@
                         <div class="sui-result-row-portrait-image"></div>
                       </div>
                       <div class="sui-result-row-player-info">
-                        <div class="sui-block-label-text">
+                        <div class="sui-text-label-block">
                           <span class="sui-mod-secondary">[TAG]</span> SAINT<br>
                           <span class="sui-text-hint">PID #7283</span>
                         </div>
@@ -2476,7 +2472,7 @@
                         <div class="sui-result-row-portrait-image"></div>
                       </div>
                       <div class="sui-result-row-player-info">
-                        <div class="sui-block-label-text">
+                        <div class="sui-text-label-block">
                           <span class="sui-mod-secondary">[TAG]</span> ABSTRACT<br>
                           <span class="sui-text-hint">PID #7283</span>
                         </div>
@@ -2501,7 +2497,7 @@
                         <div class="sui-result-row-portrait-image"></div>
                       </div>
                       <div class="sui-result-row-player-info">
-                        <div class="sui-block-label-text">
+                        <div class="sui-text-label-block">
                           <span class="sui-mod-secondary">[TAG]</span> DETHMASHENE<br>
                           <span class="sui-text-hint">PID #7283</span>
                         </div>
@@ -2526,7 +2522,7 @@
                         <div class="sui-result-row-portrait-image"></div>
                       </div>
                       <div class="sui-result-row-player-info">
-                        <div class="sui-block-label-text">
+                        <div class="sui-text-label-block">
                           <span class="sui-mod-secondary">[TAG]</span> TXUE<br>
                           <span class="sui-text-hint">PID #7283</span>
                         </div>
@@ -2551,7 +2547,7 @@
                         <div class="sui-result-row-portrait-image"></div>
                       </div>
                       <div class="sui-result-row-player-info">
-                        <div class="sui-block-label-text">
+                        <div class="sui-text-label-block">
                           <span class="sui-mod-secondary">[TAG]</span> NETLAG<br>
                           <span class="sui-text-hint">PID #7283</span>
                         </div>
@@ -2576,7 +2572,7 @@
                         <div class="sui-result-row-portrait-image"></div>
                       </div>
                       <div class="sui-result-row-player-info">
-                        <div class="sui-block-label-text">
+                        <div class="sui-text-label-block">
                           <span class="sui-mod-secondary">[TAG]</span> SAINT<br>
                           <span class="sui-text-hint">PID #7283</span>
                         </div>
