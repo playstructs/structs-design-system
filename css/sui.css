@@ -1,5 +1,17 @@
 /** ---- Structs UI (SUI) ---- **/
 
+/**
+ * Rule Order
+ *
+ * 1. Positioning
+ * 2. Display and Box Model
+ * 3. Background and Color
+ * 4. Typography
+ * 5. Other
+ */
+
+/* ---- Font Imports Start ---- */
+
 @font-face {
   font-family: DirectiveZero;
   src: url(../fonts/DirectiveZeroWid.ttf);
@@ -8,6 +20,9 @@
   font-family: ExtremeHazard;
   src: url(../fonts/ExtremeHazard.ttf);
 }
+
+/* ---- Font Imports End ---- */
+
 
 /* ---- Variables Start ---- */
 
@@ -58,6 +73,7 @@
 
   /* -- Colors End -- */
 
+
   /* -- Dimensions Start -- */
 
   --form-input-height-total: 40px;
@@ -70,6 +86,7 @@
 
   /* -- Dimensions End -- */
 
+
   /* -- Spacing Start -- */
 
   --spacing-xs: 2px;
@@ -81,9 +98,11 @@
   --spacing-xxxl: 32px;
 
   /* -- Spacing End -- */
+
 }
 
 /* ---- Variables End ----*/
+
 
 /* ---- Keyframes Start ---- */
 
@@ -98,12 +117,14 @@
 
 /* ---- Keyframes End ---- */
 
+
 /* ---- General Styling Start ---- */
 
 a,
 a:link,
 a:visited {
   color: var(--text-body);
+
   font-family: 'DirectiveZero', sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -117,17 +138,17 @@ a:hover {
   text-decoration: none;
 }
 
-
-
 body {
   background: url("/img/page/page-background.png") repeat var(--page-background);
+  color: var(--text-body);
+
   text-align: center;
   font-family: 'DirectiveZero', sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  color: var(--text-body);
+
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-crisp-edges;
   image-rendering: pixelated;
@@ -139,6 +160,7 @@ input:focus {
 }
 
 /* ---- General Styling End ---- */
+
 
 /* ---- Text Start --- */
 
@@ -257,201 +279,235 @@ a.sui-mod-disabled:visited {
 
 /* ---- Text End ---- */
 
+
 /* ---- Icons Start ---- */
 
 .sui-icon-xs {
-  font-size: var(--icon-xs);
-  height: var(--icon-xs);
   width: var(--icon-xs);
+  height: var(--icon-xs);
+
+  font-size: var(--icon-xs);
 }
 
 .sui-icon-sm {
-  font-size: var(--icon-sm);
-  height: var(--icon-sm);
   width: var(--icon-sm);
+  height: var(--icon-sm);
+
+  font-size: var(--icon-sm);
 }
 
 .sui-icon-md {
-  font-size: var(--icon-md);
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  font-size: var(--icon-md);
 }
 
 .sui-icon-lg {
-  font-size: var(--icon-lg);
-  height: var(--icon-lg);
   width: var(--icon-lg);
+  height: var(--icon-lg);
+
+  font-size: var(--icon-lg);
 }
 
 .sui-icon-xl {
-  font-size: var(--icon-xl);
-  height: var(--icon-xl);
   width: var(--icon-xl);
+  height: var(--icon-xl);
+
+  font-size: var(--icon-xl);
 }
 
 i.sui-icon {
+  display: inline-block;
+
   background-position: center;
   background-size: cover;
-  display: inline-block;
 }
 
 i.sui-icon-air {
-  background-image: url("/img/icon/icon-air.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-air.png");
 }
 
 i.sui-icon-alpha-matter {
-  background-image: url("/img/icon/icon-alpha-matter.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-alpha-matter.png");
 }
 
 i.sui-icon-alpha-ore {
-  background-image: url("/img/icon/icon-alpha-ore.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-alpha-ore.png");
 }
 
 i.sui-icon-armour {
-  background-image: url("/img/icon/icon-armour.png");
-  height: var(--icon-lg);
   width: var(--icon-lg);
+  height: var(--icon-lg);
+
+  background-image: url("/img/icon/icon-armour.png");
 }
 
 i.sui-icon-attacker {
-  background-image: url("/img/icon/icon-attacker.png");
-  height: var(--icon-lg);
   width: var(--icon-lg);
+  height: var(--icon-lg);
+
+  background-image: url("/img/icon/icon-attacker.png");
 }
 
 i.sui-icon-counter-attack {
-  background-image: url("/img/icon/icon-counter-attack.png");
-  height: var(--icon-lg);
   width: var(--icon-lg);
+  height: var(--icon-lg);
+
+  background-image: url("/img/icon/icon-counter-attack.png");
 }
 
 i.sui-icon-defended {
-  background-image: url("/img/icon/icon-defended.png");
-  height: var(--icon-lg);
   width: var(--icon-lg);
+  height: var(--icon-lg);
+
+  background-image: url("/img/icon/icon-defended.png");
 }
 
 i.sui-icon-defender-block {
-  background-image: url("/img/icon/icon-defender-block.png");
-  height: var(--icon-lg);
   width: var(--icon-lg);
+  height: var(--icon-lg);
+
+  background-image: url("/img/icon/icon-defender-block.png");
 }
 
 i.sui-icon-defender-counter {
-  background-image: url("/img/icon/icon-defender-counter.png");
-  height: var(--icon-lg);
   width: var(--icon-lg);
+  height: var(--icon-lg);
+
+  background-image: url("/img/icon/icon-defender-counter.png");
 }
 
 i.sui-icon-defending {
-  background-image: url("/img/icon/icon-defending.png");
-  height: var(--icon-lg);
   width: var(--icon-lg);
+  height: var(--icon-lg);
+
+  background-image: url("/img/icon/icon-defending.png");
 }
 
 i.sui-icon-deflector-shield {
-  background-image: url("/img/icon/icon-deflector-shield.png");
-  height: var(--icon-lg);
   width: var(--icon-lg);
+  height: var(--icon-lg);
+
+  background-image: url("/img/icon/icon-deflector-shield.png");
 }
 
 i.sui-icon-deployed-structs {
-  background-image: url("/img/icon/icon-deployed-structs.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-deployed-structs.png");
 }
 
 i.sui-icon-destroyed {
-  background-image: url("/img/icon/icon-destroyed.png");
-  height: var(--icon-lg);
   width: var(--icon-lg);
+  height: var(--icon-lg);
+
+  background-image: url("/img/icon/icon-destroyed.png");
 }
 
 i.sui-icon-electronic-warfare-system {
-  background-image: url("/img/icon/icon-electronic-warfare-system.png");
-  height: var(--icon-lg);
   width: var(--icon-lg);
+  height: var(--icon-lg);
+
+  background-image: url("/img/icon/icon-electronic-warfare-system.png");
 }
 
 i.sui-icon-enemy-indicator {
-  background-image: url("/img/icon/icon-enemy-indicator.png");
-  height: var(--icon-xs);
   width: var(--icon-xs);
+  height: var(--icon-xs);
+
+  background-image: url("/img/icon/icon-enemy-indicator.png");
 }
 
 i.sui-icon-enemy-shield-health {
-  background-image: url("/img/icon/icon-enemy-shield-health.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-enemy-shield-health.png");
 }
 
 i.sui-icon-energy {
-  background-image: url("/img/icon/icon-energy.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-energy.png");
 }
 
 i.sui-icon-inert-alpha {
-  background-image: url("/img/icon/icon-inert-alpha.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-inert-alpha.png");
 }
 
 i.sui-icon-land {
-  background-image: url("/img/icon/icon-land.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-land.png");
 }
 
 i.sui-icon-player-indicator {
-  background-image: url("/img/icon/icon-player-indicator.png");
-  height: var(--icon-xs);
   width: var(--icon-xs);
+  height: var(--icon-xs);
+
+  background-image: url("/img/icon/icon-player-indicator.png");
 }
 
 i.sui-icon-players {
-  background-image: url("/img/icon/icon-players.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-players.png");
 }
 
 i.sui-icon-shield-health {
-  background-image: url("/img/icon/icon-shield-health.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-shield-health.png");
 }
 
 i.sui-icon-space {
-  background-image: url("/img/icon/icon-space.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-space.png");
 }
 
 i.sui-icon-stealth-mode {
-  background-image: url("/img/icon/icon-stealth-mode.png");
-  height: var(--icon-lg);
   width: var(--icon-lg);
+  height: var(--icon-lg);
+
+  background-image: url("/img/icon/icon-stealth-mode.png");
 }
 
 i.sui-icon-undiscovered-ore {
-  background-image: url("/img/icon/icon-undiscovered-ore.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-undiscovered-ore.png");
 }
 
 i.sui-icon-water {
-  background-image: url("/img/icon/icon-water.png");
-  height: var(--icon-md);
   width: var(--icon-md);
+  height: var(--icon-md);
+
+  background-image: url("/img/icon/icon-water.png");
 }
 
 /* ---- Icons End ---- */
+
 
 /* ---- Panel Button Start ---- */
 
