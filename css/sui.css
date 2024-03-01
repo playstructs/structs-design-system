@@ -1822,12 +1822,12 @@ label.sui-input-text input[type=text]:disabled::placeholder {
   border-left: 4px solid var(--text-warning);
 }
 
-.sui-message-system-alert.sui-message-system-alert-minimized {
+.sui-message-system-alert.sui-mod-minimized {
   display: inline-flex;
 }
 
-.sui-message-system-alert-minimized  .sui-message-system-alert-text-container,
-.sui-message-system-alert-minimized  .sui-message-system-alert-close-container {
+.sui-mod-minimized  .sui-message-system-alert-text-container,
+.sui-mod-minimized  .sui-message-system-alert-close-container {
   display: none;
 }
 
