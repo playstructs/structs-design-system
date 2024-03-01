@@ -221,13 +221,6 @@ a.sui-mod-primary:visited {
   color: var(--accent-primary);
 }
 
-.sui-text-primary-active,
-.sui-mod-primary-active,
-a.sui-mod-primary-active:hover,
-a.sui-mod-primary-active:active {
-  color: var(--accent-primary-active);
-}
-
 .sui-text-secondary,
 .sui-mod-secondary,
 a.sui-mod-secondary,
@@ -236,26 +229,12 @@ a.sui-mod-secondary:visited {
   color: var(--accent-secondary);
 }
 
-.sui-text-secondary-active,
-.sui-mod-secondary-active,
-a.sui-mod-secondary-active:hover,
-a.sui-mod-secondary-active:active {
-  color: var(--accent-secondary-active);
-}
-
 .sui-text-destructive,
 .sui-mod-destructive,
 a.sui-mod-destructive,
 a.sui-mod-destructive:link,
 a.sui-mod-destructive:visited {
   color: var(--accent-destructive);
-}
-
-.sui-text-destructive-active,
-.sui-mod-destructive-active,
-a.sui-mod-destructive-active:hover,
-a.sui-mod-destructive-active:active {
-  color: var(--accent-destructive-active);
 }
 
 .sui-text-disabled,
@@ -790,10 +769,6 @@ a.sui-screen-btn:visited {
 }
 .sui-screen-btn-flex-wrapper .sui-screen-btn span {
   flex-grow: 1;
-}
-
-.sui-screen-btn .sui-screen-btn-fixed-width {
-
 }
 
 .sui-nav-btn,
