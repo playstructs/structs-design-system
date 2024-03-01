@@ -30,35 +30,35 @@ section {
   margin: 40px auto 20px;
 }
 
-.fixed-height-group {
+.fixed-height {
   height: 360px;
 }
 
-.fixed-width-group-xl {
+.fixed-width-container-xl {
   display: inline-block;
   max-width: 620px;
   width: 100%;
 }
 
-.fixed-width-group-lg {
+.fixed-width-container-lg {
   display: inline-block;
   max-width: 409px;
   width: 100%;
 }
 
-.fixed-width-group-md {
+.fixed-width-container-md {
   display: inline-block;
   max-width: 320px;
   width: 100%;
 }
 
-.fixed-width-group-sm {
+.fixed-width-container-sm {
   display: inline-block;
   max-width: 286px;
   width: 100%;
 }
 
-.fixed-width-group-xs {
+.fixed-width-container-xs {
   display: inline-block;
   max-width: 257px;
   width: 100%;
@@ -74,11 +74,13 @@ section {
   gap: var(--spacing-xl);
   margin: var(--spacing-xl) 0;
 }
+
 .grid-row {
   display: flex;
   flex-direction: row;
   gap: var(--spacing-xl);
 }
+
 .grid-col {
   flex-grow: 1;
   align-self: stretch;
