@@ -922,12 +922,13 @@ div.sui-panel-connector.sui-theme-enemy {
 /* ---- Screens Start ---- */
 
 .sui-screen {
-  background-clip: padding-box;
+  display: inline-block;
+  box-sizing: border-box;
+  border-color: transparent;
   border-style: solid;
   border-width: 4px;
-  border-color: transparent;
-  box-sizing: border-box;
-  display: inline-block;
+
+  background-clip: padding-box;
 }
 
 .sui-screen.sui-screen-shrink {
@@ -953,23 +954,24 @@ div.sui-panel-connector.sui-theme-enemy {
 }
 
 .sui-screen-nav {
-  align-items: flex-start;
-  border-radius: 0;
   display: flex;
-  justify-content: space-between;
-  padding: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-md);
   min-width: 0;
+  border-radius: 0;
+  padding: var(--spacing-xs) 0 var(--spacing-xs) var(--spacing-md);
+  align-items: flex-start;
+  justify-content: space-between;
   overflow-x: scroll;
 }
 
 .sui-theme-player .sui-screen-nav {
   border: 2px solid var(--border-player);
+
   background: var(--surface-player-highlight);
 }
 
 .sui-screen-nav-items {
-  align-items: flex-start;
   display: flex;
+  align-items: flex-start;
   justify-content: center;
   gap: 16px;
 }
@@ -978,17 +980,18 @@ div.sui-panel-connector.sui-theme-enemy {
 a.sui-screen-nav-item,
 a.sui-screen-nav-item:link,
 a.sui-screen-nav-item:visited {
-  align-items: center;
-  border-radius: 0;
   display: flex;
-  font-family: ExtremeHazard, sans-serif;
+  padding: 6px 10px;
+  border-radius: 0;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+
+  font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
   font-style: normal;
   font-weight: 500;
-  gap: var(--spacing-sm);
-  justify-content: center;
   line-height: 16px;
-  padding: 6px 10px;
   text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
@@ -999,11 +1002,12 @@ a.sui-screen-nav-item:visited {
 }
 
 .sui-screen-nav-close {
+  display: flex;
+  padding: var(--spacing-sm) var(--spacing-md);
   align-items: center;
   align-self: stretch;
-  display: flex;
   gap: 0;
-  padding: var(--spacing-sm) var(--spacing-md);
+
   text-decoration: none;
 }
 
@@ -1029,16 +1033,17 @@ a.sui-screen-nav-item:visited {
 }
 
 .sui-screen-properties {
-  align-items: center;
   display: flex;
-  gap: var(--spacing-xl);
-  justify-content: center;
   min-width: 72px;
   padding: 6px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xl);
 }
 
 .sui-theme-player .sui-screen-properties {
   border: 2px solid var(--border-player-dark);
+
   background-color: var(--surface-player-body);
   color: var(--text-player-primary);
 }
@@ -1047,6 +1052,7 @@ a.sui-screen-nav-item:visited {
 .sui-theme-player .sui-screen-properties a:link,
 .sui-theme-player .sui-screen-properties a:visited {
   color: var(--text-player-primary);
+
   text-decoration: none;
 }
 
@@ -1057,6 +1063,7 @@ a.sui-screen-nav-item:visited {
 
 .sui-theme-enemy .sui-screen-properties {
   border: 2px solid var(--border-enemy-dark);
+
   background-color: var(--surface-enemy-body);
   color: var(--text-enemy-primary);
 }
@@ -1065,6 +1072,7 @@ a.sui-screen-nav-item:visited {
 .sui-theme-enemy .sui-screen-properties a:link,
 .sui-theme-enemy .sui-screen-properties a:visited {
   color: var(--text-enemy-primary);
+
   text-decoration: none;
 }
 
@@ -1074,19 +1082,21 @@ a.sui-screen-nav-item:visited {
 }
 
 .sui-screen-info {
+  padding: 0 var(--spacing-sm);
   border-radius: 0;
+
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
   font-style: normal;
   font-weight: 500;
   line-height: 16px;
   text-transform: uppercase;
-  padding: 0 var(--spacing-sm);
 }
 
 .sui-theme-player .sui-screen-info,
 .sui-theme-player.sui-screen-info {
   border: 2px solid var(--border-player);
+
   background-color: var(--surface-player-highlight);
   color: var(--text-player-highlight);
 }
@@ -1094,6 +1104,7 @@ a.sui-screen-nav-item:visited {
 .sui-theme-player .sui-screen-info.sui-mod-inverted,
 .sui-theme-player.sui-screen-info.sui-mod-inverted {
   border: 2px solid var(--border-player);
+
   background-color: var(--surface-player-inverted);
   color: var(--text-player-inverted);
 }
@@ -1101,6 +1112,7 @@ a.sui-screen-nav-item:visited {
 .sui-theme-enemy .sui-screen-info,
 .sui-theme-enemy.sui-screen-info {
   border: 2px solid var(--border-enemy);
+
   background-color: var(--surface-enemy-highlight);
   color: var(--text-enemy-highlight);
 }
@@ -1108,13 +1120,15 @@ a.sui-screen-nav-item:visited {
 .sui-theme-enemy .sui-screen-info.sui-mod-inverted,
 .sui-theme-enemy.sui-screen-info.sui-mod-inverted {
   border: 2px solid var(--border-enemy);
+
   background-color: var(--surface-enemy-inverted);
   color: var(--text-enemy-inverted);
 }
 
 .sui-screen-dialogue {
-  border-radius: 0;
   padding: var(--spacing-md);
+  border-radius: 0;
+
   text-align: left;
 }
 
@@ -1128,6 +1142,7 @@ a.sui-screen-nav-item:visited {
 .sui-theme-player .sui-screen-dialogue,
 .sui-theme-player.sui-screen-dialogue {
   border: 2px solid var(--border-player-dark);
+
   background-color: var(--surface-player-body);
 }
 
@@ -1139,6 +1154,7 @@ a.sui-screen-nav-item:visited {
 .sui-theme-enemy .sui-screen-dialogue,
 .sui-theme-enemy.sui-screen-dialogue {
   border: 2px solid var(--border-enemy-dark);
+
   background-color: var(--surface-enemy-body);
 }
 
@@ -1150,6 +1166,7 @@ a.sui-screen-nav-item:visited {
 
 .sui-screen-dialogue.sui-theme-neutral {
   border: 2px solid var(--border-neutral-dark);
+
   background-color: var(--surface-neutral-body);
 }
 
@@ -1161,13 +1178,14 @@ a.sui-screen-nav-item:visited {
 a.sui-screen-portrait,
 a.sui-screen-portrait:link,
 a.sui-screen-portrait:visited {
-  align-items: center;
-  border-radius: 0;
-  display: flex;
-  height: 40px;
-  justify-content: center;
-  width: 40px;
   position: relative;
+
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  align-items: center;
+  justify-content: center;
 }
 
 .sui-screen-portrait i {
@@ -1180,101 +1198,116 @@ a.sui-screen-portrait:visited {
 
 a.sui-screen-portrait:hover {
   box-sizing: border-box;
-  height: 100%;
   width: 100%;
+  height: 100%;
+  padding: var(--spacing-md);
+
   outline: 2px solid rgba(0, 0, 0, 0.20);
   outline-offset: -2px;
-  padding: var(--spacing-md);
 }
+
 .sui-theme-player a.sui-screen-portrait:hover {
   background-color: var(--surface-player-body);
 }
+
 .sui-theme-enemy a.sui-screen-portrait:hover {
   background-color: var(--surface-enemy-body);
 }
 
 .sui-theme-player .sui-screen-portrait:hover i.icon-menu {
-  color: var(--accent-primary);
   display: inline-block;
+
+  color: var(--accent-primary);
 }
 
 .sui-theme-enemy .sui-screen-portrait:hover i.icon-info {
-  color: var(--accent-destructive);
   display: inline-block;
+
+  color: var(--accent-destructive);
 }
 
 .sui-screen-indicator {
-  background-color: var(--surface-neutral-body);
-  border-radius: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  width: 40px;
   position: relative;
   z-index: 0;
+
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 0;
+  justify-content: center;
+  align-items: center;
+
+  background-color: var(--surface-neutral-body);
 }
 
 .sui-screen-indicator::before {
   content: "";
-  height: 100%;
-  width: 100%;
-  outline: 2px solid rgba(0, 0, 0, 0.20);
-  outline-offset: -2px;
+
   position: absolute;
   top: 0;
   left: 0;
   z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  outline: 2px solid rgba(0, 0, 0, 0.20);
+  outline-offset: -2px;
 }
 
 .sui-screen-portrait-image {
+  width: 100%;
+  height: 100%;
+
   background-image: url("/img/mock/mock-droid-360.png");
   background-position: -16px -4px;
-  height: 100%;
-  width: 100%;
+
   outline: 2px solid rgba(0, 0, 0, 0.20);
   outline-offset: -2px;
 }
 
 .sui-screen-battery {
   display: flex;
+  width: 36px;
   flex-direction: row;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   gap: var(--spacing-xs);
-  width: 36px
 }
 
 .sui-theme-player .sui-screen-battery,
 .sui-theme-player.sui-screen-battery {
-  border-radius: 0;
   border: 2px solid var(--border-player-dark);
+  border-radius: 0;
+
   background: var(--surface-player-body);
 }
 
 .sui-theme-enemy .sui-screen-battery,
 .sui-theme-enemy.sui-screen-battery {
-  border-radius: 0;
   border: 2px solid var(--border-enemy-dark);
+  border-radius: 0;
+
   background: var(--surface-enemy-body);
 }
 
 .sui-battery {
-  align-items: center;
   display: inline-flex;
   flex-direction: row;
+  align-items: center;
   justify-content: space-between;
   gap: var(--spacing-xs);
 }
 
 .sui-battery-chunk {
   display: inline-block;
+  width: 4px;
+  height: 16px;
+
   background-image: url("/img/battery/battery-chunk-empty.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: 4px 16px;
-  height: 16px;
-  width: 4px;
 }
 
 .sui-theme-player .sui-screen-battery .sui-battery-chunk.sui-mod-filled,
@@ -1292,6 +1325,7 @@ a.sui-screen-portrait:hover {
 }
 
 /* ---- Screens End ---- */
+
 
 /* ---- Action Bar Start---- */
 
