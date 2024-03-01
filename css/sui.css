@@ -705,19 +705,21 @@ a.sui-screen-btn,
 a.sui-screen-btn:link,
 a.sui-screen-btn:visited {
   display: inline-flex;
-  align-items: center;
-  background: var(--surface-default);
-  background-clip: padding-box;
+  height: var(--from-input-height-content);
+  padding: 0 var(--spacing-lg);
   border: 0 none;
   border-radius: 0;
+  margin: 2px;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-md, 8px);
+
+  background: var(--surface-default);
+  background-clip: padding-box;
+
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
-  gap: var(--spacing-md, 8px);
-  height: var(--from-input-height-content);
-  justify-content: center;
   line-height: 16px;
-  margin: 2px;
-  padding: 0 var(--spacing-lg);
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -754,10 +756,10 @@ a.sui-screen-btn:visited {
 }
 
 .sui-screen-btn-flex-wrapper {
-  align-self: stretch;
   display: flex;
-  gap: var(--spacing-md);
+  align-self: stretch;
   justify-items: center;
+  gap: var(--spacing-md);
 }
 
 .sui-screen-btn-flex-wrapper > .sui-screen-btn {
@@ -767,6 +769,7 @@ a.sui-screen-btn:visited {
 .sui-screen-btn-flex-wrapper .sui-screen-btn i {
   flex-grow: 0;
 }
+
 .sui-screen-btn-flex-wrapper .sui-screen-btn span {
   flex-grow: 1;
 }
@@ -777,8 +780,9 @@ a.sui-nav-btn:link,
 a.sui-nav-btn:hover,
 a.sui-nav-btn:active,
 a.sui-nav-btn:visited {
-  align-items: center;
   display: inline-flex;
+  align-items: center;
+
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
   font-style: normal;
@@ -794,46 +798,51 @@ a.sui-nav-btn:visited {
 
 /* ---- Screen Button End ---- */
 
+
 /* ---- Panel Start ---- */
 
 .sui-panel-wrapper-fit-content {
   display: inline-block;
 }
+
 .sui-panel {
   display: flex;
-  align-items: stretch;
   max-height: 100%;
+  align-items: stretch;
 }
 
 .sui-panel-edge-left {
-  background-clip: padding-box;
+  box-sizing: border-box;
+  width: 0;
   border-style: solid;
   border-width: 0 0 0 6px;
   border-color: transparent;
-  box-sizing: border-box;
-  width: 0;
+
+  background-clip: padding-box;
 }
 
 .sui-panel-edge-right {
-  background-clip: padding-box;
+  box-sizing: border-box;
+  width: 0;
   border-style: solid;
   border-width: 0 6px 0 0;
   border-color: transparent;
-  box-sizing: border-box;
-  width: 0;
+
+  background-clip: padding-box;
 }
 
 .sui-panel-chunk {
-  align-items: flex-start;
-  background-clip: padding-box;
+  display: flex;
+  box-sizing: border-box;
+  padding-bottom: var(--spacing-xs);
+  border-color: transparent;
   border-style: solid;
   border-width: 4px 0 8px 0;
-  border-color: transparent;
-  box-sizing: border-box;
-  display: flex;
+  align-items: flex-start;
   flex-direction: column;
   gap: var(--spacing-xs);
-  padding-bottom: var(--spacing-xs);
+
+  background-clip: padding-box;
 }
 
 .sui-panel-chunk.sui-mod-grow {
@@ -841,17 +850,18 @@ a.sui-nav-btn:visited {
 }
 
 .sui-panel-chunk.sui-mod-shrink {
-  flex-shrink: 1;
   min-width: 0;
+  flex-shrink: 1;
 }
 
 .sui-panel-connector {
-  background-clip: padding-box;
-  border-style: solid;
-  border-width: 4px 2px 8px 4px;
-  border-color: transparent;
   box-sizing: border-box;
   width: 2px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 4px 2px 8px 4px;
+
+  background-clip: padding-box;
 }
 
 .sui-theme-player .sui-panel-edge-left,
@@ -866,8 +876,9 @@ div.sui-panel-edge-right.sui-theme-player {
 
 .sui-theme-player .sui-panel-chunk,
 div.sui-panel-chunk.sui-theme-player {
-  background: var(--surface-panel);
   border-image: url("/img/panel/panel-edge-top-bottom-default.png") 6 0 8 0 / 6px 0 8px 0;
+
+  background: var(--surface-panel);
 }
 
 .sui-theme-player .sui-panel-connector,
@@ -887,8 +898,9 @@ div.sui-panel-edge-right.sui-theme-enemy {
 
 .sui-theme-enemy .sui-panel-chunk,
 div.sui-panel-chunk.sui-theme-enemy {
-  background: var(--surface-panel-medium);
   border-image: url("/img/panel/panel-edge-top-bottom-medium.png") 6 0 8 0 / 6px 0 8px 0;
+
+  background: var(--surface-panel-medium);
 }
 
 .sui-theme-enemy .sui-panel-connector,
@@ -905,6 +917,7 @@ div.sui-panel-connector.sui-theme-enemy {
 }
 
 /* ---- Panel End ---- */
+
 
 /* ---- Screens Start ---- */
 
