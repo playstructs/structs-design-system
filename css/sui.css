@@ -1330,90 +1330,98 @@ a.sui-screen-portrait:hover {
 /* ---- Action Bar Start---- */
 
 .sui-action-bar-bottom-row {
-  align-items: flex-start;
   display: flex;
-  gap: 0;
   padding: 0;
+  align-items: flex-start;
+  gap: 0;
 }
 
 .sui-action-bar-btn-group {
-  align-items: flex-start;
   display: flex;
-  gap: var(--spacing-xs);
   height: 48px;
+  align-items: flex-start;
+  gap: var(--spacing-xs);
 }
 
 .sui-theme-player .sui-action-bar-btn-group {
-  background: url("/img/panel/panel-btn-group-sliver-default.png") left no-repeat;
   padding-left: 7px;
+
+  background: url("/img/panel/panel-btn-group-sliver-default.png") left no-repeat;
 }
 
 .sui-theme-enemy .sui-action-bar-btn-group {
-  background: url("/img/panel/panel-btn-group-sliver-medium.png") left no-repeat;
   padding-left: 7px;
+
+  background: url("/img/panel/panel-btn-group-sliver-medium.png") left no-repeat;
 }
 
 /* ---- Action Bar End ---- */
 
+
 /* ---- Dialogue Panel Start ---- */
 
 .sui-panel-chunk-spacer-indicator {
-  background: url("/img/panel/panel-chunk-spacer-indicator.png") top no-repeat;
-  flex-grow: 1;
   width: 48px;
+  flex-grow: 1;
+
+  background: url("/img/panel/panel-chunk-spacer-indicator.png") top no-repeat;
 }
 
 .sui-dialogue-btn-chunk {
   display: flex;
-  flex-direction: row;
   flex: 1 0 0;
-  gap: var(--spacing-xs);
+  flex-direction: row;
   justify-content: center;
+  gap: var(--spacing-xs);
 }
 
 .sui-dialogue-btn-chunk-col {
-  align-items: flex-end;
   display: flex;
   flex: 1 0 0;
   flex-direction: column;
+  align-items: flex-end;
   justify-content: flex-end;
 }
 
 .sui-panel-chunk-spacer-btn-a {
-  background: url("/img/panel/panel-chunk-spacer-btn-a.png") bottom 11px center no-repeat;
-  flex: 1 0 0;
   width: 44px;
+  flex: 1 0 0;
+
+  background: url("/img/panel/panel-chunk-spacer-btn-a.png") bottom 11px center no-repeat;
 }
 
 .sui-panel-chunk-spacer-btn-b {
-  background: url("/img/panel/panel-chunk-spacer-btn-b.png") bottom 11px center no-repeat;
-  flex: 1 0 0;
   width: 44px;
+  flex: 1 0 0;
+
+  background: url("/img/panel/panel-chunk-spacer-btn-b.png") bottom 11px center no-repeat;
 }
 
 /* ---- Dialogue Panel End ---- */
 
+
 /* ---- Page Header Start ---- */
 
 .sui-page-header {
-  align-items: center;
-  border-bottom: 1px solid var(--border-subtle);
-  box-sizing: border-box;
   display: flex;
-  justify-content: space-between;
-  padding: 0 var(--spacing-xl) 0 var(--spacing-xs);
+  box-sizing: border-box;
   width: 100%;
+  padding: 0 var(--spacing-xl) 0 var(--spacing-xs);
+  border-bottom: 1px solid var(--border-subtle);
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sui-page-header-resources {
-  align-items: center;
   display: flex;
   flex-grow: 1;
-  gap: var(--spacing-xl);
+  align-items: center;
   justify-content: flex-end;
+  gap: var(--spacing-xl);
 }
 
 /* ---- Page Header End ---- */
+
 
 /* ---- Resource Start ---- */
 
@@ -1423,15 +1431,17 @@ a.sui-resource:link,
 a.sui-resource:hover,
 a.sui-resource:active,
 a.sui-resource:visited {
-  align-items: center;
   display: inline-flex;
-  gap: var(--spacing-sm);
-  justify-items: center;
   min-height: var(--spacing-xxxl);
+  align-items: center;
+  justify-items: center;
+  gap: var(--spacing-sm);
+
   text-decoration: none;
 }
 
 /* ---- Resource End ---- */
+
 
 /* ---- Result Rows Start ---- */
 
@@ -1446,120 +1456,130 @@ a.sui-resource:visited {
 }
 
 .sui-result-row {
-  align-content: center;
-  align-items: center;
+  display: flex;
+  padding: var(--spacing-md);
   border: 1px solid var(--border);
   border-radius: 0;
-  display: flex;
   flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
   gap: var(--spacing-lg) var(--spacing-xxxl);
-  padding: var(--spacing-md);
 }
 
 .sui-result-table.sui-result-rows:first-child {
   border-top: 1px solid var(--border);
 }
+
 .sui-result-table.sui-result-rows .sui-result-row {
   border-top: 0 none;
 }
 
 .sui-result-row-left-section {
-  align-items: center;
   display: flex;
-  flex: 1 0 0;
-  gap: 16px;
   min-width: 256px;
   padding-right: var(--spacing-xl);
+  flex: 1 0 0;
+  align-items: center;
+  gap: 16px;
 }
 
 .sui-result-row-right-section {
-  align-items: center;
   display: flex;
-  flex: 1 0 0;
-  justify-content: space-between;
   min-width: 224px;
   padding: 0;
+  flex: 1 0 0;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .sui-result-row-player-info {
-  align-items: flex-start;
   display: flex;
+  padding-right: var(--spacing-xl);
   flex: 1 0 0;
   flex-direction: column;
-  gap: var(--spacing-md);
+  align-items: flex-start;
   justify-content: center;
-  padding-right: var(--spacing-xl);
+  gap: var(--spacing-md);
+
   text-align: left;
 }
 
 .sui-result-row-portrait {
-  align-items: flex-start;
-  border-radius: 0;
   display: flex;
-  height: 44px;
-  justify-content: center;
-  padding: 0;
   width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 0;
+  align-items: flex-start;
+  justify-content: center;
 }
 
 .sui-result-row-portrait-image {
-  background: url("/img/mock/mock-droid-360.png") top;
-  border: 1px solid var(--border-subtle);
   box-sizing: border-box;
-  height: 44px;
   width: 44px;
+  height: 44px;
+  border: 1px solid var(--border-subtle);
+
+  background: url("/img/mock/mock-droid-360.png") top;
 }
 
 .sui-result-row-portrait-icon {
-  align-items: center;
-  color: var(--accent-secondary);
   display: flex;
-  height: 44px;
-  justify-content: center;
   width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--accent-secondary);
 }
 
 .sui-result-row-resources {
-  align-items: center;
   display: flex;
-  gap: var(--spacing-xl);
+  align-items: center;
   justify-content: flex-end;
+  gap: var(--spacing-xl);
 }
 
 /* ---- Result Rows End ---- */
 
+
 /* ---- Badge Start ---- */
 
 .sui-badge {
-  align-items: center;
   display: inline-flex;
+  padding: 0 var(--spacing-md);
+  align-items: center;
+  justify-content: center;
+
   font-family: 'ExtremeHazard', sans-serif;
   font-size: 8px;
   font-style: normal;
   font-weight: 500;
-  justify-content: center;
   line-height: 16px;
-  padding: 0 var(--spacing-md);
   text-transform: uppercase;
 }
 
 .sui-badge.sui-mod-default {
   border: 1px solid var(--accent-primary);
+
   color: var(--text-player-primary);
 }
 
 .sui-badge.sui-mod-warning {
   border: 1px solid var(--text-warning);
+
   color: var(--text-warning);
 }
 
 .sui-badge.sui-mod-solid {
-  background-color: var(--accent-primary);
   border: 1px solid var(--accent-primary);
+
+  background-color: var(--accent-primary);
   color: var(--text-player-inverted);
 }
 
 /* ---- Badge End ---- */
+
 
 /* ---- Checkbox, Radio Start ---- */
 
