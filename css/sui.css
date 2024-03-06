@@ -1423,6 +1423,29 @@ a.sui-screen-portrait:hover {
 /* ---- Page Header End ---- */
 
 
+/* ---- Tooltip Start ---- */
+
+.sui-tooltip {
+  display: none;
+  max-width: 320px;
+  padding: var(--spacing-xl);
+  border: 2px solid var(--border);
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xl);
+
+  background: var(--surface-default);
+
+  text-align: left;
+}
+
+.sui-tooltip.sui-mod-show {
+  display: inline-flex;
+}
+
+/* ---- Tooltip End ---- */
+
+
 /* ---- Resource Start ---- */
 
 .sui-resource,

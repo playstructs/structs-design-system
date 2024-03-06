@@ -43,7 +43,7 @@
       </div>
       <div class="sui-screen sui-screen-full-width sui-screen-shrink">
         <div class="sui-page-body-screen">
-          <div class="content">
+          <div id="content-container" class="content">
 
 <!-- Content Start -->
 
@@ -1794,10 +1794,18 @@
     </div>
   </div>
 
+  <h2 class="sub-section-header">Tooltip</h2>
+
+  <div class="ui-element-container">
+    <div class="sui-tooltip sui-mod-show">
+      Tooltips display 1 - 2 sentences of information.
+    </div>
+  </div>
+
   <h2 class="sub-section-header">Resources</h2>
 
   <div class="ui-element-container">
-    <a href="javascript: void(0)" class="sui-resource">
+    <a id="resource1" href="javascript: void(0)" class="sui-resource" data-tooltip="Alpha Matter">
       <span>1</span>
       <i class="sui-icon sui-icon-alpha-matter"></i>
     </a>
@@ -3187,6 +3195,43 @@
   <script src="js/plugins.js"></script>
   <script src="js/liga.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    function createTooltip(triggerId, message) {
+      const div = document.createElement('div');
+      div.id = `${triggerId}-message`;
+      div.classList.add('sui-tooltip');
+      div.innerHTML = message;
+      return div;
+    }
+
+    var buttonPressedTimer = null;
+
+    function clearButtonPressedTimer() {
+      this.classList.remove('sui-mod-show');
+      clearTimeout(buttonPressedTimer);
+    }
+
+    function pressButton() {
+      clearTimeout(buttonPressedTimer)
+      buttonPressedTimer = setTimeout(function() {
+        this.classList.add('sui-mod-show');
+      }.bind(this), 250);
+    }
+
+    let tooltips = document.querySelectorAll('[data-tooltip]');
+    tooltips.forEach(tooltipTrigger => {
+      console.log(tooltipTrigger.id);
+      const trigger = document.getElementById(tooltipTrigger.id);
+      const message = tooltipTrigger.dataset.tooltip;
+      const tooltipElm = createTooltip(tooltipTrigger.id, message);
+
+      tooltipTrigger.parentElement.appendChild(tooltipElm);
+
+      trigger.addEventListener("mousedown", pressButton.bind(tooltipElm));
+      window.addEventListener("mouseup", clearButtonPressedTimer.bind(tooltipElm));
+    });
+
+  </script>
 </body>
 
 </html>
