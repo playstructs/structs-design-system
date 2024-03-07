@@ -3196,11 +3196,12 @@
   <script src="js/liga.js"></script>
   <script src="js/main.js"></script>
   <script>
-    function createTooltip(triggerId, message) {
+    function createTooltip(trigger) {
       const div = document.createElement('div');
-      div.id = `${triggerId}-message`;
+      div.id = `${trigger.id}-message`;
       div.classList.add('sui-tooltip');
-      div.innerHTML = message;
+      div.innerHTML = trigger.dataset.tooltip;
+      div.suiTooltipTrigger = trigger;
       return div;
     }
 
@@ -3212,22 +3213,44 @@
     }
 
     function pressButton() {
+      console.log('pressButton');
+
       clearTimeout(buttonPressedTimer)
       buttonPressedTimer = setTimeout(function() {
         this.classList.add('sui-mod-show');
-      }.bind(this), 250);
+        this.style.position = 'absolute';
+        this.style.top = `${this.suiTooltipTrigger.offsetTop - this.offsetHeight}px`;
+        this.style.left = `${this.suiTooltipTrigger.offsetLeft - (this.offsetWidth - this.suiTooltipTrigger.offsetWidth) / 2}px`;
+      }.bind(this), 100);
     }
 
     let tooltips = document.querySelectorAll('[data-tooltip]');
     tooltips.forEach(tooltipTrigger => {
       console.log(tooltipTrigger.id);
-      const trigger = document.getElementById(tooltipTrigger.id);
-      const message = tooltipTrigger.dataset.tooltip;
-      const tooltipElm = createTooltip(tooltipTrigger.id, message);
 
+      const tooltipElm = createTooltip(tooltipTrigger);
       tooltipTrigger.parentElement.appendChild(tooltipElm);
 
-      trigger.addEventListener("mousedown", pressButton.bind(tooltipElm));
+      // To position the tooltip the parent also must have position defined.
+      if (!tooltipTrigger.parentElement.style.position) {
+        tooltipTrigger.parentElement.style.position = 'relative';
+      }
+
+      // Detect touch only screen
+      if(window.matchMedia("(pointer: coarse)").matches) {
+        console.log('touchscreen');
+
+        // Press and hold on mobile is controlled by the contextmenu event which overrides touch and mouse events
+        tooltipTrigger.addEventListener("contextmenu", (event) => {
+          event.preventDefault()
+          pressButton.bind(tooltipElm)();
+        });
+      }
+
+      // Starts press and hold on desktop
+      tooltipTrigger.addEventListener("mousedown", pressButton.bind(tooltipElm));
+
+      // End press and hold on desktop and clears tooltip on mobile on tap away
       window.addEventListener("mouseup", clearButtonPressedTimer.bind(tooltipElm));
     });
 
