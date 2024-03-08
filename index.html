@@ -1805,14 +1805,25 @@
   <h2 class="sub-section-header">Resources</h2>
 
   <div class="ui-element-container">
-    <a id="resource1" href="javascript: void(0)" class="sui-resource" data-tooltip="Alpha Matter">
+    <a
+      id="resource1"
+      href="javascript: void(0)"
+      class="sui-resource"
+      data-sui-tooltip="Alpha Matter"
+    >
       <span>1</span>
       <i class="sui-icon sui-icon-alpha-matter"></i>
     </a>
   </div>
 
   <div class="ui-element-container">
-    <a href="javascript: void(0)" class="sui-resource">
+    <a
+      id="resource2"
+      href="javascript: void(0)"
+      class="sui-resource"
+      data-sui-tooltip="Alpha Matter"
+      data-sui-mod-placement="bottom"
+    >
       <i class="sui-icon sui-icon-alpha-matter"></i>
       <span>1</span>
     </a>
@@ -3200,7 +3211,7 @@
       const div = document.createElement('div');
       div.id = `${trigger.id}-message`;
       div.classList.add('sui-tooltip');
-      div.innerHTML = trigger.dataset.tooltip;
+      div.innerHTML = trigger.dataset.suiTooltip;
       div.suiTooltipTrigger = trigger;
       return div;
     }
@@ -3221,12 +3232,17 @@
         this.style.position = 'absolute';
         this.style.top = `${this.suiTooltipTrigger.offsetTop - this.offsetHeight}px`;
         this.style.left = `${this.suiTooltipTrigger.offsetLeft - (this.offsetWidth - this.suiTooltipTrigger.offsetWidth) / 2}px`;
+
+        if (this.suiTooltipTrigger.dataset.suiModPlacement === 'bottom') {
+          this.style.top = `${this.suiTooltipTrigger.offsetTop + this.suiTooltipTrigger.offsetHeight}px`;
+        }
+
       }.bind(this), 100);
     }
 
-    let tooltips = document.querySelectorAll('[data-tooltip]');
+    let tooltips = document.querySelectorAll('[data-sui-tooltip]');
     tooltips.forEach(tooltipTrigger => {
-      console.log(tooltipTrigger.id);
+      console.log(tooltipTrigger);
 
       const tooltipElm = createTooltip(tooltipTrigger);
       tooltipTrigger.parentElement.appendChild(tooltipElm);
