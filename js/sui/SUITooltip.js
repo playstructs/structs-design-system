@@ -1,3 +1,5 @@
+import {SUIUtil} from "./SUIUtil.js";
+
 export class SUITooltip {
 
   /**
@@ -6,6 +8,10 @@ export class SUITooltip {
    * @type {number|null} a timeout ID
    */
   static pointerPressedTimer = null;
+
+  constructor() {
+    this.util = new SUIUtil();
+  }
 
   /**
    * @param {HTMLElement} trigger
@@ -38,11 +44,12 @@ export class SUITooltip {
       tooltipElm.classList.add('sui-mod-show');
 
       tooltipElm.style.position = 'absolute';
-      tooltipElm.style.top = `${tooltipTriggerElm.offsetTop - tooltipElm.offsetHeight}px`;
-      tooltipElm.style.left = `${tooltipTriggerElm.offsetLeft - (tooltipElm.offsetWidth - tooltipTriggerElm.offsetWidth) / 2}px`;
+      this.util.horizontallyCenter(tooltipElm, tooltipTriggerElm);
 
       if (tooltipTriggerElm.dataset.suiModPlacement === 'bottom') {
-        tooltipElm.style.top = `${tooltipTriggerElm.offsetTop + tooltipTriggerElm.offsetHeight}px`;
+        this.util.positionBelow(tooltipElm, tooltipTriggerElm);
+      } else {
+        this.util.positionAbove(tooltipElm, tooltipTriggerElm);
       }
 
     }.bind(this), 100);
@@ -68,34 +75,29 @@ export class SUITooltip {
         tooltipTrigger.parentElement.style.position = 'relative';
       }
 
+      let pressedEvent = 'mousedown';
+      let releasedEvent = 'mouseup';
+
       // Attach relevant pointer event listeners for mobile or desktop
       if(window.matchMedia("(pointer: coarse)").matches) {
-
-        tooltipTrigger.addEventListener("touchstart", function() {
-          this.pointerPressed(tooltipElm, tooltipTrigger);
-        }.bind(this), { passive: true });
-
-        window.addEventListener("touchend", function() {
-          this.clearPointerPressedTimer(tooltipElm)
-        }.bind(this), { passive: true });
+        pressedEvent = 'touchstart';
+        releasedEvent = 'touchend';
 
         // Press and hold on mobile also fires a contextmenu event which we need to block
         // because it can obscure the tooltip and also cause inadvertent actions.
         tooltipTrigger.addEventListener("contextmenu", (event) => {
-          event.preventDefault()
-        });
-
-      } else {
-
-        tooltipTrigger.addEventListener("mousedown", function() {
-          this.pointerPressed(tooltipElm, tooltipTrigger);
-        }.bind(this));
-
-        window.addEventListener("mouseup", function () {
-          this.clearPointerPressedTimer(tooltipElm)
-        }.bind(this));
+          event.preventDefault();
+        }, { passive: false });
 
       }
+
+      tooltipTrigger.addEventListener(pressedEvent, function() {
+        this.pointerPressed(tooltipElm, tooltipTrigger);
+      }.bind(this), { passive: true });
+
+      window.addEventListener(releasedEvent, function () {
+        this.clearPointerPressedTimer(tooltipElm);
+      }.bind(this), { passive: true });
 
     });
   }

@@ -86,6 +86,11 @@
 
   /* -- Dimensions End -- */
 
+  /* -- Positioning Start -- */
+
+  --popup-z-index: 100;
+
+  /* -- Positioning End */
 
   /* -- Spacing Start -- */
 
@@ -1426,6 +1431,8 @@ a.sui-screen-portrait:hover {
 /* ---- Tooltip Start ---- */
 
 .sui-tooltip {
+  z-index: var(--popup-z-index);
+
   display: none;
   max-width: 320px;
   padding: var(--spacing-xl);
