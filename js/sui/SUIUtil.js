@@ -40,6 +40,20 @@ export class SUIUtil {
    * @param {HTMLElement} originElm
    */
   horizontallyCenter(dynamicElm, originElm) {
-    dynamicElm.style.left = `${originElm.offsetLeft - (dynamicElm.offsetWidth - originElm.offsetWidth) / 2}px`;
+    const originRect = originElm.getBoundingClientRect();
+
+    // If the dynamic element will go offscreen on the left,
+    // align the dynamic element up to the left edge.
+    if (originRect.left - (originElm.offsetWidth / 2) < dynamicElm.offsetWidth / 2) {
+      dynamicElm.style.left = `${originElm.offsetLeft}px`;
+
+    // If the dynamic element will go offscreen on the right,
+    // align the dynamic element up to the right edge.
+    } else if ((originElm.offsetWidth / 2) + (window.innerWidth - originRect.right) < dynamicElm.offsetWidth / 2) {
+      dynamicElm.style.left = `${(originElm.offsetLeft + originElm.offsetWidth) - dynamicElm.offsetWidth}px`;
+
+    } else {
+      dynamicElm.style.left = `${originElm.offsetLeft - (dynamicElm.offsetWidth - originElm.offsetWidth) / 2}px`;
+    }
   }
 }
