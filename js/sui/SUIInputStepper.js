@@ -1,4 +1,6 @@
-export class SUIInputStepper {
+import {SUIFeature} from "./SUIFeature.js";
+
+export class SUIInputStepper extends SUIFeature {
 
   /**
    * Ensure that the number is a number between the min or max value or the empty string.

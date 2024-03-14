@@ -3255,14 +3255,9 @@
   <script src="js/liga.js"></script>
   <script src="js/main.js"></script>
   <script type="module">
-    import {SUITooltip} from "./js/sui/SUITooltip.js";
-    import {SUIInputStepper} from "./js/sui/SUIInputStepper.js";
+    import {SUI} from "./js/sui/SUI.js";
 
-    const tooltip = new SUITooltip();
-    tooltip.init();
-
-    const inputStepper = new SUIInputStepper();
-    inputStepper.init();
+    (new SUI()).init();
   </script>
 </body>
 

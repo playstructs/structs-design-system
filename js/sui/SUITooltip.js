@@ -1,6 +1,7 @@
+import {SUIFeature} from "./SUIFeature.js";
 import {SUIUtil} from "./SUIUtil.js";
 
-export class SUITooltip {
+export class SUITooltip extends SUIFeature {
 
   /**
    * Used to track how long the mouse or touch screen is pressed.
@@ -10,6 +11,7 @@ export class SUITooltip {
   static pointerPressedTimer = null;
 
   constructor() {
+    super();
     this.util = new SUIUtil();
   }
 
