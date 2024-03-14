@@ -756,7 +756,11 @@ a.sui-screen-btn:visited {
   box-shadow: 0 2px 0 0 var(--accent-destructive-active), 0 -2px 0 0 var(--accent-destructive-active), 2px 0 0 0 var(--accent-destructive-active), -2px 0 0 0 var(--accent-destructive-active);
 }
 
+button.sui-screen-btn:disabled,
+button.sui-screen-btn:disabled:hover,
+button.sui-screen-btn:disabled:active,
 .sui-screen-btn.sui-mod-disabled {
+  color: var(--accent-disabled);
   box-shadow: 0 2px 0 0 var(--accent-disabled), 0 -2px 0 0 var(--accent-disabled), 2px 0 0 0 var(--accent-disabled), -2px 0 0 0 var(--accent-disabled);
 }
 
@@ -1810,6 +1814,49 @@ label.sui-input-text input[type=text]:disabled::placeholder {
 }
 
 /* ---- Input Text End ---- */
+
+/* ---- Input Stepper Start ---- */
+
+.sui-input-stepper {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: var(--spacing-md);
+}
+
+.sui-input-stepper input[type=number] {
+  display: inline-flex;
+  width: 25px;
+  padding: var(--spacing-md) var(--spacing-xl);
+  border: 0 none;
+  border-bottom: 2px solid var(--accent-secondary);
+  align-items: center;
+  align-self: stretch;
+  justify-content: center;
+  gap: var(--spacing-sm);
+
+  background: transparent;
+  color: var(--text-body);
+
+  text-align: center;
+
+  -moz-appearance: textfield;
+}
+
+.sui-input-stepper input[type=number]::-webkit-outer-spin-button,
+.sui-input-stepper input[type=number]::-webkit-inner-spin-button {
+  margin: 0;
+
+  -webkit-appearance: none;
+}
+
+.sui-input-stepper input[type=number]:disabled {
+  border-bottom: 2px solid var(--accent-disabled);
+
+  color: var(--accent-disabled);
+}
+
+/* ---- Input Stepper End ---- */
 
 
 /* ---- Page Layout Start ---- */

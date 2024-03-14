@@ -2294,6 +2294,54 @@
       </div>
     </div>
 
+    <div class="ui-element-container">
+      <div class="grid-container">
+        <div class="grid-row">
+
+          <div class="sui-input-stepper">
+            <button class="sui-screen-btn sui-mod-secondary">
+              <i class="sui-icon sui-icon-md icon-subtract"></i>
+            </button>
+            <input
+              id="inputStepper1"
+              name="inputStepper1"
+              type="number"
+              step="1"
+              min="0"
+              max="99"
+              value="0"
+            >
+            <button class="sui-screen-btn sui-mod-secondary">
+              <i class="sui-icon sui-icon-md icon-add"></i>
+            </button>
+          </div>
+
+        </div>
+        <div class="grid-row">
+
+          <div class="sui-input-stepper">
+            <button class="sui-screen-btn sui-mod-secondary">
+              <i class="sui-icon sui-icon-md icon-subtract"></i>
+            </button>
+            <input
+              id="inputStepper2"
+              name="inputStepper2"
+              type="number"
+              step="1"
+              min="0"
+              max="99"
+              value="0"
+              disabled
+            >
+            <button class="sui-screen-btn sui-mod-secondary">
+              <i class="sui-icon sui-icon-md icon-add"></i>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
   </form>
 </section>
 
@@ -3208,9 +3256,13 @@
   <script src="js/main.js"></script>
   <script type="module">
     import {SUITooltip} from "./js/sui/SUITooltip.js";
+    import {SUIInputStepper} from "./js/sui/SUIInputStepper.js";
 
     const tooltip = new SUITooltip();
     tooltip.init();
+
+    const inputStepper = new SUIInputStepper();
+    inputStepper.init();
   </script>
 </body>
 
