@@ -1,5 +1,5 @@
-# Structs Design System (SDS)
-**Structs Design System** is a collection of components that can help you build interfaces within the [Structs](https://playstructs.com) universe. 
+# Structs UI (SUI)
+**Structs UI** is a collection of components that can help you build interfaces within the [Structs](https://playstructs.com) universe. 
 
 ## Structs
 In the distant future the species of the galaxy are embroiled in a race for Alpha Matter, the rare and dangerous substance that fuels galactic civilization. Players take command of Structs, a race of sentient machines, and must forge alliances, conquer enemies and expand their influence to control Alpha Matter and the fate of the galaxy.
