@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/TestSpace.iml" filepath="$PROJECT_DIR$/.idea/TestSpace.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/structs-design-system.iml" filepath="$PROJECT_DIR$/.idea/structs-design-system.iml" />
     </modules>
   </component>
 </project>
